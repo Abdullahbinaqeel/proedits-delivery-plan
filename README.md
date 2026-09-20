@@ -8,7 +8,8 @@ ProEdits SRS v1.3.
 | | |
 |---|---|
 | Duration | 12 weeks · one calendar quarter |
-| Total effort | 1,160 engineering hours |
+| Total effort | 240 engineering hours |
+| Weekly effort | 20 hours per week, every week |
 | Module tracks | 13, across 3 milestones |
 | Build window | Weeks 1–10 — feature complete |
 | Stabilisation | Weeks 11–12 — test, deploy, handover |
