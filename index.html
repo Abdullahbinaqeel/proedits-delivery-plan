@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="ProEdits 12-Week Delivery Plan — the complete build of the AI and human assisted photo editing platform. 1,160 hours across 13 module tracks and three milestones, with an interactive Gantt chart, every weekly task and full SRS traceability.">
+<meta name="theme-color" content="#F6F7F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11161A" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ProEdits — 12-Week Delivery Plan">
+<meta property="og:description" content="1,160 hours across 13 module tracks and three milestones. Interactive Gantt, every weekly task, full requirement traceability.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B3A5C'/%3E%3Crect x='7' y='9' width='18' height='15' rx='2' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M7 14h18M12 6v5M20 6v5' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3Crect x='11' y='17' width='7' height='3' rx='1' fill='%23DE9540'/%3E%3C/svg%3E">
+<style>
+  :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>ProEdits Delivery Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#F6F7F8; --surface:#FFFFFF; --surface-2:#EFF2F4; --sunken:#E7EBEE;
+  --ink:#151C22; --ink-2:#3B4855; --muted:#66727E; --faint:#909BA6;
+  --line:#DCE2E7; --line-2:#C6CFD6;
+  --steel:#3A6B8F; --steel-soft:#E4EDF4;
+  --amber:#B4670F; --amber-soft:#F7ECDC;
+  --teal:#2C7466; --teal-soft:#E0EFEB;
+  --graphite:#55606B; --graphite-soft:#E8EBEE;
+  --ok:#2C7466; --warn:#B4670F; --crit:#A8412F;
+  --shadow:0 1px 2px rgba(20,30,40,.06), 0 6px 18px -8px rgba(20,30,40,.14);
+  --radius:6px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#11161A; --surface:#191F25; --surface-2:#20272E; --sunken:#0D1216;
+    --ink:#E7ECF0; --ink-2:#BCC7D1; --muted:#8B98A5; --faint:#6A7682;
+    --line:#2A333B; --line-2:#3A454F;
+    --steel:#6BA3C9; --steel-soft:#1C2B36;
+    --amber:#DE9540; --amber-soft:#332618;
+    --teal:#54AB97; --teal-soft:#162C28;
+    --graphite:#94A1AE; --graphite-soft:#222A31;
+    --ok:#54AB97; --warn:#DE9540; --crit:#D4715F;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px -8px rgba(0,0,0,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#11161A; --surface:#191F25; --surface-2:#20272E; --sunken:#0D1216;
+  --ink:#E7ECF0; --ink-2:#BCC7D1; --muted:#8B98A5; --faint:#6A7682;
+  --line:#2A333B; --line-2:#3A454F;
+  --steel:#6BA3C9; --steel-soft:#1C2B36;
+  --amber:#DE9540; --amber-soft:#332618;
+  --teal:#54AB97; --teal-soft:#162C28;
+  --graphite:#94A1AE; --graphite-soft:#222A31;
+  --ok:#54AB97; --warn:#DE9540; --crit:#D4715F;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px -8px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.62; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif;text-wrap:balance;margin:0;line-height:1.18;letter-spacing:-.005em}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+a{color:var(--steel)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:3px}
+
+/* ---------- shell ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+.prose{max-width:74ch}
+main{padding-block:0 96px}
+section{scroll-margin-top:96px}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:40;
+  background:color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter:saturate(1.6) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{display:flex;align-items:center;gap:16px;height:52px}
+.brand{display:flex;align-items:baseline;gap:9px;flex:0 0 auto}
+.brand b{font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;font-size:16px;letter-spacing:-.01em}
+.brand span{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:.08em}
+nav.sec{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;margin:0 -4px;padding:0 4px}
+nav.sec::-webkit-scrollbar{display:none}
+nav.sec a{
+  flex:0 0 auto;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.03em;
+  color:var(--muted);text-decoration:none;padding:6px 9px;border-radius:5px;white-space:nowrap;
+}
+nav.sec a:hover{color:var(--ink);background:var(--surface-2)}
+nav.sec a[aria-current="true"]{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.tgl{flex:0 0 auto;background:var(--surface);border:1px solid var(--line);color:var(--muted);border-radius:5px;height:28px;width:30px;cursor:pointer;font-size:13px;line-height:1;display:grid;place-items:center}
+.tgl:hover{color:var(--ink);border-color:var(--line-2)}
+
+/* ---------- hero ---------- */
+.hero{border-bottom:1px solid var(--line);background:var(--surface);}
+.hero-in{padding-block:44px 34px}
+.hero h1{font-size:clamp(30px,5.4vw,50px);font-weight:700;margin:10px 0 12px}
+.hero .sub{font-size:clamp(15px,2vw,18px);color:var(--ink-2);max-width:62ch;margin:0 0 26px}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.fig{background:var(--surface);padding:14px 16px}
+.fig b{display:block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:27px;font-weight:700;line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.fig i{display:block;font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.fig.acc b{color:var(--amber)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted)}
+.meta em{font-style:normal;color:var(--ink-2)}
+
+/* ---------- section head ---------- */
+.shead{display:flex;align-items:baseline;gap:12px;margin:62px 0 18px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.shead .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint);font-weight:500}
+.shead h2{font-size:clamp(20px,3vw,27px);font-weight:600}
+h3.sub3{font-size:17px;font-weight:600;margin:30px 0 10px;color:var(--ink)}
+p{margin:0 0 14px}
+ul.tight{margin:0 0 16px;padding-left:19px}
+ul.tight li{margin-bottom:5px}
+
+/* ---------- cards ---------- */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.card h4{font-size:15px;font-weight:600;margin-bottom:7px}
+.card p:last-child{margin-bottom:0}
+.rule-card{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:var(--radius);padding:15px 18px}
+.note{background:var(--surface-2);border-radius:var(--radius);padding:13px 16px;font-size:14px;color:var(--ink-2);margin:0 0 18px}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+thead th{
+  position:sticky;top:0;background:var(--surface-2);text-align:left;font-weight:600;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  padding:9px 12px;border-bottom:1px solid var(--line-2);white-space:nowrap;z-index:1;
+}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:var(--surface-2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+td b,td strong{color:var(--ink);font-weight:600}
+tr.total td{background:var(--sunken);font-weight:600;color:var(--ink)}
+
+/* ---------- chips ---------- */
+.chip{display:inline-flex;align-items:center;gap:5px;font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:3px;white-space:nowrap}
+.c-found{background:var(--steel-soft);color:var(--steel)}
+.c-eng{background:var(--amber-soft);color:var(--amber)}
+.c-flow{background:var(--teal-soft);color:var(--teal)}
+.c-ship{background:var(--graphite-soft);color:var(--graphite)}
+.sev-h{color:var(--crit);font-weight:600}
+.sev-m{color:var(--warn);font-weight:600}
+.sev-l{color:var(--muted)}
+
+/* ---------- gantt ---------- */
+.gantt{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.gscroll{overflow-x:auto}
+.ginner{min-width:840px}
+.grow{--label-w:218px;display:grid;grid-template-columns:var(--label-w) repeat(12,1fr) 62px;align-items:stretch;border-bottom:1px solid var(--line)}
+.grow:last-child{border-bottom:0}
+.ghead{position:sticky;top:0;background:var(--surface-2);z-index:2;border-bottom:1px solid var(--line-2)}
+.ghead .gc{padding:7px 0;text-align:center;border-left:1px solid var(--line)}
+.ghead .gc button{
+  all:unset;cursor:pointer;display:block;width:100%;padding:2px 0;border-radius:4px;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;color:var(--ink-2);
+}
+.ghead .gc button:hover{background:var(--surface);color:var(--amber)}
+.ghead .gc small{display:block;font-family:"IBM Plex Mono",monospace;font-size:9px;color:var(--faint);margin-top:1px}
+.glabel{padding:8px 12px;display:flex;align-items:center;gap:8px;font-size:12.5px;border-right:1px solid var(--line);background:var(--surface);position:sticky;left:0;z-index:1}
+.ghead .glabel{background:var(--surface-2)}
+.glabel .code{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;color:var(--muted);flex:0 0 30px}
+.glabel .nm{color:var(--ink-2);line-height:1.25}
+.gcells{grid-column:2 / span 12;display:grid;grid-template-columns:repeat(12,1fr);position:relative}
+.gcell{border-left:1px solid var(--line);min-height:34px}
+.gcell.m2{background:color-mix(in srgb,var(--surface-2) 55%,transparent)}
+.gcell.ship{background:color-mix(in srgb,var(--sunken) 60%,transparent)}
+.gcell.wsel{background:var(--amber-soft)}
+.gbar{
+  position:absolute;top:6px;bottom:6px;border-radius:3px;display:flex;align-items:center;
+  justify-content:flex-end;padding-right:6px;cursor:default;
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;color:#fff;
+  transition:filter .12s ease, transform .12s ease;
+}
+.gbar:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.gbar.b-found{background:var(--steel)}
+.gbar.b-eng{background:var(--amber)}
+.gbar.b-flow{background:var(--teal)}
+.gbar.b-ship{background:var(--graphite)}
+.gtot{padding:8px 10px;text-align:right;font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;color:var(--ink-2);border-left:1px solid var(--line);background:var(--surface);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:flex-end}
+.ghead .gtot{background:var(--surface-2);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.grow.foot{background:var(--sunken);font-weight:600}
+.grow.foot .glabel,.grow.foot .gtot{background:var(--sunken)}
+.grow.foot .gcells .gcell{display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink);font-variant-numeric:tabular-nums}
+.gmile{--label-w:218px;display:grid;grid-template-columns:var(--label-w) repeat(12,1fr) 62px;background:var(--surface);border-bottom:1px solid var(--line-2)}
+.gmile .gm{grid-row:1;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:6px 0;color:var(--muted);border-left:1px solid var(--line)}
+.gmile .gm.a{background:var(--steel-soft);color:var(--steel)}
+.gmile .gm.b{background:var(--amber-soft);color:var(--amber)}
+.gmile .gm.c{background:var(--teal-soft);color:var(--teal)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;padding:11px 14px;border-top:1px solid var(--line);background:var(--surface-2);font-size:11.5px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;font-size:10.5px}
+.sw{width:11px;height:11px;border-radius:2px;display:inline-block}
+.freeze{display:flex;align-items:center;gap:8px;margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--amber)}
+
+/* ---------- matrix ---------- */
+.mx{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table.matrix{font-size:12px}
+table.matrix th,table.matrix td{padding:6px 7px;text-align:center;border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
+table.matrix th:first-child,table.matrix td:first-child{text-align:left;position:sticky;left:0;background:var(--surface);z-index:1;border-left:0;font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ink)}
+table.matrix thead th:first-child{background:var(--surface-2)}
+table.matrix td.h{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:500}
+table.matrix td.z{color:var(--line-2)}
+table.matrix td.h.g-found{background:var(--steel-soft)}
+table.matrix td.h.g-eng{background:var(--amber-soft)}
+table.matrix td.h.g-flow{background:var(--teal-soft)}
+table.matrix td.h.g-ship{background:var(--graphite-soft)}
+table.matrix tr.total td{background:var(--sunken);font-weight:600;color:var(--ink);font-family:"IBM Plex Mono",monospace}
+table.matrix tr.total td:first-child{background:var(--sunken)}
+table.matrix tbody tr:hover td:not(:first-child){outline:1px solid var(--amber);outline-offset:-1px}
+
+/* ---------- weeks ---------- */
+.wk{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+.wk[open]{box-shadow:var(--shadow)}
+.wk summary{
+  list-style:none;cursor:pointer;padding:13px 16px;display:grid;
+  grid-template-columns:54px 1fr auto;gap:14px;align-items:center;
+}
+.wk summary::-webkit-details-marker{display:none}
+.wk summary:hover{background:var(--surface-2)}
+.wk[open] summary{border-bottom:1px solid var(--line);background:var(--surface-2)}
+.wk .wn{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:22px;font-weight:700;color:var(--amber);line-height:1}
+.wk .wn small{display:block;font-family:"IBM Plex Mono",monospace;font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.06em;margin-top:2px}
+.wk .wt{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:16px;font-weight:600;line-height:1.25}
+.wk .wd{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--muted);margin-top:3px}
+.wk .wh{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--ink-2);text-align:right;white-space:nowrap}
+.wk .wh small{display:block;font-size:9.5px;color:var(--faint);font-weight:400;letter-spacing:.05em}
+.wkbody{padding:4px 16px 16px}
+.trk{margin-top:14px}
+.trkhd{display:flex;align-items:center;gap:9px;margin-bottom:7px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+.trkhd .tn{font-size:13.5px;font-weight:600;color:var(--ink)}
+.trkhd .th{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
+table.tasks{font-size:12.5px}
+table.tasks td{padding:7px 9px}
+table.tasks td:first-child{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);white-space:nowrap;width:1%}
+table.tasks td:nth-child(2){font-weight:600;color:var(--ink);width:19%}
+table.tasks td:last-child{text-align:right;font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ink-2);width:1%;white-space:nowrap}
+.wkfoot{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.wkfoot div{background:var(--surface-2);border-radius:var(--radius);padding:11px 13px;font-size:12.5px;color:var(--ink-2)}
+.wkfoot .lb{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+.msbar{display:flex;align-items:center;gap:10px;margin:34px 0 14px}
+.msbar .bar{height:3px;flex:1;border-radius:2px}
+.msbar .lb{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+
+/* ---------- filter ---------- */
+.filterbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center}
+.filterbar input{
+  flex:1 1 190px;min-width:0;background:var(--surface);border:1px solid var(--line);color:var(--ink);
+  border-radius:5px;padding:7px 11px;font:inherit;font-size:13px;
+}
+.filterbar input::placeholder{color:var(--faint)}
+.fbtn{background:var(--surface);border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:6px 11px;font-family:"IBM Plex Mono",monospace;font-size:11px;cursor:pointer;letter-spacing:.04em}
+.fbtn:hover{color:var(--ink);border-color:var(--line-2)}
+.fbtn[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:#fff}
+.count{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint);margin-left:auto}
+
+/* ---------- misc ---------- */
+.deadline{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--warn);white-space:nowrap}
+.tip{
+  position:fixed;z-index:60;pointer-events:none;background:var(--ink);color:var(--ground);
+  border-radius:5px;padding:7px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  line-height:1.5;box-shadow:0 6px 20px -6px rgba(0,0,0,.45);max-width:260px;
+}
+.tip b{color:var(--ground);display:block;font-size:11.5px;margin-bottom:2px}
+footer{border-top:1px solid var(--line);margin-top:70px;padding-block:26px 10px;color:var(--faint);font-family:"IBM Plex Mono",monospace;font-size:11px;display:flex;flex-wrap:wrap;gap:8px 22px}
+@media (max-width:760px){
+  .grow,.gmile{--label-w:132px}
+  .ghead .gc button{font-size:10px}
+  .wk summary{grid-template-columns:44px 1fr;row-gap:6px}
+  .wk .wh{grid-column:1 / -1;text-align:left}
+  .shead{margin-top:46px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand"><b>ProEdits</b><span>PLAN v1.0</span></div>
+    <nav class="sec" id="secnav">
+      <a href="#scope">Scope</a>
+      <a href="#model">Model</a>
+      <a href="#stack">Stack</a>
+      <a href="#milestones">Milestones</a>
+      <a href="#modules">Phase Breakdown</a>
+      <a href="#gantt">Gantt</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#weeks">Weekly Tasks</a>
+      <a href="#effort">Effort</a>
+      <a href="#path">Critical Path</a>
+      <a href="#trace">Traceability</a>
+      <a href="#issues">Open Issues</a>
+      <a href="#risks">Risks</a>
+      <a href="#excluded">Excluded</a>
+      <a href="#matrix">Appendix</a>
+    </nav>
+    <button class="tgl" id="themeBtn" aria-label="Switch theme" title="Switch theme">◐</button>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="eyebrow">Delivery plan · prepared against SRS v1.3</div>
+    <h1>ProEdits — 12-Week Delivery Plan</h1>
+    <p class="sub">The complete build of the AI and human assisted photo editing platform, from an empty repository to production go-live. Every one of the twelve specified modules, delivered in full.</p>
+    <div class="figs">
+      <div class="fig"><b>12</b><i>Weeks</i></div>
+      <div class="fig acc"><b>1,160</b><i>Hours</i></div>
+      <div class="fig"><b>13</b><i>Module tracks</i></div>
+      <div class="fig"><b>3</b><i>Milestones</i></div>
+      <div class="fig"><b>10</b><i>Build weeks</i></div>
+      <div class="fig"><b>2</b><i>Test &amp; deploy weeks</i></div>
+    </div>
+    <div class="meta">
+      <span>START <em>Mon 28 Sep 2026</em></span>
+      <span>FREEZE <em>Sun 6 Dec 2026</em></span>
+      <span>GO-LIVE <em>Fri 18 Dec 2026</em></span>
+      <span>ISSUED <em>21 Sep 2026</em></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="scope">
+  <div class="shead"><span class="n">01</span><h2>Scope Basis and Assumptions</h2></div>
+  <div class="prose">
+    <p>This plan delivers the <strong>complete ProEdits platform as specified in SRS v1.3</strong>, through to production deployment. All twelve SRS modules are built in full. There is no deferred phase, no reduced tier set and no partial add-on delivery.</p>
+  </div>
+  <h3 class="sub3">What the platform does at go-live</h3>
+  <div class="grid2" id="capGrid"></div>
+
+  <h3 class="sub3">The two non-negotiable rules</h3>
+  <p class="prose">The SRS states only two requirements as firm rules rather than recommendations. Both constrain the architecture from the first week and are re-verified at every milestone gate.</p>
+  <div class="grid2">
+    <div class="rule-card">
+      <div class="eyebrow">FR-AI.6 · FR-UP.5 · Business Rule 6</div>
+      <h4>Original files are never deleted</h4>
+      <p style="margin:6px 0 0;font-size:14px;color:var(--ink-2)">No delete route exists for an original. Deletion is blocked at the data-access layer and storage lifecycle rules exclude the originals prefix. An automated test asserts that project deletion, revision and add-on processing all leave originals intact. Built in Week&nbsp;1, re-verified in Week&nbsp;11.</p>
+      <p style="margin:9px 0 0;font-size:13px;color:var(--muted);font-style:italic">“If an editor needs to manually fix windows, lighting, or other HDR problems, they may need access to the original exposures.”</p>
+    </div>
+    <div class="rule-card">
+      <div class="eyebrow">FR-TRAFFIC.1 · Business Rule 4</div>
+      <h4>One shared human queue</h4>
+      <p style="margin:6px 0 0;font-size:14px;color:var(--ink-2)">Exactly one service method creates an editing task. An architecture test fails the build if a task is created anywhere else. The method is idempotent, so no path can produce a duplicate task or silently drop one. Built in Week&nbsp;4, before any consumer of it exists.</p>
+      <p style="margin:9px 0 0;font-size:13px;color:var(--muted);font-style:italic">“Every AI failure or human request must enter your existing Traffic Management System.”</p>
+    </div>
+  </div>
+
+  <h3 class="sub3">Assumptions</h3>
+  <div class="tw"><table id="assumeTbl"><thead><tr><th style="width:1%">#</th><th>Assumption</th><th>Consequence if it does not hold</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="model">
+  <div class="shead"><span class="n">02</span><h2>Delivery Model</h2></div>
+  <div class="prose">
+    <p>Work is organised into <strong>module tracks</strong>. Each track corresponds to one functional area of the platform and runs across a defined set of weeks.</p>
+  </div>
+  <div class="rule-card" style="border-left-color:var(--steel);margin-bottom:18px">
+    <p style="margin:0;font-size:16px"><strong>Every module track is resourced at 20 hours of effort in each week it is active.</strong></p>
+    <p style="margin:7px 0 0;font-size:14px;color:var(--ink-2)">A week in which five module tracks are active carries 100 hours; a week with six carries 120. Effort ramps up in Week 1 as the foundation is laid, holds at 100–120 hours through the build, and shifts entirely to testing and deployment in Weeks 11–12.</p>
+  </div>
+  <div class="grid3">
+    <div class="card"><h4>Feature freeze at Week 10</h4><p style="font-size:14px;color:var(--ink-2)">All feature development finishes at the end of Week 10. Weeks 11 and 12 contain no new functionality — only integration testing, cross-browser verification, performance measurement, a security pass, load testing, two defect rounds, staging soak, production build, go-live and handover.</p><p style="font-size:13.5px;color:var(--muted)">A platform of this size cannot be tested meaningfully while it is still changing, and a deployment scheduled for the same week as the last feature is a deployment that slips.</p></div>
+    <div class="card"><h4>Weekly working agreement</h4><p style="font-size:14px;color:var(--ink-2)">Per active track, per week: <strong>16 h</strong> implementation, <strong>3 h</strong> verification — tests written in the same week as the code they cover, never deferred — and <strong>1 h</strong> coordination covering written status, cross-track integration points and open-issue chase.</p></div>
+    <div class="card"><h4>Milestone gates</h4><p style="font-size:14px;color:var(--ink-2)">At the end of Weeks 4, 8 and 12: live demonstration against the exit-criteria checklist referenced to SRS identifiers; defect triage with blockers fixed inside the gate; the open-issue register updated; written sign-off before the next milestone begins.</p></div>
+  </div>
+  <h3 class="sub3">Definition of Done — applies to every task without exception</h3>
+  <div class="tw"><table id="dodTbl"><thead><tr><th style="width:1%">#</th><th>Condition</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="stack">
+  <div class="shead"><span class="n">03</span><h2>Technology Stack</h2></div>
+  <p class="prose">Exactly as confirmed. No substitutions.</p>
+  <div class="tw"><table id="stackTbl"><thead><tr><th style="width:24%">Part</th><th>Technology</th></tr></thead><tbody></tbody></table></div>
+  <h3 class="sub3">Three engines, one shared pipeline</h3>
+  <p class="prose">The architecture the source flow document recommends and SRS §5.1 formalises. The three engines are separated in the codebase <em>and</em> in the deployment, not only conceptually, so that changing an AI model or vendor in one engine requires no change to the others, and so processing capacity grows independently of the web tier.</p>
+  <div class="grid3">
+    <div class="card" style="border-top:3px solid var(--amber)"><div class="eyebrow">Engine 1</div><h4>AI Pre-Processing</h4><p style="font-size:13.5px;color:var(--ink-2);margin:0">Python / OpenCV. Exposure detection, scene grouping, alignment, HDR merge, tone mapping, working-image render.</p></div>
+    <div class="card" style="border-top:3px solid var(--amber)"><div class="eyebrow">Engine 2</div><h4>AI Add-On</h4><p style="font-size:13.5px;color:var(--ink-2);margin:0">Hosted AI APIs behind one internal adapter. Object removal, decluttering, lawn replacement, object manipulation, virtual staging.</p></div>
+    <div class="card" style="border-top:3px solid var(--teal)"><div class="eyebrow">Engine 3</div><h4>Human Editing</h4><p style="font-size:13.5px;color:var(--ink-2);margin:0">NestJS workflow state in PostgreSQL with the staff interfaces. All human tiers, rejected AI results, and every revision.</p></div>
+  </div>
+  <div class="note" style="margin-top:14px"><strong>All three feed one chain:</strong> Traffic Management → Editor Assignment → QA → Revision → Delivery.</div>
+  <h3 class="sub3">Storage key convention</h3>
+  <p class="prose">Fixed in Week 1 and used unchanged thereafter. Every saved result receives its own key; PostgreSQL records which original or earlier version it derives from. The bucket is private with no public access; every read is served through a time-limited presigned URL issued only after the API has authorised the request.</p>
+  <div class="tw"><table id="keysTbl"><thead><tr><th style="width:22%">File class</th><th>Key pattern</th><th style="width:22%">Written by</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="milestones">
+  <div class="shead"><span class="n">04</span><h2>Milestone Summary</h2></div>
+  <div id="msCards"></div>
+</section>
+
+<section id="modules">
+  <div class="shead"><span class="n">05</span><h2>Phase Breakdown by Module</h2></div>
+  <p class="prose">All thirteen delivery tracks, mapped across the three milestones. Every SRS module appears; nothing is deferred beyond the programme.</p>
+  <div class="tw" style="max-height:none"><table id="phaseTbl"><thead><tr><th style="width:1%">#</th><th style="width:13%">Module</th><th>Milestone 1 · W1–4</th><th>Milestone 2 · W5–8</th><th>Milestone 3 · W9–12</th><th style="width:1%" class="num">Weeks</th><th style="width:1%" class="num">Hours</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="gantt">
+  <div class="shead"><span class="n">06</span><h2>Gantt Chart</h2></div>
+  <p class="prose">Each bar is a module track active across those weeks at 20 hours per week. Milestone bands run across the top; hover a bar for its span and hours, and select a week header to highlight that column.</p>
+  <div class="gantt">
+    <div class="gscroll"><div class="ginner" id="ganttInner"></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--steel)"></i>Foundation &amp; data</span>
+      <span><i class="sw" style="background:var(--amber)"></i>Processing &amp; editing engines</span>
+      <span><i class="sw" style="background:var(--teal)"></i>Workflow, commerce &amp; comms</span>
+      <span><i class="sw" style="background:var(--graphite)"></i>Test &amp; deployment</span>
+    </div>
+  </div>
+  <div class="freeze">▲ Feature freeze — Sunday 6 December 2026. From this point no functional change enters the codebase outside defect remediation.</div>
+</section>
+
+<section id="timeline">
+  <div class="shead"><span class="n">07</span><h2>Timeline</h2></div>
+  <div class="tw"><table id="timeTbl"><thead><tr><th style="width:1%">Week</th><th style="width:15%">Dates</th><th style="width:1%" class="num">MS</th><th>Active tracks</th><th style="width:1%" class="num">Hours</th><th style="width:1%" class="num">Cumul.</th><th style="width:30%">Key output</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="weeks">
+  <div class="shead"><span class="n">08</span><h2>Week-by-Week Tasks</h2></div>
+  <p class="prose">Every task, grouped by module track. Each track carries 20 hours in each week it appears, and every week's task hours sum to that week's total.</p>
+  <div class="filterbar">
+    <button class="fbtn" id="expandAll">Expand all</button>
+    <button class="fbtn" id="collapseAll">Collapse all</button>
+    <span class="count" id="weekCount"></span>
+  </div>
+  <div id="weekList"></div>
+</section>
+
+<section id="effort">
+  <div class="shead"><span class="n">09</span><h2>Effort Distribution</h2></div>
+  <h3 class="sub3">By module track</h3>
+  <div class="tw"><table id="effortTbl"><thead><tr><th>Module track</th><th style="width:34%">Share of 1,160 hours</th><th style="width:1%" class="num">Hours</th><th style="width:22%">Weeks active</th></tr></thead><tbody></tbody></table></div>
+  <p class="prose" style="font-size:14px;color:var(--ink-2)">The two largest tracks are the add-on engine and the traffic-management layer. That weighting follows the source material: five independent generative effects each need their own input handling and quality validation, and the shared queue is the component every other module depends on — the one the SRS singles out as the most important part of the whole design.</p>
+  <h3 class="sub3">By layer and by milestone</h3>
+  <div class="grid2">
+    <div class="tw" style="margin:0"><table id="layerTbl"><thead><tr><th>Layer</th><th style="width:1%" class="num">Hours</th><th style="width:1%" class="num">Share</th></tr></thead><tbody></tbody></table></div>
+    <div class="tw" style="margin:0"><table id="msEffortTbl"><thead><tr><th>Milestone</th><th class="num">Back</th><th class="num">Front</th><th class="num">Proc</th><th class="num">Infra</th><th class="num">T&amp;D</th><th class="num">Total</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</section>
+
+<section id="path">
+  <div class="shead"><span class="n">10</span><h2>Dependency Order and Critical Path</h2></div>
+  <p class="prose">The SRS sets out a technical dependency order for the build in §9.5. This plan follows it exactly, running tracks in parallel only where the dependency allows.</p>
+  <div class="tw"><table id="seqTbl"><thead><tr><th style="width:1%">Seq</th><th style="width:26%">Item</th><th style="width:1%" class="num">Weeks</th><th>Why it sits here</th></tr></thead><tbody></tbody></table></div>
+  <div class="rule-card" style="margin-bottom:18px">
+    <h4>Week 4 is the hinge of the programme</h4>
+    <p style="margin:6px 0 0;font-size:14px;color:var(--ink-2)">It closes the ingestion chain — upload, grouping, merge, working image — and simultaneously stands up the two shared services that everything in Milestone 2 consumes: the single queue entry point and the credit ledger. A slip in Week 4 propagates directly to every track in Weeks 5 through 9.</p>
+  </div>
+  <h3 class="sub3">Float — the only resequencing levers available</h3>
+  <p class="prose">Most tracks run on the critical path. The items below carry float, listed in the order they should be used. Together they represent roughly 40 hours. Any use of them is agreed at a milestone gate and recorded, never taken silently.</p>
+  <div class="tw"><table id="floatTbl"><thead><tr><th>Item</th><th style="width:1%" class="num">Now</th><th style="width:1%">Move to</th><th style="width:44%">Cost of moving</th></tr></thead><tbody></tbody></table></div>
+  <h3 class="sub3">Cross-track integration points</h3>
+  <p class="prose">Parallel tracks meet at defined points. Each is verified in the week it occurs rather than left to Week 11.</p>
+  <div class="tw"><table id="intTbl"><thead><tr><th style="width:1%">Week</th><th>Integration point</th><th style="width:22%">Tracks meeting</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="trace">
+  <div class="shead"><span class="n">11</span><h2>Acceptance Criteria and Traceability</h2></div>
+  <p class="prose">Every functional requirement, non-functional requirement and business rule in SRS v1.3 mapped to the week that delivers it and the method that verifies it. Nothing is deferred beyond the programme.</p>
+  <div class="filterbar">
+    <input type="text" id="traceSearch" placeholder="Search requirements, weeks or verification method…" autocomplete="off">
+    <button class="fbtn" data-tf="all" aria-pressed="true">All</button>
+    <button class="fbtn" data-tf="FR">Functional</button>
+    <button class="fbtn" data-tf="NFR">Non-functional</button>
+    <button class="fbtn" data-tf="BR">Business rules</button>
+    <span class="count" id="traceCount"></span>
+  </div>
+  <div class="tw"><table id="traceTbl"><thead><tr><th style="width:1%">ID</th><th style="width:38%">Requirement</th><th style="width:1%" class="num">Week</th><th>Verified by</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="issues">
+  <div class="shead"><span class="n">12</span><h2>Open Issues and Decision Deadlines</h2></div>
+  <p class="prose">Every item in SRS Section 10. Each carries the Friday by which an answer is needed — the Friday before the week that consumes it — what it blocks, and the working default that will be built if the deadline passes.</p>
+  <div class="note"><strong>Escalation.</strong> Any deadline missed by more than three working days is raised at the following weekly status. If still unanswered at the next milestone gate it is recorded as a formal schedule risk against the week it affects, and the working default is confirmed as the shipped behaviour with the rework cost stated.</div>
+  <div class="tw"><table id="issueTbl"><thead><tr><th style="width:1%">SRS §</th><th style="width:20%">Open issue</th><th style="width:1%">Needed by</th><th style="width:1%">Blocks</th><th>Working default if unanswered</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="risks">
+  <div class="shead"><span class="n">13</span><h2>Risk Register</h2></div>
+  <div class="tw"><table id="riskTbl"><thead><tr><th style="width:1%">#</th><th style="width:22%">Risk</th><th style="width:1%">Like.</th><th style="width:1%">Impact</th><th>Mitigation</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="excluded">
+  <div class="shead"><span class="n">14</span><h2>Explicitly Excluded</h2></div>
+  <p class="prose">The following are outside this programme. Each is excluded either by the SRS itself or by the confirmed technology approach, not by a scope reduction made here. <strong>Everything else specified in SRS v1.3 is delivered inside these 12 weeks.</strong></p>
+  <div class="tw"><table id="exclTbl"><thead><tr><th style="width:32%">Excluded</th><th>Reason</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="matrix">
+  <div class="shead"><span class="n">15</span><h2>Appendix A — Week × Module Hours Matrix</h2></div>
+  <p class="prose">Every cell is one module track active that week at 20 hours. Hover a row to trace it across the schedule.</p>
+  <div class="mx" id="matrixWrap"></div>
+  <div class="legend" style="border:1px solid var(--line);border-top:0;border-radius:0 0 var(--radius) var(--radius);background:var(--surface-2)" id="mxKey"></div>
+</section>
+
+<footer>
+  <span>ProEdits Delivery Plan v1.0</span>
+  <span>21 September 2026</span>
+  <span>Prepared against ProEdits SRS v1.3</span>
+  <span>1,160 hours · 12 weeks · 3 milestones</span>
+</footer>
+</main>
+<div class="tip" id="tip" hidden></div>
+<script>
+const G={found:'found',eng:'eng',flow:'flow',ship:'ship'};
+
+const TRACKS=[
+ {c:'M0',n:'Platform & Infrastructure',g:'found',bars:[[1,3],[10,10]],h:80},
+ {c:'M1',n:'Accounts & Authentication',g:'found',bars:[[1,2]],h:40},
+ {c:'M2',n:'Client Dashboard',g:'found',bars:[[2,3]],h:40},
+ {c:'M3',n:'Project Creation & Upload',g:'found',bars:[[2,4]],h:60},
+ {c:'M4',n:'AI Pre-Processing Engine',g:'eng',bars:[[3,6]],h:80},
+ {c:'M5',n:'Service Tier Selection',g:'flow',bars:[[4,5]],h:40},
+ {c:'M6',n:'Basic Tier — AI & Self Editing',g:'eng',bars:[[5,9]],h:100},
+ {c:'M7',n:'Human Edited Tiers',g:'flow',bars:[[6,9]],h:80},
+ {c:'M8',n:'AI Add-On Engine',g:'eng',bars:[[5,10]],h:120},
+ {c:'M9',n:'Traffic Mgmt, Assignment & QA',g:'flow',bars:[[4,8],[10,10]],h:120},
+ {c:'M10',n:'Credits & Package Accounting',g:'flow',bars:[[4,5],[7,7],[9,9]],h:80},
+ {c:'M11',n:'Notifications',g:'flow',bars:[[9,10]],h:40},
+ {c:'M12',n:'File & Version Management',g:'found',bars:[[1,1],[3,3],[8,8],[10,10]],h:80},
+ {c:'TST',n:'System Test & UAT',g:'ship',bars:[[11,12]],h:100},
+ {c:'DEP',n:'Deployment & Handover',g:'ship',bars:[[11,12]],h:100}
+];
+const WEEKHOURS=[60,80,100,100,120,100,100,100,100,100,100,100];
+const WEEKDATES=['28 Sep – 4 Oct','5 – 11 Oct','12 – 18 Oct','19 – 25 Oct','26 Oct – 1 Nov','2 – 8 Nov','9 – 15 Nov','16 – 22 Nov','23 – 29 Nov','30 Nov – 6 Dec','7 – 13 Dec','14 – 20 Dec'];
+
+const CAPS=[
+ ['Four account types','Client, editor, QA reviewer and administrator, each with its own authenticated entry point and permissions enforced by the backend on every protected request — not by hiding controls in the interface.','FR-ACC.1–5'],
+ ['Password reset and recovery','A time-limited, single-use email token, invalidated on use and on password change.','FR-ACC.4'],
+ ['Client dashboard','Credit balance, monthly package status, active and completed projects, each card carrying name, creation date, image count, status and tiers.','FR-DASH.1–2'],
+ ['Action-state distinction','A project awaiting the client is presented differently from one awaiting internal work, because the two demand different calls to action.','FR-DASH.3'],
+ ['Project creation and batch upload','Project creation as an explicit step, then direct-to-storage batch upload of single images and bracketed sets with multipart transfer and per-part retry.','FR-UP.1–4'],
+ ['Permanent original retention','Every original exposure file kept, separate from any derived image, for the lifetime of the project.','FR-UP.5, FR-AI.6'],
+ ['Bracket detection and grouping','Automatic grouping from capture metadata and visual similarity, with a client-facing correction path when the grouping is uncertain or fails.','FR-AI.1–2, FR-AI.7'],
+ ['Exposure stacking and HDR render','Alignment, merge and tone mapping into one working image per scene, which becomes the base for every subsequent step.','FR-AI.3–5'],
+ ['Reprocessing without re-upload','A scene re-run from the retained originals after a grouping correction or a parameter change.','FR-AI.6'],
+ ['Four-tier selection','Basic, Basic Plus, Standard and Advanced, selected per working image individually or applied in bulk.','FR-TIER.1, FR-TIER.3'],
+ ['Basic self-service studio','Automatic AI Auto Enhance on selection, all fourteen manual adjustment controls, a three-way comparison at matched zoom and position, and full-resolution export.','FR-BASIC.1–3'],
+ ['Three Basic outcomes','Accept the AI result, save and download a manual edit, or send to a human editor after confirming the additional credit — plus a default satisfaction gate.','FR-BASIC.4–6'],
+ ['Human editing across three tiers','Basic Plus, Standard and Advanced each following the same seven-step sequence, with Advanced in a high-priority queue restricted to experienced editors.','FR-HUMAN.1–4'],
+ ['All five AI add-ons','Object Removal, Decluttering, Lawn Replacement, Object Manipulation and Virtual Staging behind one consistent internal API, with masks aligned to original image dimensions.','FR-ADDON.1–6'],
+ ['A single shared human queue','Every task needing human attention — a rejected Basic result, a send-to-human request, any human-tier submission, a rejected add-on — enters the same queue through the same entry point.','FR-TRAFFIC.1, FR-ADDON.7, FR-BASIC.7'],
+ ['Weighted priority calculation','All five named inputs — package, service quality, delivery time, queue position, editor availability — as configurable weights rather than hardcoded logic.','FR-TRAFFIC.2, NFR-MAIN.2'],
+ ['Assignment, QA and revisions','Editor assignment, QA review, and a revision loop in which every revision produces a new version and passes through QA again before reaching the client.','FR-TRAFFIC.3–5, FR-HUMAN.5'],
+ ['Credits and monthly packages','A transactional ledger recording purchases, allocations, reservations, charges and refunds, with payment confirmed only by verified provider webhooks.','FR-CREDIT.1–5'],
+ ['Notifications','In-app status feed and transactional email telling clients when a result is ready and telling editors and QA reviewers when a task is assigned.','SRS §3.11'],
+ ['Version history and delivery','Originals, working images, AI results, manual results and every delivered revision retained and comparable, with downloads and per-project ZIP export through time-limited private links.','FR-FILE.1–3']
+];
+const ASSUME=[
+ ['A1','Open decisions listed in Section 12 are answered by the deadlines stated there.','Any week blocked on an unanswered decision slips one for one; the working default shipped meanwhile requires rework.'],
+ ['A2','Hosted AI API accounts and keys for enhancement and generative editing are provisioned and funded before Week 5.','Weeks 5–10 add-on and enhancement work cannot begin.'],
+ ['A3','A representative sample set of real photographs — minimum 20 scenes including mixed flash, subject movement, blown windows, empty rooms for staging and outdoor lawn shots — is supplied by the end of Week 2.','Exposure merge quality and add-on output quality cannot be tuned or validated against real conditions.'],
+ ['A4','Editors and QA reviewers are internal or contracted staff, not a public marketplace, and work in their own desktop editing tools.','A public editor marketplace or an in-browser professional retouching suite is a separate programme.'],
+ ['A5','The three Figma files are the single visual source and are final for the screens enumerated in SRS §4.1.','Redesign after a screen is built is handled as a change request against the next gate.'],
+ ['A6','A payment provider supported in the operating jurisdiction is selected and account-approved before Week 5.','Credit purchase and package subscription cannot be completed in Week 5.'],
+ ['A7','One staging environment and one production environment, with managed PostgreSQL and managed Redis.','Self-hosting database and cache infrastructure adds work not budgeted here.'],
+ ['A8','Expected volume, concurrency and peak-load figures are supplied before Week 11 load testing.','Infrastructure sizing and the performance targets cannot be confirmed against real conditions.']
+];
+const DOD=[
+ 'TypeScript compiles under <code>strict</code>; no untyped escape hatch without an inline justification.',
+ 'Authorisation is enforced in the backend. Hiding a control in the interface is a presentation decision and never the access control.',
+ 'Unit tests cover the success path and every documented failure path. Any state transition or credit movement additionally carries an integration test.',
+ 'Errors are caught and either handled or re-thrown with context. No silent failure, and no indefinite loading state presented to a user.',
+ 'The database migration is committed and applies cleanly to an empty database.',
+ 'The requirement identifiers listed against that week in the traceability table are demonstrable.',
+ 'Merged through review with the continuous integration pipeline green.'
+];
+const STACK=[
+ ['Frontend','<strong>React + TypeScript</strong> (strict mode)'],
+ ['Backend','<strong>Node.js + TypeScript</strong>, framework <strong>NestJS</strong>'],
+ ['Database access','<strong>Prisma</strong>'],
+ ['Database','<strong>PostgreSQL</strong> (managed)'],
+ ['Image storage','<strong>Amazon S3</strong>'],
+ ['Browser editing','Brush and selection tools and adjustment previews — <strong>React Konva</strong> for mask painting, <strong>WebGL</strong> for live slider previews'],
+ ['Background processing','A Node-compatible job queue with separate workers — <strong>BullMQ on Redis</strong> (managed)'],
+ ['Generative editing','<strong>Hosted AI APIs</strong>, behind one internal ProEdits adapter interface'],
+ ['Exposure merging &amp; advanced processing','<strong>Python / OpenCV</strong> workers'],
+ ['Server-side raster operations','<strong>Sharp</strong> — thumbnails, derivatives, routine full-resolution operations'],
+ ['Deployment','<strong>Docker</strong> — the React application, the Node API and the processing workers run as separate services'],
+ ['Email','Transactional email service'],
+ ['Payments','A payment provider supported in the operating jurisdiction, confirmed by verified webhooks']
+];
+const KEYS=[
+ ['Originals','projects/{projectId}/originals/{originalFileId}.{ext}','Browser, presigned multipart'],
+ ['Working image','projects/{projectId}/working/{workingImageId}.jpg','Python / OpenCV service'],
+ ['AI result — auto enhance','projects/{projectId}/ai/{workingImageId}/enhance-{jobId}.jpg','Node worker'],
+ ['AI result — add-on','projects/{projectId}/ai/{workingImageId}/addon-{addOnJobId}.jpg','Node worker'],
+ ['Manual result','projects/{projectId}/manual/{workingImageId}/v{n}.jpg','Export worker (Sharp)'],
+ ['Delivered versions','projects/{projectId}/delivered/{workingImageId}/v{n}.jpg','Editor upload / export worker'],
+ ['Masks','projects/{projectId}/masks/{addOnJobId}.png','Browser, exported from React Konva'],
+ ['Thumbnails &amp; previews','projects/{projectId}/thumbs/{entityId}.webp','Node worker (Sharp)']
+];
+const MILESTONES=[
+ {n:1,t:'Foundation and Ingestion',w:'Weeks 1–4',d:'28 Sep – 25 Oct 2026',h:340,gate:'Fri 23 Oct 2026',cls:'a',
+  goal:'A client creates a project, uploads a bracketed exposure set, receives a rendered working image with every original retained, and selects a service tier from all four — against a live credit balance and a queue already built to receive every future task source.',
+  ex:['Four account types register, log in, refresh and log out; password reset works end to end; a request for another account’s resource returns a refusal from the backend guard, not from a hidden control.',
+      'The dashboard shows credit balance, package status, active and completed projects, and distinguishes projects awaiting client action from those awaiting internal action.',
+      'No client-facing response anywhere exposes an editor identity, a QA identity or an internal queue position.',
+      'A 50-file batch containing multiple brackets uploads directly to storage with per-part retry and resumption after interruption.',
+      'Brackets are detected and grouped from capture metadata and visual similarity, with a confidence score recorded per group.',
+      'Exposures are aligned, merged and tone-mapped into one working image per scene, written to storage and marked ready, within 60 seconds per group.',
+      'Deleting a project, running a revision or processing an add-on leaves every original file intact.',
+      'A tier can be selected per working image across all four tiers, individually or in bulk, and cannot be selected until pre-processing has succeeded or the client has confirmed a grouping.',
+      'The credit ledger reserves, charges and releases inside serialisable transactions; two concurrent submissions cannot spend the same credit.',
+      'Exactly one service method creates an editing task, enforced by an architecture test that fails the build on a second creation site.',
+      'The full stack starts from a single command locally; migrations apply cleanly from an empty database.']},
+ {n:2,t:'Editing Engines and Human Pipeline',w:'Weeks 5–8',d:'26 Oct – 22 Nov 2026',h:420,gate:'Fri 20 Nov 2026',cls:'b',
+  goal:'Both editing engines are operational and the human pipeline carries real work. A Basic image travels the complete Option C flow; a Basic Plus, Standard or Advanced image travels the complete seven-step human flow including a revision; three of the five add-ons produce results and route rejections into the same queue.',
+  ex:['Selecting Basic automatically runs AI Auto Enhance and presents the result as a preview with no button press required.',
+      'All fourteen adjustment controls operate live in the browser with visible before-and-after feedback and require no documentation to use.',
+      'The three-way toggle switches between the original working image, the AI result and the client’s manual edit at an identical zoom level and pan position.',
+      'Full-resolution export reproduces the browser preview within the agreed numeric tolerance across the reference image set.',
+      'Basic Plus, Standard and Advanced each complete the seven-step sequence; Advanced is placed in a high-priority queue and cannot be assigned to a non-senior editor unless the override is explicit and logged.',
+      'Priority is calculated from all five named inputs as configurable weights, adjustable without a code change.',
+      'QA approves or returns with comments; a return routes back to the same editor and escalates to a lead after a configurable number of cycles.',
+      'A client revision request creates a new version and always passes through QA again before reaching the client.',
+      'Every delivered revision is retained as its own version and is comparable against earlier versions.',
+      'Object Removal, Decluttering and Lawn Replacement each accept a brush-painted mask exported at original pixel dimensions, return a result, and on rejection enter the same shared queue.',
+      'Credits reserve on submission, charge on client approval and release on cancellation before editing starts; monthly packages allocate and renew; payment is confirmed only by a verified provider webhook.']},
+ {n:3,t:'Completion, Testing and Deployment',w:'Weeks 9–12',d:'23 Nov – 20 Dec 2026',h:400,gate:'Fri 18 Dec 2026',cls:'c',
+  goal:'The platform is feature complete at the end of Week 10, then tested, hardened, documented, deployed and handed over.',
+  ex:['Object Manipulation accepts a marked region plus a short instruction; Virtual Staging accepts an empty-room image, a room type and a style, and generates furnished output.',
+      'Multiple add-ons can be applied to one image before delivery.',
+      'The three Basic client options and the satisfaction gate all resolve correctly, and a Basic image sent to a human enters the same pipeline as every other human request.',
+      'Clients and staff receive in-app notification and transactional email on result-ready, task-assigned and revision-completed events, with live status delivered by server-sent events.',
+      'Final files and per-project ZIP archives download through time-limited private links after backend authorisation.',
+      'The retention policy is implemented and executes, with the originals prefix excluded from every lifecycle rule.',
+      'Feature freeze holds from the end of Week 10. No functional change enters Weeks 11 or 12 outside defect remediation.',
+      'Performance meets all three targets on the reference set, measured and recorded.',
+      'The full role-permission matrix passes; storage is encrypted at rest and in transit; the bucket is private; presigned links expire; no secret is committed.',
+      'Load testing passes against the confirmed volume assumptions.',
+      'The application renders and functions on current Chrome, Safari, Edge and Firefox, desktop and mobile web.',
+      'Backup and restore are verified; monitoring and alerting are live.',
+      'UAT is executed with real client, editor, QA and administrator accounts and signed off.',
+      'Production deployment completes; smoke tests pass; runbook, environment reference, API documentation and operational training materials are handed over.']}
+];
+</script>
+<script>
+const WEEKS=[
+{n:1,ms:1,t:'Platform, authentication and storage foundation',tracks:[
+ {c:'M0',g:'found',tasks:[
+  ['1.0.1','Monorepo and tooling','Workspace with four applications: the React client, the NestJS API, the Node worker and the Python processing service. Shared base TypeScript configuration with strict and noUncheckedIndexedAccess. Linting and formatting enforced on commit; Conventional Commits enforced by a commit-message hook.',5],
+  ['1.0.2','Local infrastructure','Docker Compose bringing up PostgreSQL 16, Redis 7 and an S3-compatible object store for local development. A complete environment-variable example file with every key documented; no secret committed to the repository at any point.',5],
+  ['1.0.3','NestJS API skeleton','Configuration module with schema-validated environment parsing that refuses to start on a missing or malformed value. Global validation pipe with whitelisting and transformation. Global exception filter mapping every error to one consistent response envelope. Health and readiness endpoints. Request logging with a correlation identifier propagated to workers.',6],
+  ['1.0.4','Prisma migration workflow','Prisma initialised against PostgreSQL with the generated client wired into the API. Migration workflow documented and a seed harness created for local and staging data.',4]]},
+ {c:'M1',g:'found',tasks:[
+  ['1.1.1','User model','User with identifier, role enumeration across client, editor, QA reviewer and administrator, email as a unique login, password hash, nullable seniority level used later for Advanced assignment, creation timestamp and last-login timestamp. First migration applied.',3],
+  ['1.1.2','Authentication endpoints','Register, login, refresh and logout. Argon2id password hashing. Short-lived access token paired with a rotating refresh token, with refresh-token reuse detection. Last-login timestamp written on each successful login. Invalid credentials return one uniform refusal that does not disclose whether an account exists.',7],
+  ['1.1.3','Role-based access control','Authentication guard, role guard and a role decorator covering all four account types. An ownership-guard primitive for resource-level checks used by every later module. Access control is enforced here, in the backend, on every protected request.',5],
+  ['1.1.4','Password reset and recovery','Reset request, time-limited single-use token, and password change, with the token invalidated on use and on password change. Email dispatch behind an interface so the transactional provider is swappable. Rate limiting on the request endpoint.',5]]},
+ {c:'M12',g:'found',tasks:[
+  ['1.12.1','Object storage configuration','Private bucket with public access blocked entirely, server-side encryption enabled, versioning configured, and cross-origin rules permitting direct browser upload from the application origin only.',4],
+  ['1.12.2','Storage service and key convention','A single storage service implementing the eight-class key convention. All presigning — for upload and for time-limited download — routes through this service, so no other module constructs a key or a URL directly.',6],
+  ['1.12.3','File lineage schema','OriginalFile, WorkingImage and DeliveredVersion with the foreign keys that record which original or earlier version each derived file came from. Every saved result receives its own storage key; the relationship between them lives in the database.',6],
+  ['1.12.4','Original retention guard','Deletion of an original is blocked at the data-access layer, no delete route exists, and lifecycle rules exclude the originals prefix. An automated test asserts that cascading a project deletion does not remove an original file or object. Implemented in the first week rather than added as a later policy.',4]]}],
+ del:'The full stack starts from one command. Four account types register, log in, refresh and reset their password. Storage is private, encrypted and structured, and originals cannot be deleted.',
+ acc:'FR-ACC.1–5, FR-AI.6 (data layer), FR-UP.5, FR-FILE.1 (schema), NFR-SEC.1, NFR-SEC.3, Business Rule 6',
+ dep:'Nothing',blk:'Every subsequent week — everything else requires authenticated actors'},
+
+{n:2,ms:1,t:'Client application, dashboard and upload API',tracks:[
+ {c:'M0',g:'found',tasks:[
+  ['2.0.1','React application shell','React with TypeScript in strict mode, routing, server-state management, and an HTTP client that attaches the access token and transparently refreshes and retries once on expiry. Functional components throughout; asynchronous code uses async/await.',7],
+  ['2.0.2','Design system from Figma','Design tokens — colour, typography, spacing, elevation, radius — extracted from the Client_User, Desk_user and QA—Editor_user files, plus the shared component set they have in common: buttons, inputs, cards, status chips, modals, toasts, tables and empty states. Built once here so all four role interfaces stay consistent.',7],
+  ['2.0.3','Job queue and worker process','BullMQ on Redis with the worker running as its own process, separate from the API. Queue registry covering pre-processing, enhancement, add-on, export and archive work. Retry with exponential backoff, attempt limits, dead-letter handling and job-level structured logging.',6]]},
+ {c:'M1',g:'found',tasks:[
+  ['2.1.1','Login and registration screens','Client_User authentication screens with field-level validation, inline error surfacing, loading state and a clear failure state. No failure is swallowed.',5],
+  ['2.1.2','Password reset screens and emails','Request, confirmation and new-password screens, with the matching transactional email templates and expiry messaging.',4],
+  ['2.1.3','Role-routed application shells','Four shells with their own navigation and layout: client (Client_User), editor and administrator (Desk_user), QA reviewer (QA—Editor_user). Route guards read the role claim. Navigation only; the backend remains the enforcement point.',6],
+  ['2.1.4','Role-permission matrix tests','End-to-end tests asserting that each of the four account types is refused every route belonging to the other three, and that an authenticated account cannot reach another account’s resources.',5]]},
+ {c:'M2',g:'found',tasks:[
+  ['2.2.1','Dashboard API','One endpoint returning current credit balance, monthly package status, the active project list and the completed project list, each project carrying name, creation date, image count, current status and the tiers associated with its images.',6],
+  ['2.2.2','Dashboard screen','Client_User dashboard: project cards with status chips, separated active and completed sections, and the credit balance and package status panels, wired to the live endpoint from Week 4 and to the same contract against seeded data until then.',8],
+  ['2.2.3','Client-action versus internal-action states','A project awaiting the client — a Basic result ready to accept or send on, or a QA-approved result awaiting review — is presented distinctly from a project awaiting internal work in the editor or QA queue, because the two demand different calls to action.',4],
+  ['2.2.4','Identity suppression','A serialisation rule applied to every client-facing response that strips editor identity, QA identity, assignment detail and internal queue position. A test asserts the absence of these fields across every client endpoint.',2]]},
+ {c:'M3',g:'found',tasks:[
+  ['2.3.1','Project model and API','Project with owner, name, creation date and derived status. Create, list and detail endpoints, each behind an ownership guard. Project creation is an explicit step before any upload, per every version of the source flow.',6],
+  ['2.3.2','Create-project flow','Client_User creation screen and the transition into the upload step.',4],
+  ['2.3.3','Presigned multipart upload API','Initiate, part-signing, completion and abort endpoints. The API verifies project access before issuing any temporary upload permission — the browser never receives a credential it has not been authorised for. Part size, part count and expiry are configured; abort cleans up the incomplete transfer.',10]]}],
+ del:'A client logs in, sees their dashboard, creates a project, and the backend is ready to authorise direct browser uploads into it.',
+ acc:'FR-DASH.1–4, FR-UP.1, NFR-SEC.1, NFR-SEC.2',dep:'Week 1',blk:'Week 3 — there is nothing to upload into without a project'},
+
+{n:3,ms:1,t:'Batch upload, project detail and bracket detection',tracks:[
+ {c:'M0',g:'found',tasks:[
+  ['3.0.1','Continuous integration','On every pull request: lint, type check, unit tests and build. Branch protection requires a green pipeline before merge.',6],
+  ['3.0.2','Observability','Structured logging with correlation identifiers propagated from the API through the queue into the workers and the Python service, error tracking, and metrics covering queue depth, job duration and failure rate.',7],
+  ['3.0.3','Python service container','Container image for the Python and OpenCV service, internal service-to-service authentication so it is not reachable from outside the private network, and contract tests against the documented interface. The Python service holds no account or business logic.',7]]},
+ {c:'M2',g:'found',tasks:[
+  ['3.2.1','Project detail screen','Image grid with per-image status, exposure groups shown as groups with their member originals, thumbnails, and the per-image tier once selected.',8],
+  ['3.2.2','Activity history','A per-project chronological record of what has happened — uploaded, grouped, processed, tier selected, submitted, edited, reviewed, delivered — expressed in client-facing language with no internal identity.',6],
+  ['3.2.3','List controls and states','Filtering by status and tier, sorting, pagination, and complete empty, loading, error and partial-failure states across the dashboard and project detail.',6]]},
+ {c:'M3',g:'found',tasks:[
+  ['3.3.1','Batch uploader','Client_User upload screen: drag-and-drop and file picker, multi-file selection, per-file and per-part progress, automatic retry of failed parts with backoff, individual and bulk cancel, and a clear summary of what succeeded and what did not. Large sets transfer as multipart uploads.',10],
+  ['3.3.2','Upload verification and metadata','On completion the backend verifies each object exists with the expected size and checksum, then records the original file with capture time, exposure time, ISO, aperture, exposure bias and dimensions read from the embedded metadata. Processing jobs are scheduled only after verification succeeds.',6],
+  ['3.3.3','File limits','Configuration-driven accepted formats, maximum file size, maximum resolution, maximum files per batch and maximum images per project, validated both when a presigned permission is requested and again at completion.',4]]},
+ {c:'M4',g:'eng',tasks:[
+  ['3.4.1','Processing service scaffold','The Python and OpenCV service with a documented internal contract: given a set of original files, return group definitions and a rendered working-image key. Invoked by the Node worker, never called directly by the browser.',5],
+  ['3.4.2','Bracket detection from metadata','Clustering by capture time within a configurable window, combined with exposure-value delta analysis, to identify candidate bracketed sets — for example five frames of one room taken seconds apart at different exposure levels.',7],
+  ['3.4.3','Visual similarity confirmation','Feature matching and histogram comparison to confirm that a candidate set really is the same scene, guarding against the two failure modes the source material warns of: similar-looking rooms grouped wrongly, and missing metadata leaving frames ungrouped. A confidence score is recorded per group.',8]]},
+ {c:'M12',g:'found',tasks:[
+  ['3.12.1','Derivative pipeline','Sharp-based generation of thumbnails and web-scale previews for originals, working images and every later result, written to the thumbnails prefix and used by every grid and viewer in the product.',6],
+  ['3.12.2','Version model and lineage API','Delivered-version records with an incrementing version number, and an endpoint returning the complete lineage of any image — which original it came from, which working image, which results derive from it.',6],
+  ['3.12.3','Download service','Time-limited presigned download URLs issued only after the API authorises the request against the requesting account’s role and relationship to the file. No object is ever publicly readable.',5],
+  ['3.12.4','Retention policy engine','Configurable retention per file class, with the originals class hard-coded as exempt so no future configuration change can expose them to deletion.',3]]}],
+ del:'A 50-file batch uploads directly to storage, is verified, produces metadata-rich records, and the processing service identifies which frames belong to the same scene.',
+ acc:'FR-UP.2, FR-UP.3, FR-AI.1, FR-AI.2, FR-FILE.1, FR-FILE.3, NFR-SEC.2, NFR-SEC.3',dep:'Week 2',blk:'Week 4 — nothing can be merged before the groups exist'},
+
+{n:4,ms:1,t:'Exposure merge, tier selection, queue and ledger — Milestone 1 gate',tracks:[
+ {c:'M3',g:'found',tasks:[
+  ['4.3.1','Manual grouping override','A client-facing view of the detected groups with the ability to split a group, merge two groups, move a frame between groups, or mark a frame as standalone. Groups with a low confidence score are surfaced for confirmation first. This is the correction path the source material asks for, and what makes an uncertain automatic grouping recoverable rather than a dead end.',8],
+  ['4.3.2','Grouping override API','Endpoints backing the above, recording whether a group was detected automatically or confirmed by the client, and re-scheduling the merge when a grouping changes.',5],
+  ['4.3.3','Upload resumption and cleanup','Resuming an interrupted multipart transfer in a later session, and a scheduled job that aborts and cleans up transfers abandoned beyond a configured age.',4],
+  ['4.3.4','Upload end-to-end coverage','Automated coverage of a 50-file batch containing multiple brackets and standalone images, including an induced part failure and its retry.',3]]},
+ {c:'M4',g:'eng',tasks:[
+  ['4.4.1','Exposure alignment','Alignment across the bracket to correct for camera movement between frames, with handling for moving subjects so a person or a curtain that moved between exposures does not produce a ghost in the merged result.',6],
+  ['4.4.2','Merge and tone mapping','HDR merge and exposure-fusion producing the combined image, followed by tone mapping. Every parameter is configuration rather than a constant, because these need testing against real photographs — particularly mixed flash exposures, movement and window detail — and will be tuned in Week 5.',8],
+  ['4.4.3','Working image render and ready state','The merged result is rendered and written to the working prefix, a working-image record is created linking it to its exposure group, and it is marked ready for either AI editing or human editing — the state every subsequent step depends on.',4],
+  ['4.4.4','Progress endpoint','Per-group processing status for client polling, so the upload screen can show real progress rather than an unqualified spinner.',2]]},
+ {c:'M5',g:'flow',tasks:[
+  ['4.5.1','Tier model','Service selection records tied to a working image, with the tier enumeration covering Basic, Basic Plus, Standard and Advanced, and the selection timestamp.',3],
+  ['4.5.2','Tier options and pricing endpoint','Per working image, the available tiers with their credit cost and indicative turnaround, so the client chooses against real information rather than a bare label.',5],
+  ['4.5.3','Tier picker','The post-processing working-image grid with thumbnails and scene labels, a per-image tier picker, and bulk application across a multi-selection — since a project routinely contains a mix of tiers and setting them one at a time across fifty images is not workable.',9],
+  ['4.5.4','Selection gating','A working image cannot proceed to tier selection until pre-processing has completed successfully or the client has confirmed a manual grouping. Blocked images explain why, and failed groups link straight to the correction path.',3]]},
+ {c:'M9',g:'flow',tasks:[
+  ['4.9.1','Workflow models','Editing task, QA review and revision request records. The task’s source type carries the full enumeration from the outset — Basic Plus, Standard, Advanced, rejected Basic and rejected add-on — so every later consumer plugs in without a schema change.',4],
+  ['4.9.2','Task state machine','Guarded transitions through queued, assigned, in editing, in QA, QA rejected, client review, revision requested and complete. All transitions live in one service; an illegal transition throws and is logged. A result can never reach client review without passing QA, and a revision can never bypass it. Table-driven tests cover every legal and every illegal edge.',10],
+  ['4.9.3','Single entry point','One method creates an editing task, used by every producer without exception, idempotent on the combination of working image, source type and revision cycle so a path can neither duplicate a task nor silently drop one. An architecture test fails the build if a task is created anywhere else in the codebase. The SRS’s firmest structural requirement, built before any of its three consumers exist.',6]]},
+ {c:'M10',g:'flow',tasks:[
+  ['4.10.1','Ledger model','Credit ledger entries recording purchase, package allocation, reservation, charge and refund, each linked to the task, edit session or add-on job that caused it. Balance is always derived from the ledger and never stored as a mutable counter.',4],
+  ['4.10.2','Reserve, charge and release','The three operations that move credit, each inside one database transaction at serialisable isolation with a per-account lock and an idempotency key, so a retried request cannot double-spend and two concurrent submissions cannot spend the same credit.',10],
+  ['4.10.3','Concurrency coverage','A test suite that fires concurrent reservations against a balance sufficient for only one and asserts exactly one succeeds, plus retry-storm coverage against the idempotency keys.',3],
+  ['4.10.4','Balance surfacing and blocking','The live balance replaces the seeded value on the dashboard, and tier selection blocks with a clear explanation when the balance is insufficient, with no partial submission possible.',3]]}],
+ del:'A five-exposure bracket becomes one rendered working image; the client picks a tier from all four against a live balance; the shared queue and the credit ledger are built and proven before anything consumes them.',
+ acc:'FR-UP.4, FR-AI.3–5, FR-AI.7, FR-TIER.1–3, FR-TRAFFIC.1, FR-CREDIT.1, FR-CREDIT.2, NFR-PERF.1, NFR-MAIN.1, Business Rules 1, 4, 5, 7',
+ dep:'Week 3',blk:'Every module in Milestone 2 — the working image, the tier, the queue and the ledger are the four things each of them consumes'}
+];
+</script>
+<script>
+WEEKS.push(
+{n:5,ms:2,t:'Enhancement, add-on foundation, priority engine and payments',note:'The widest week of the programme: six tracks run concurrently because Milestone 1 delivered every prerequisite they depend on, and all six are independent of one another.',tracks:[
+ {c:'M4',g:'eng',tasks:[
+  ['5.4.1','Failure fallback presentation','When detection is uncertain or merging fails, the originals are presented ungrouped with a clear explanation and the manual bracket-confirmation path from Week 4, rather than the image sitting in an indefinite processing state. Failures are logged for monitoring with the reason attached.',9],
+  ['5.4.2','Reprocessing without re-upload','Re-running detection, grouping and merge from the retained originals after a grouping correction or a parameter change — the direct payoff of the retention rule, and the reason originals are kept rather than discarded once a working image exists.',6],
+  ['5.4.3','Tuning against the sample set','Parameter tuning across the supplied photographs, focused on the three conditions the source material flags as hardest: mixed flash exposures, movement between frames, and retaining detail in windows without flattening the interior.',5]]},
+ {c:'M5',g:'flow',tasks:[
+  ['5.5.1','Change and re-selection rules','Which tier changes are permitted before submission, what happens to a reserved credit when a tier changes, and the point after which the selection is locked.',5],
+  ['5.5.2','Project-level bulk assignment','Applying one tier across every image in a project or across a filtered subset, with a preview of the total credit cost before confirmation.',6],
+  ['5.5.3','Cost resolution and confirmation','Resolving the credit cost for the chosen tier against the account’s package entitlement and pay-as-you-go balance, and presenting a confirmation showing what will be consumed from each.',6],
+  ['5.5.4','Four-tier coverage','End-to-end coverage of selection, change and submission across Basic, Basic Plus, Standard and Advanced.',3]]},
+ {c:'M6',g:'eng',tasks:[
+  ['5.6.1','Enhancement provider adapter and benchmark','One internal interface taking a working image and returning an enhanced result, so the vendor behind it is swappable without touching anything else. Two candidate hosted services benchmarked against the sample set on output quality, resolution ceiling, latency against the 15-second target and cost per image, with a written recommendation and a recorded selection. The source material is explicit that this provider stays undecided until real images establish acceptable quality — this is where that decision gets made on evidence.',8],
+  ['5.6.2','Auto-enhance job','Selecting Basic enqueues the enhancement job automatically, with no button press: the client sees the enhanced result as a preview when they arrive at the studio. The result is written to its own storage key, leaving the working image untouched. A provider failure surfaces a visible delayed state, never an indefinite spinner.',7],
+  ['5.6.3','Edit session and adjustment recipe','The Basic edit session record holding the enhancement result path, the manual adjustment values and the client’s eventual decision. Adjustments are stored as a validated, versioned recipe keyed by control name — for example an exposure of 0.4, a contrast of 10 and a saturation of 5 — so the same recipe replays identically in the browser preview and in the full-resolution export.',5]]},
+ {c:'M8',g:'eng',tasks:[
+  ['5.8.1','Add-on job model','Add-on job records carrying the full five-type enumeration from the start, plus mask data, instruction text, room type and style — the union of what all five add-ons need, so adding the fourth and fifth requires no schema change.',4],
+  ['5.8.2','Unified add-on API','One API surface for every add-on: create a job with its mask or instruction, poll status, fetch the result, and record the client’s accept or reject decision. The source material is explicit that one common architecture should serve all five; this is that architecture.',7],
+  ['5.8.3','Provider adapter and evaluation','A provider interface behind which different hosted services can sit for different effects, plus an evaluation across all five effects on output quality and — critically for property photography — whether the generated result preserves the structure of the room or the building rather than inventing geometry.',9]]},
+ {c:'M9',g:'flow',tasks:[
+  ['5.9.1','Priority engine','Priority calculated from the five named inputs — monthly package status, service quality tier, delivery time or deadline, queue position, and editor availability — combined through weights held in configuration rather than in code, so the balance between them can be adjusted once real queue behaviour is observed without a release.',10],
+  ['5.9.2','Editor assignment','Assignment of the highest-priority task to an available editor, accounting for current workload and, for Advanced work, the seniority flag.',7],
+  ['5.9.3','Priority configuration API','Storage of the weight set with an administrator endpoint to read and update it, and a change history so a shift in queue behaviour can be traced to the configuration change that caused it.',3]]},
+ {c:'M10',g:'flow',tasks:[
+  ['5.10.1','Monthly packages','Package definitions with included credits and a renewal date, client enrolment, allocation on renewal, and a defined consumption order so included credits are drawn down before pay-as-you-go balance.',8],
+  ['5.10.2','Payment provider integration','Credit purchase and package subscription through a provider supported in the operating jurisdiction. Payment is confirmed only by a verified provider webhook, never by a browser redirect, and settlement is idempotent so a repeated webhook cannot credit an account twice.',9],
+  ['5.10.3','Purchase flow','Client-facing purchase of a credit bundle and subscription to a package, with confirmation and receipt.',3]]}],
+ del:'AI Auto Enhance produces previews; the add-on architecture and provider selection are settled; the queue prioritises and assigns; clients can buy credits and subscribe to a package.',
+ acc:'FR-AI.7, FR-TIER.1, FR-BASIC.1, FR-ADDON.1, FR-TRAFFIC.2, FR-TRAFFIC.3, FR-CREDIT.1, FR-CREDIT.3, FR-CREDIT.5, NFR-PERF.2, NFR-AVAIL.3, NFR-MAIN.1, NFR-MAIN.2',
+ dep:'Week 4',blk:'Weeks 6 to 9 across every editing and workflow track'},
+
+{n:6,ms:2,t:'WebGL preview, editor workspace, mask painting and QA review',tracks:[
+ {c:'M4',g:'eng',tasks:[
+  ['6.4.1','Performance tuning','Bringing detection, grouping, stacking and rendering for a bracket set of up to seven exposures within the 60-second target, with client-visible progress if a set runs longer.',7],
+  ['6.4.2','Independent scaling','Queue concurrency and worker sizing tuned so processing capacity grows independently of the web tier, as the architecture requires.',5],
+  ['6.4.3','Graceful degradation','If the engine is unavailable or errors, the affected task moves to a state the client can see and understand rather than leaving the interface in an indefinite loading state.',4],
+  ['6.4.4','Regression suite','An automated suite running the full sample set through detection, grouping and merge, comparing against recorded baselines so a later parameter change cannot silently degrade output quality.',4]]},
+ {c:'M6',g:'eng',tasks:[
+  ['6.6.1','WebGL preview core','The rendering pipeline: texture upload of a downscaled preview, the render loop, and binding of the adjustment recipe to shader uniforms so a slider change repaints immediately rather than round-tripping to the server.',8],
+  ['6.6.2','Tone controls','Brightness, exposure, contrast, highlights, shadows, whites and blacks implemented in the shader. Highlights and shadows operate on luminance ranges rather than as a global curve, which is what makes them useful on interior photography with bright windows.',8],
+  ['6.6.3','Shared viewer','A reusable viewer holding one zoom level and one pan offset, so any two images shown through it are compared at the identical position. Built once here and reused by the three-way view in Week 8, the QA comparison in this same week, and the add-on preview in Week 7.',4]]},
+ {c:'M7',g:'flow',tasks:[
+  ['6.7.1','Tier submission','Submitting a Basic Plus, Standard or Advanced image reserves the credit and creates exactly one task through the single entry point, both inside one transaction so a failed queue insert releases the reservation rather than stranding it.',6],
+  ['6.7.2','Editor queue screen','The Desk_user queue: the editor’s assigned work sorted by priority, showing tier, age, deadline and thumbnail, with claim and open actions and complete empty and loading states.',6],
+  ['6.7.3','Editor task workspace','Task detail carrying the client’s instructions, the working image, and the original exposures — the explicit reason the retention rule exists, since an editor fixing windows, lighting or other HDR problems may need the source frames. Every file is offered through a time-limited download link, with a download-all action. Editors work in their own desktop tools; the workspace provides the material and takes back the result.',8]]},
+ {c:'M8',g:'eng',tasks:[
+  ['6.8.1','Mask painting canvas','React Konva canvas with a brush of adjustable size and hardness, an eraser, undo and redo, clear, and a visible overlay of the painted region so the client can see exactly what is marked before submitting — a poorly marked region reliably produces a poor result and an avoidable rejection into the human queue.',10],
+  ['6.8.2','Mask export','The painted region is exported as a mask at the original image’s pixel dimensions, not the dimensions it was displayed at, and written to the masks prefix. Getting this wrong misaligns every generated result, so it carries its own coverage across zoom levels and viewport sizes.',5],
+  ['6.8.3','Object Removal','The first add-on: the working image and the mask are sent to the provider, the result is written to its own key with its lineage recorded, and the job’s progress and failure states are surfaced.',5]]},
+ {c:'M9',g:'flow',tasks:[
+  ['6.9.1','QA review screen','The QA—Editor_user review screen: the editor’s result against the source material — originals and working image — through the shared viewer with synchronised zoom and pan, so a reviewer compares the same region of both rather than eyeballing two independently positioned images.',9],
+  ['6.9.2','Approve and return','Approve advances the task to client review. Return requires comments, routes back to the same editor, and is capped at a configurable number of QA cycles before escalating to a lead editor. Every pass is recorded as its own review record.',6],
+  ['6.9.3','Advanced seniority restriction','An Advanced task can only be assigned to an editor flagged as experienced. Assignment to a non-senior editor is refused — including through a manual administrator action — unless the administrator explicitly force-overrides, in which case the override and its reason are logged.',5]]}],
+ del:'Sliders move an image live in the browser; an editor can take a task and see everything needed to work on it; a client can paint a mask and remove an object; a reviewer can compare and approve or return.',
+ acc:'FR-BASIC.2 (tone controls), FR-HUMAN.1 steps 1–4, FR-HUMAN.4, FR-ADDON.1, FR-ADDON.4, FR-TRAFFIC.3, FR-TRAFFIC.4, NFR-PERF.1, NFR-SCALE.1, NFR-AVAIL.3, NFR-USE.2, Business Rule 3',
+ dep:'Week 5',blk:'Week 7'},
+
+{n:7,ms:2,t:'Full control set, revision loop, two more add-ons and the admin console',tracks:[
+ {c:'M6',g:'eng',tasks:[
+  ['7.6.1','Colour controls','Temperature, tint, hue, saturation and vibrance in the shader. Temperature and tint operate in a colour space that keeps neutral surfaces neutral, which matters on interiors where mixed daylight and tungsten are routine. Vibrance is weighted away from already-saturated pixels so it does not wreck skin tones or oversaturate a lawn.',8],
+  ['7.6.2','Detail controls','Sharpening and clarity, the latter as a local-contrast pass rather than a global contrast change. These two, with highlights and shadows, are the controls flagged as beyond routine image operations, and they are implemented deliberately rather than approximated.',6],
+  ['7.6.3','Studio panel','The Client_User studio: grouped and collapsible slider sections, per-control and global reset, live numeric readout, keyboard adjustment, and an unsaved-changes guard on navigation. All fourteen controls are operable without documentation.',6]]},
+ {c:'M7',g:'flow',tasks:[
+  ['7.7.1','Result upload and QA submission','The editor uploads the finished file through a presigned upload, which creates a new delivered version, and submits it for QA through the guarded state machine.',7],
+  ['7.7.2','Client review screen','The Client_User review screen showing the QA-approved result against the working image through the shared viewer, with approve or request-revision, the latter requiring comments. No editor or QA identity appears anywhere on it.',7],
+  ['7.7.3','Revision loop','A revision request records its cycle number, then creates a new task through the single entry point, routed back to an editor and always back through QA before reaching the client a second time. QA cannot be skipped on a revision cycle under any path.',6]]},
+ {c:'M8',g:'eng',tasks:[
+  ['7.8.1','Result preview and decision','The generated result shown against the source through the shared viewer, with accept — which delivers and downloads — or reject, which creates a task through the same entry point every other human request uses. There is no add-on-specific queue anywhere in the system.',5],
+  ['7.8.2','Decluttering','Marking multiple unwanted items across a scene in one pass, with the provider removing them and reconstructing the background behind them — a general tidy-up across several small objects, as distinct from Object Removal’s single marked target.',7],
+  ['7.8.3','Lawn Replacement','Marking the dry or undesired grass area and selecting the desired appearance, with the provider regenerating that masked region as healthy grass while leaving the rest of the photograph unchanged — the boundary between the masked and unmasked region being the quality-critical part.',8]]},
+ {c:'M9',g:'flow',tasks:[
+  ['7.9.1','Administrator console','The Desk_user administrator view: live queue monitoring with status, age, tier and deadline indicators, filtering across every dimension, and queue-health signals such as depth by tier and oldest unassigned task.',8],
+  ['7.9.2','Editor roster','Editor records with seniority flags, availability and current workload, maintained by an administrator. Growing the editor pool is a roster change, not a code change.',6],
+  ['7.9.3','Reassignment and override','Manual reassignment of a task to a different editor and manual priority override, both recorded in an audit trail with the acting administrator and the reason.',6]]},
+ {c:'M10',g:'flow',tasks:[
+  ['7.10.1','Refund and release policy','The rules governing what happens to a reserved credit in every outcome — rejected AI result sent to a human, cancelled project, revision request, task abandoned — implemented as one configurable policy class rather than scattered through the workflow, so the business rule can change without touching the workflow code.',7],
+  ['7.10.2','Charge finalisation','A reservation converts to a charge on client approval and is released back to the balance if the task is cancelled before an editor begins work. Both paths are transactional and idempotent.',6],
+  ['7.10.3','Invoicing','Account statements, ledger export, and receipts for purchases and package renewals.',7]]}],
+ del:'All fourteen controls work; the revision loop closes; three of the five add-ons produce results; administrators can see and steer the queue.',
+ acc:'FR-BASIC.2 (complete), FR-HUMAN.1 steps 5–7, FR-HUMAN.5, FR-TRAFFIC.5, FR-ADDON.2, FR-ADDON.3, FR-ADDON.7, FR-CREDIT.3, FR-CREDIT.4, NFR-USE.1, NFR-SCALE.2, Business Rules 5, 7',
+ dep:'Week 6',blk:'Week 8'},
+
+{n:8,ms:2,t:'Export parity, Advanced behaviour, Object Manipulation, version history — Milestone 2 gate',tracks:[
+ {c:'M6',g:'eng',tasks:[
+  ['8.6.1','Three-way view','Toggling between the original working image, the AI-enhanced result and the client’s manual edit, all through the shared viewer so all three are seen at an identical zoom level and pan position. Keyboard shortcut and a hold-to-compare gesture.',6],
+  ['8.6.2','Full-resolution export','On save or export, a worker applies the stored recipe to the full-resolution image. Routine operations run through Sharp; the remaining photographic operations reuse the same arithmetic as the shader so the two agree rather than approximate each other.',9],
+  ['8.6.3','Preview-to-export parity','An automated test comparing the browser preview against the exported full-resolution result across the reference image set at a set of representative recipes, asserting a per-channel difference within an agreed numeric tolerance. The gap between a browser preview and a server-side export is a known risk in this stack; this test is how it is closed rather than assumed away.',5]]},
+ {c:'M7',g:'flow',tasks:[
+  ['8.7.1','Advanced queue behaviour','Advanced tasks placed ahead of Basic Plus and Standard tasks of equal age, with delivery deadlines attached and surfaced to both editor and administrator.',6],
+  ['8.7.2','Tier differentiation','The interface and pricing differences between Basic Plus, Standard and Advanced expressed consistently across selection, submission, the editor workspace and client-facing status.',5],
+  ['8.7.3','Editor performance analytics','Throughput per editor, QA pass rate on first submission, average cycle time and revision rate, presented to administrators — the data that later informs how the priority weights and the editor pool are tuned.',9]]},
+ {c:'M8',g:'eng',tasks:[
+  ['8.8.1','Object Manipulation','The one add-on requiring instruction beyond a marked region: a marked object plus a short instruction — move, replace, add, reposition — drawn from a constrained action set with an optional free-text qualifier, since the model needs to know what change to make, not only where.',9],
+  ['8.8.2','Instruction handling','Validation of the instruction against the permitted action set, and per-provider request construction translating the internal instruction format into whatever each provider expects — keeping one consistent internal API while the providers behind it differ.',5],
+  ['8.8.3','Job status and failure surfacing','Progress, queue position and failure reasons surfaced to the client for every add-on type, with a clear recovery action on failure rather than a dead end.',6]]},
+ {c:'M9',g:'flow',tasks:[
+  ['8.9.1','Service-level dashboards','Per-tier turnaround measured against the promised delivery time, breach and near-breach alerting, and trend reporting for administrators.',8],
+  ['8.9.2','Load balancing across editor pools','Distributing assignment across the available editor pool by workload and seniority rather than round-robin, so a single editor does not accumulate the queue while others idle.',6],
+  ['8.9.3','Queue end-to-end coverage','Automated coverage proving all four tiers, a rejected Basic AI result and a rejected add-on result all enter the same queue, are prioritised together, and are assigned, reviewed and delivered through one pipeline.',6]]},
+ {c:'M12',g:'found',tasks:[
+  ['8.12.1','Full version history','Every revision cycle produces a new delivered version rather than overwriting the previous one, so both the client and internal staff can compare versions if a delivery is disputed.',7],
+  ['8.12.2','Version comparison view','A client-facing comparison between any two versions of a delivered image through the shared viewer at matched zoom and position, with the revision comments that produced each.',8],
+  ['8.12.3','Version access control and audit','Version-level access restricted to the owning client and to staff actively assigned to a related task, with an audit trail recording every access to a delivered file.',5]]}],
+ del:'What the client previews is what the client downloads; Advanced behaves as a priority tier with senior routing; four of five add-ons work; every revision is retained and comparable.',
+ acc:'FR-BASIC.3, FR-HUMAN.2–4, FR-ADDON.5, FR-TRAFFIC.1, FR-TRAFFIC.2, FR-FILE.2, NFR-SEC.2, NFR-SCALE.2, Business Rules 3, 4',
+ dep:'Week 7',blk:'Week 9'}
+);
+</script>
+<script>
+WEEKS.push(
+{n:9,ms:3,t:'Virtual Staging, Basic completion, notifications',tracks:[
+ {c:'M6',g:'eng',tasks:[
+  ['9.6.1','Three client options','The three outcomes the source flow settles on as Option C, presented at any point after the AI Auto Enhance preview: accept the AI result as it is and download; adjust with the studio controls, save and download; or hand the image to a human editor. Each outcome is recorded on the edit session.',7],
+  ['9.6.2','Send to human editor','An explicit confirmation of the additional credit or price before the task is created, then the image — in whatever state the client left it, AI-enhanced or manually adjusted — handed to the same entry point Standard and Advanced use. No separate Basic pipeline exists anywhere in the system.',5],
+  ['9.6.3','Satisfaction gate','Where the client does not explicitly choose one of the three options, the default decision point is a simple satisfied yes-or-no: yes completes and downloads, no routes into the human editing queue.',3],
+  ['9.6.4','Presets and saved edit styles','Saving a recipe as a named preset and applying it across other images in the project, so a client editing thirty photographs of one property does not rebuild the same adjustment thirty times.',5]]},
+ {c:'M7',g:'flow',tasks:[
+  ['9.7.1','Human-tier end-to-end coverage','Automated coverage of Basic Plus, Standard and Advanced from submission through assignment, editing, QA, client review, one full revision cycle and final delivery, asserting that originals remain intact at every step and that QA is never bypassed.',8],
+  ['9.7.2','Workload balancing and deadlines','Editor workload visibility with deadline surfacing across the queue and the workspace, and warnings as a promised turnaround approaches.',6],
+  ['9.7.3','Rejected-AI sources in the workspace','When a task originates from a rejected AI result — either a Basic enhancement the client declined or a rejected add-on — the editor workspace presents the original exposures, the working image, the AI attempt and any mask the client painted, together with the client’s reason. The editor starts from the full context rather than from the failed output alone.',6]]},
+ {c:'M8',g:'eng',tasks:[
+  ['9.8.1','Virtual Staging','The multi-step add-on: select an empty-room image, select a room type — living room, bedroom, office — select a style — modern, luxury, minimal — then generate, with the standard accept-or-reject outcome. It differs from the other four in requiring a sequence of selections rather than a single mark-and-generate, and in being judged on whether the generated furniture sits in plausible perspective within the real room.',10],
+  ['9.8.2','Add-on chaining','Applying more than one add-on to the same image before delivery — for example decluttering a room and then staging it — with each step’s lineage recorded so the chain can be traced and any step rejected into the human queue with its full history.',6],
+  ['9.8.3','Structural-fidelity evaluation harness','A repeatable evaluation across the sample set checking that generated results preserve the property’s actual structure — walls, windows, floor lines, exterior geometry — rather than inventing it, since a structurally wrong result is worse than no result in property marketing.',4]]},
+ {c:'M10',g:'flow',tasks:[
+  ['9.10.1','Package lifecycle','Renewal, proration, upgrade and downgrade between packages, with correct handling of unused included credits across the boundary.',7],
+  ['9.10.2','Balance management','Credit expiry rules, low-balance alerts, and optional automatic top-up, so a client does not discover an empty balance mid-project.',6],
+  ['9.10.3','Reconciliation and integrity','Financial reconciliation reports against provider settlement records, and a scheduled ledger integrity check asserting that every derived balance still reconciles to the sum of its entries.',7]]},
+ {c:'M11',g:'flow',tasks:[
+  ['9.11.1','Notification model and feed','Notification records with a read state, an in-app feed for every role, and endpoints to list and mark read.',6],
+  ['9.11.2','Transactional email','Email dispatch with a template for each event: an AI result ready for review, a human-edited result ready for review, a revision completed, a task assigned to an editor or QA reviewer, and a delivery ready to download. Delivery failures are logged and retried rather than swallowed.',8],
+  ['9.11.3','Client progress states','The client-facing states — processing, with editor, in review, ready for review, complete — surfaced consistently across the dashboard, project detail and image detail, so the client always knows where a photograph is without asking.',6]]}],
+ del:'All five add-ons produce results; the Basic Option C flow is complete end to end; billing handles the full package lifecycle; everyone is told when something needs them.',
+ acc:'FR-BASIC.4–7, FR-HUMAN.1, FR-HUMAN.5, FR-ADDON.6, FR-CREDIT.3, FR-CREDIT.4, SRS §3.11, Business Rules 2, 4, 5',
+ dep:'Week 8',blk:'Week 10'},
+
+{n:10,ms:3,t:'Production infrastructure, hardening, live status, delivery — Feature freeze',note:'The last week of feature development. At its close the product is functionally complete and the codebase enters freeze.',tracks:[
+ {c:'M0',g:'found',tasks:[
+  ['10.0.1','Production container images','Multi-stage images for the React application, the NestJS API, the Node worker and the Python processing service, each deployed as its own service so the processing engines scale independently of the web tier.',6],
+  ['10.0.2','Continuous deployment','On merge: build and publish images, apply database migrations, deploy to staging. A documented and rehearsed rollback path for both the application and the migration.',7],
+  ['10.0.3','Managed services','Managed PostgreSQL and managed Redis provisioned and configured — sizing, connection pooling, backup schedule, retention window, network isolation and credential rotation.',7]]},
+ {c:'M8',g:'eng',tasks:[
+  ['10.8.1','Engine hardening','Retry policy per provider, failover to an alternate provider where one is configured, per-job cost tracking, and rate-limit handling that queues rather than fails.',7],
+  ['10.8.2','All-add-on coverage','End-to-end coverage of all five add-ons, each exercising both outcomes — accepted and downloaded, and rejected into the shared queue, assigned, edited, QA-reviewed and delivered.',7],
+  ['10.8.3','Add-on performance tuning','Bringing generation within the 30-second target for the mark-and-generate add-ons, with Virtual Staging held to its own confirmed target given the heavier generation it performs.',6]]},
+ {c:'M9',g:'flow',tasks:[
+  ['10.9.1','Priority calibration','Calibrating the five configured weights against the agreed business rule, with a simulation harness that replays a synthetic queue under a candidate weight set so the effect of a change is visible before it is applied.',6],
+  ['10.9.2','Queue resilience','Stuck-task detection with automatic reassignment, dead-letter review with an administrator action to requeue, and reconciliation so no task can be lost between the queue and the database.',7],
+  ['10.9.3','Audit log','A complete administrator audit log — assignments, reassignments, priority overrides, seniority changes, configuration changes and force-overrides — each with actor, timestamp and reason.',7]]},
+ {c:'M11',g:'flow',tasks:[
+  ['10.11.1','Live status','Server-sent events replacing polling for queue status, processing progress and result-ready events, with automatic reconnection and a polling fallback where the connection cannot be held. Polling was sufficient to build against; live updates are what the multi-actor workflow actually needs, since several people wait on the same state change.',8],
+  ['10.11.2','Digests and preferences','Daily digest emails and per-account notification preferences by channel and event type.',6],
+  ['10.11.3','Staff notifications and escalation','Assignment notifications to editors and QA reviewers, QA-rejection notifications back to the editor, and escalation alerts to a lead on cycle-cap breach or an approaching deadline.',6]]},
+ {c:'M12',g:'found',tasks:[
+  ['10.12.1','Project archive export','A worker building a ZIP of a project’s delivered files, with the client notified when it is ready and the archive served through a time-limited private link. Large projects are built asynchronously rather than held open on a request.',7],
+  ['10.12.2','Delivery packaging','File naming conventions, output format and quality options, and embedded metadata on delivered files.',6],
+  ['10.12.3','Retention execution','The retention policy running as a scheduled job across working images, superseded revisions and derivatives, with the originals prefix excluded from every rule — verified by a test that runs the policy against a seeded project and asserts every original survives.',7]]}],
+ del:'The platform is feature complete, deployable as four independently scalable services, resilient in its queue, live in its status updates, and complete in its delivery path.',
+ acc:'FR-ADDON.1–7 (complete), FR-FILE.1–3, FR-TRAFFIC.2, SRS §3.11, SRS §4.1 (download), NFR-PERF.3, NFR-SCALE.1, NFR-SCALE.2, NFR-MAIN.1, NFR-MAIN.2',
+ dep:'Week 9',blk:'Feature freeze — Sunday 6 December 2026'},
+
+{n:11,ms:3,t:'System testing, security, load and production build',tracks:[
+ {c:'TST',g:'ship',h:60,tasks:[
+  ['11.T.1','System integration testing','Full regression across all thirteen tracks and every cross-module boundary: upload into pre-processing, pre-processing into tier selection, tier selection into the queue, the queue into editing and QA, both AI engines into the shared queue, credits across every path that consumes them, and versions across every path that produces one. Includes the paths that only appear in combination — a rejected add-on on an image that already carries a manual edit, a revision on a chained add-on result, a package boundary crossed mid-project.',14],
+  ['11.T.2','Cross-browser verification','Current Chrome, Safari, Edge and Firefox on desktop, and mobile web for the client-facing application. Particular attention to the WebGL studio and the Konva mask canvas, the two most rendering-sensitive surfaces in the product.',8],
+  ['11.T.3','Performance verification','Measurement against all three targets on the reference set: pre-processing within 60 seconds for a bracket of up to seven exposures, an auto-enhance preview within 15 seconds, and an add-on result within 30 seconds. Actual figures recorded; any miss logged with its identified cause and a remediation item.',10],
+  ['11.T.4','Security pass','The complete role-permission matrix across all four account types and every endpoint; verification that storage is encrypted at rest and enforced in transit; the bucket confirmed private with no public access path; presigned link expiry verified including replay after expiry; confirmation that image access is limited to the owning client and to staff actively assigned to a related task; a secrets audit confirming every credential is supplied by environment and none is committed; and a dependency vulnerability scan.',12],
+  ['11.T.5','Load testing','Concurrent upload, concurrent pre-processing, concurrent studio sessions and sustained queue throughput, run against the confirmed volume assumptions, with the web tier and the processing engines measured separately so a bottleneck is attributed to the right service.',8],
+  ['11.T.6','Defect remediation, round one','Triage and fix of everything found above, prioritised by severity, with a regression test added for each defect fixed.',8]]},
+ {c:'DEP',g:'ship',h:40,tasks:[
+  ['11.D.1','Staging build and soak','The complete stack deployed to staging and run continuously under synthetic load for the remainder of the week, surfacing the class of problem — connection exhaustion, memory growth, queue drift, token expiry — that only appears over time.',10],
+  ['11.D.2','Production infrastructure','Production environment built with the web tier, API, Node workers and Python processing service as separately scalable units, autoscaling policies set per service, and object storage configured with the durability the retention rule requires.',10],
+  ['11.D.3','Backup and disaster recovery','Database backup schedule and retention configured, a restore rehearsed and timed against a real snapshot, object-storage durability and versioning confirmed, and recovery objectives documented.',8],
+  ['11.D.4','Monitoring, alerting and runbook','Dashboards for the application, the queue and the processing engines; alerts on error rate, queue depth, job failure rate, provider failure and deadline breach; and an on-call runbook covering the top failure modes with their diagnosis and remedy.',12]]}],
+ del:'Every module tested together, measured, hardened and load-proven; production infrastructure standing and monitored; staging soaking.',
+ acc:'NFR-PERF.1–4, NFR-SCALE.1, NFR-SCALE.2, NFR-AVAIL.1–3, NFR-SEC.1–3, NFR-PORT.1',
+ dep:'Week 10 and the feature freeze holding',blk:'Week 12'},
+
+{n:12,ms:3,t:'UAT, go-live and handover — Milestone 3 gate',tracks:[
+ {c:'TST',g:'ship',h:40,tasks:[
+  ['12.T.1','User acceptance testing','Scripted UAT executed on staging with real accounts in all four roles, covering every exit criterion from all three milestones: registration through to download on Basic; the full human flow on each of Basic Plus, Standard and Advanced including a revision; each of the five add-ons through both accept and reject; credit purchase, package subscription and consumption; and the notification and delivery paths. Observations recorded against each criterion.',16],
+  ['12.T.2','Defect remediation, round two','Triage and fix of UAT findings, prioritised by whether they block go-live, each with a regression test. Anything not blocking is logged with an owner rather than absorbed silently.',14],
+  ['12.T.3','Production smoke and verification','Post-deployment verification in production: authentication across all four roles, an upload through to a rendered working image, a tier selection with credit movement, a queue submission through to QA, one add-on generation, a delivery download, and confirmation that notifications and monitoring are firing.',10]]},
+ {c:'DEP',g:'ship',h:60,tasks:[
+  ['12.D.1','Production deployment and go-live','The release executed against the rehearsed plan: migrations applied, services deployed in dependency order, health verified at each step, with the rollback path standing by throughout.',14],
+  ['12.D.2','Configuration and onboarding','Production configuration seeded — tier definitions and pricing, package definitions, priority weights, file limits, retention rules, QA cycle caps — and the editor and QA roster created with seniority flags set.',10],
+  ['12.D.3','Documentation','Deployment runbook, environment variable reference, API documentation, the data model, the task state machine as a reference diagram, and the operational procedures for the recurring administrative actions.',12],
+  ['12.D.4','Operational training material','Role-based guides for administrators, editors and QA reviewers covering the queue, the workspace, the review flow, the escalation path and the priority configuration.',10],
+  ['12.D.5','Gate, handover and closure','Final demonstration against the Milestone 3 exit criteria; handover of the documentation set, credentials and monitoring access; closure of the open-issue register with every item marked resolved or carried with a named owner; written sign-off.',14]]}],
+ del:'ProEdits live in production, verified, documented, staffed and handed over.',
+ acc:'Every requirement in the traceability table, demonstrated in production',
+ dep:'Week 11',blk:'—'}
+);
+</script>
+<script>
+const PHASE=[
+ ['M0','Platform &amp; Infrastructure','found','Monorepo with strict TypeScript, linting and commit conventions; local Docker Compose across database, cache and object storage; NestJS skeleton with validated configuration, global validation, error mapping and health checks; Prisma migration workflow; React application shell with token refresh; design system from Figma; job queue with separate worker processes, retry, backoff and dead-letter handling; continuous integration; structured logging, correlation identifiers and metrics; containerised Python service with internal service authentication','—','Production container images for the web application, API, workers and Python service; continuous deployment to staging with migration on deploy and a documented rollback path; managed PostgreSQL and managed Redis provisioning','1, 2, 3, 10',80],
+ ['M1','Accounts &amp; Authentication','found','User model with four roles and a seniority flag; register, login, refresh and logout; strong password hashing; short-lived access token with rotating refresh; role guards and an ownership guard; password reset and account recovery with a time-limited token; login, registration and reset screens; role-routed application shells for all four account types; full role-permission matrix tests','—','—','1, 2',40],
+ ['M2','Client Dashboard','found','Dashboard API returning credit balance, monthly package status, active and completed project lists with counts; dashboard screen with project cards carrying name, date, image count, status and tier; distinction between projects awaiting client action and those awaiting internal action; suppression of editor and QA identity in every client-facing response; project detail screen with image grid, per-image status and group view; per-project activity history; filtering, sorting, pagination and complete empty, loading and error states','—','—','2, 3',40],
+ ['M3','Project Creation &amp; Upload','found','Project model with create, list and detail endpoints under ownership guards; create-project flow; presigned multipart upload with initiate, part signing, completion and abort, authorised against project access before any temporary permission is issued; drag-and-drop batch uploader with multi-select, per-file and per-part progress, automatic retry with backoff, and cancel; upload verification with capture-metadata extraction; configurable format, size, resolution and count limits validated on both request and completion; client-side manual bracket grouping override; upload resumption across sessions and cleanup of orphaned transfers','—','—','2, 3, 4',60],
+ ['M4','AI Pre-Processing Engine','eng','Python and OpenCV service with a documented internal contract; bracket detection from capture time and exposure-value delta; scene grouping confirmed by feature and histogram similarity with a recorded confidence score; exposure alignment with ghost handling; HDR merge and exposure fusion with tone mapping and configurable parameters; working-image render to storage with a ready state; per-group progress endpoint','Client-facing fallback presenting originals ungrouped for manual bracket confirmation when detection is uncertain or fails; reprocessing a scene from retained originals without re-upload; tuning against the client sample set for mixed flash, subject movement and window detail; performance tuning to the 60-second target; independent scaling of the engine with tuned queue concurrency; graceful degradation to a visible delayed state; a regression suite across the sample set','—','3, 4, 5, 6',80],
+ ['M5','Service Tier Selection','flow','Tier model covering all four tiers; tier options and pricing endpoint per working image; tier picker on the post-processing working-image grid, per image and applied in bulk across a selection; gating that prevents tier selection until pre-processing has succeeded or a grouping has been confirmed','Tier change and re-selection rules before submission; project-level bulk assignment; tier-to-credit cost resolution with an explicit confirmation step; end-to-end coverage across all four tiers','—','4, 5',40],
+ ['M6','Basic Tier — AI &amp; Self Editing','eng','—','Enhancement provider adapter with a two-candidate benchmark against the sample set; auto-triggered AI Auto Enhance writing to its own storage key; edit-session model with a validated adjustment-recipe schema; WebGL preview engine with texture pipeline and recipe binding; tone controls — brightness, exposure, contrast, highlights, shadows, whites, blacks; colour controls — temperature, tint, hue, saturation, vibrance; detail controls — sharpening, clarity; shared zoom and pan viewer; grouped slider panel with per-control reset, numeric readout and an unsaved-changes guard; three-way view toggle at matched position; full-resolution export worker; preview-to-export parity test with a numeric tolerance','Three client options — accept the AI result, save and download a manual edit, or send to a human editor; credit confirmation before handoff with routing through the shared pipeline; satisfaction gate default path; presets and saved edit styles','5, 6, 7, 8, 9',100],
+ ['M7','Human Edited Tiers','flow','—','Tier submission for Basic Plus, Standard and Advanced reserving credit and creating exactly one task through the shared entry point; priority-sorted editor queue; editor task workspace exposing client instructions, the working image and the original exposures through time-limited download links; result upload creating a new delivered version and submission for QA; client review screen with approve or request-revision; revision loop returning through an editor and then QA; Advanced high-priority queue behaviour with delivery deadlines; tier differentiation in interface and pricing; editor performance analytics covering throughput, QA pass rate and cycle time','End-to-end coverage across Basic Plus, Standard and Advanced including revisions; editor workload balancing with deadline surfacing; handling of rejected-AI sources in the workspace, presenting the original, the AI attempt and any mask together','6, 7, 8, 9',80],
+ ['M8','AI Add-On Engine','eng','—','Add-on job model carrying the full five-type enumeration; one unified internal add-on API for creation, status, result and client decision; provider adapter interface with evaluation across all five effects; React Konva canvas with brush, size, hardness, eraser, undo, redo and clear; mask export at the original image’s pixel dimensions; Object Removal provider integration with worker and result storage; result preview with accept and reject, rejection entering the shared queue; Decluttering with multi-item marking and scene reconstruction; Lawn Replacement with region marking and appearance selection; Object Manipulation with a marked region plus a short instruction from a constrained action set; instruction validation and per-provider request construction; job status, progress and failure surfacing','Virtual Staging with empty-room selection, room type, style and generation; add-on chaining across one image before delivery; a result-evaluation harness for structural fidelity; engine hardening with retries, provider failover and cost tracking; end-to-end coverage of all five add-ons including reject-to-queue for each; performance tuning to the 30-second target','5, 6, 7, 8, 9, 10',120],
+ ['M9','Traffic Mgmt, Assignment &amp; QA','flow','Task, QA review and revision request models; a guarded state machine with table-driven coverage of every legal and illegal transition; the single entry point for task creation, idempotent per source, enforced by an architecture test','Priority engine with five configurable weighted inputs; editor assignment accounting for availability and seniority; priority rule configuration with an administrator API; QA review screen with synchronised source-and-result comparison; approve and return-with-comments, with a cycle cap and lead escalation; restriction of Advanced work to senior editors with a logged force-override; administrator console for queue monitoring with age and deadline indicators; editor roster, seniority flags and availability management; manual reassignment and priority override with an audit trail; service-level dashboards with per-tier turnaround and breach alerting; load balancing across editor pools; end-to-end queue coverage across all four tiers and both rejected-AI paths','Priority formula calibration against the agreed weights; queue resilience with stuck-task detection, reassignment and dead-letter review; administrator audit log and configuration change history','4, 5, 6, 7, 8, 10',120],
+ ['M10','Credits &amp; Package Accounting','flow','Credit ledger model with a derived balance; reserve, charge and release inside serialisable transactions with idempotency keys; a concurrency suite proving two requests cannot spend the same credit; balance display and insufficient-credit blocking','Package model with allocation, renewal and a defined consumption order against included credits; payment provider integration with verified webhook handling and idempotent settlement; purchase flow for credit bundles and package subscription; refund and release rules as a configurable policy; charge finalisation on approval and release on pre-edit cancellation; invoicing with statements, ledger export and receipts','Package renewal, proration, upgrade and downgrade; credit expiry, low-balance alerts and automatic top-up; financial reconciliation reporting and ledger integrity checks','4, 5, 7, 9',80],
+ ['M11','Notifications','flow','—','—','Notification model with an in-app feed and read state; transactional email service with a template for every event; client progress states surfaced across the dashboard and project detail; server-sent events replacing polling for live status; digest emails and notification preferences; editor and QA assignment notifications and escalation alerts','9, 10',40],
+ ['M12','File &amp; Version Management','found','Object-storage configuration with a private policy, encryption and cross-origin rules for direct browser upload; storage service implementing the eight-class key convention; file-lineage schema linking originals, working images and delivered versions; retention guard preventing deletion of originals, with lifecycle exclusion and an automated test; thumbnail and preview derivative pipeline; delivered-version model with an incrementing version number and a lineage endpoint; presigned time-limited download service under backend authorisation; configurable retention policy per file class','Full version history across every revision; client-facing version comparison view; version-level access control and audit trail','Per-project ZIP export worker with completion notification; delivery packaging with naming conventions, format options and embedded metadata; retention policy execution with lifecycle rules that exclude the originals prefix','1, 3, 8, 10',80],
+ ['—','System Test &amp; UAT','ship','—','—','System integration testing across every module; cross-browser verification on desktop and mobile web; performance verification against all three targets; full security pass covering the role matrix, encryption, bucket policy, link expiry, secrets and dependencies; load testing; two rounds of defect remediation; UAT execution with real accounts in every role; post-deployment smoke tests','11, 12',100],
+ ['—','Deployment &amp; Handover','ship','—','—','Staging environment build and soak; production infrastructure with the web tier scaling independently of the processing engines; backup, restore and disaster-recovery verification; monitoring, alerting and an on-call runbook; production deployment and go-live; data seeding, editor roster onboarding and package configuration; deployment runbook, environment reference and API documentation; operational training materials for administrator, editor and QA roles; gate, handover and closure of the open-issue register','11, 12',100]
+];
+const TIMELINE=[
+ [1,'28 Sep – 4 Oct 2026',1,'M0, M1, M12',60,60,'Running platform, four-role authentication, storage with original retention enforced'],
+ [2,'5 – 11 Oct 2026',1,'M0, M1, M2, M3',80,140,'Client application shell, dashboard, project creation, presigned upload API'],
+ [3,'12 – 18 Oct 2026',1,'M0, M2, M3, M4, M12',100,240,'Batch upload working; bracket detection and grouping operational'],
+ [4,'19 – 25 Oct 2026',1,'M3, M4, M5, M9, M10',100,340,'<b>Working image rendered; four-tier selection; shared queue and ledger live — Gate Fri 23 Oct</b>'],
+ [5,'26 Oct – 1 Nov 2026',2,'M4, M5, M6, M8, M9, M10',120,460,'AI Auto Enhance, add-on foundation, priority engine, packages and payments'],
+ [6,'2 – 8 Nov 2026',2,'M4, M6, M7, M8, M9',100,560,'WebGL preview, editor workspace, mask painting, QA review'],
+ [7,'9 – 15 Nov 2026',2,'M6, M7, M8, M9, M10',100,660,'Full control set, revision loop, three add-ons, administrator console'],
+ [8,'16 – 22 Nov 2026',2,'M6, M7, M8, M9, M12',100,760,'<b>Both editing engines and the full human pipeline operational — Gate Fri 20 Nov</b>'],
+ [9,'23 – 29 Nov 2026',3,'M6, M7, M8, M10, M11',100,860,'Virtual Staging, add-on chaining, Basic options complete, notifications'],
+ [10,'30 Nov – 6 Dec 2026',3,'M0, M8, M9, M11, M12',100,960,'<b>▲ Feature freeze — production infrastructure, delivery packaging, live status</b>'],
+ [11,'7 – 13 Dec 2026',3,'System Test, Deployment',100,1060,'Integration, performance, security, load testing; staging soak; production build'],
+ [12,'14 – 20 Dec 2026',3,'System Test, Deployment',100,1160,'<b>UAT signed, production go-live, handover — Gate Fri 18 Dec</b>']
+];
+const EFFORT=[
+ ['M8 — AI Add-On Engine','eng',120,'5, 6, 7, 8, 9, 10'],
+ ['M9 — Traffic Management, Assignment &amp; QA','flow',120,'4, 5, 6, 7, 8, 10'],
+ ['M6 — Basic Tier (AI + Self Editing)','eng',100,'5, 6, 7, 8, 9'],
+ ['System Test &amp; UAT','ship',100,'11, 12'],
+ ['Deployment &amp; Handover','ship',100,'11, 12'],
+ ['M0 — Platform &amp; Infrastructure','found',80,'1, 2, 3, 10'],
+ ['M4 — AI Pre-Processing Engine','eng',80,'3, 4, 5, 6'],
+ ['M7 — Human Edited Tiers','flow',80,'6, 7, 8, 9'],
+ ['M10 — Credits &amp; Package Accounting','flow',80,'4, 5, 7, 9'],
+ ['M12 — File &amp; Version Management','found',80,'1, 3, 8, 10'],
+ ['M3 — Project Creation &amp; Upload','found',60,'2, 3, 4'],
+ ['M1 — Accounts &amp; Authentication','found',40,'1, 2'],
+ ['M2 — Client Dashboard','found',40,'2, 3'],
+ ['M5 — Service Tier Selection','flow',40,'4, 5'],
+ ['M11 — Notifications','flow',40,'9, 10']
+];
+const LAYER=[
+ ['Backend','NestJS API, Prisma and PostgreSQL, the workflow state machine, credits and the ledger, queue orchestration, versioning, notifications, storage and authorisation',398],
+ ['Frontend','React client application, the four role interfaces, the WebGL editing studio, the Konva mask canvas, the shared viewer, staff dashboards and consoles',342],
+ ['Test &amp; deployment','Weeks 11–12 in full',200],
+ ['Image processing','Python and OpenCV pre-processing, Sharp derivatives and full-resolution export, hosted AI provider adapters and evaluation',140],
+ ['Infrastructure','Containerisation, local and production environments, continuous integration and deployment, observability, managed services',80]
+];
+const MSEFFORT=[['Milestone 1 — Weeks 1–4',121,114,45,60,0,340],['Milestone 2 — Weeks 5–8',199,146,75,0,0,420],['Milestone 3 — Weeks 9–12',78,82,20,20,200,400],['Total',398,342,140,80,200,1160]];
+const SEQ=[
+ [1,'Accounts and roles','1–2','Everything else requires authenticated actors and enforced permissions'],
+ [2,'Upload and storage, including original file retention','1–4','Nothing exists to process without files, and the retention rule must be structural rather than retrofitted'],
+ [3,'AI Pre-Processing Engine','3–6','Nothing downstream has a working image without it; every tier and every add-on operates on its output'],
+ [4,'Service tier selection','4–5','Requires a ready working image to select against'],
+ [5,'Traffic management, editor assignment and QA','4–8, 10','Built against the simplest human path first, before three different sources feed it'],
+ [6,'Basic tier flow','5–9','Built after the queue exists, so its send-to-human path routes into a pipeline that is already proven rather than one built to receive it'],
+ [7,'Add-on engine','5–10','Object Removal first, since the brush-and-mask input it establishes is reused directly by Decluttering, Lawn Replacement and Object Manipulation, and its accept-or-reject pattern is reused by all five']
+];
+const FLOATS=[
+ ['Editor performance analytics','W8','Post go-live','Administrators operate without throughput and pass-rate reporting at launch'],
+ ['Presets and saved edit styles','W9','Post go-live','Clients rebuild adjustments per image rather than reusing a saved recipe'],
+ ['Add-on chaining','W9','Post go-live','Each add-on is applied and delivered independently; the effects cannot be stacked before delivery'],
+ ['Digest emails and preferences','W10','Post go-live','Per-event notification only; no digest and no per-account preference control'],
+ ['Server-sent events','W10','Post go-live','Status refreshes by polling, which is functionally sufficient but less immediate'],
+ ['Financial reconciliation reporting','W9','Post go-live','Reconciliation against provider settlement is performed manually at launch']
+];
+const INTG=[
+ [3,'Upload completion schedules a pre-processing job','M3 → M4'],
+ [4,'Working image ready enables tier selection','M4 → M5'],
+ [4,'Tier submission reserves credit and creates a task','M5 → M10 → M9'],
+ [5,'Basic selection triggers automatic enhancement','M5 → M6'],
+ [6,'Editor workspace reads originals and working image','M7 → M12'],
+ [6,'Mask export feeds the add-on provider','M8 → M12'],
+ [7,'Add-on rejection creates a task through the shared entry point','M8 → M9'],
+ [8,'Editor result creates a delivered version','M7 → M12'],
+ [9,'Basic send-to-human creates a task through the same entry point','M6 → M9'],
+ [9,'Every state transition raises a notification','M7, M9 → M11'],
+ [10,'Delivered versions feed archive export','M12 → M0']
+];
+const EXCL=[
+ ['Native mobile applications for iOS or Android','SRS §2.4: the client-facing application is a responsive web application accessible from desktop and mobile browsers. No native application is assumed'],
+ ['Browser-based professional retouching tools for editors','Editors work in their own desktop tools. The task workspace supplies the source material and takes back the result; building a full retouching suite in the browser is a separate programme'],
+ ['Visual design, wireframes and UI mockups','SRS §1.2 places these outside the requirements. The three Figma files are the design input this plan consumes'],
+ ['Pricing and package definitions','SRS §1.2. The system is built to hold and apply them; the commercial figures are supplied by the client and configured in Week 12'],
+ ['Marketing pages and public website','SRS §1.2. This programme delivers the application, not the site that markets it'],
+ ['Third-party AI model selection as a commercial decision','SRS §1.2. The evaluation and technical selection happen in Week 5; the commercial relationship with the chosen vendor is the client’s'],
+ ['A public editor marketplace with ratings, bidding or editor profiles','SRS §2.6 assumes editors are internal or contracted staff, not a marketplace']
+];
+</script>
+<script>
+const TRACE=[
+ ['FR-ACC.1','Client registration','1, 2','Registration end-to-end test'],
+ ['FR-ACC.2','Login and session handling','1, 2','Login and refresh end-to-end test'],
+ ['FR-ACC.3','Four distinct account types with separate permissions','1, 2, 11','Role-permission matrix test'],
+ ['FR-ACC.4','Password reset, account recovery, session expiry','1, 2','Reset flow test with token expiry and reuse cases'],
+ ['FR-ACC.5','Account creation date, last login and role recorded','1','Schema and login integration test'],
+ ['FR-DASH.1','Dashboard shows balance, package status, active and completed projects','2, 5','Dashboard integration test'],
+ ['FR-DASH.2','Project entry shows name, date, image count, status and tiers','2','Dashboard integration test'],
+ ['FR-DASH.3','Client-action projects distinguished from internal-action projects','2','State-presentation test'],
+ ['FR-DASH.4','Editor and QA identity and internal queue state never shown to a client','2, 7, 11','Response-shape assertion across every client endpoint'],
+ ['FR-UP.1','Project creation as an explicit step before upload','2','API contract test'],
+ ['FR-UP.2','Single image and bracketed set upload','3','Batch upload end-to-end test'],
+ ['FR-UP.3','Accepted formats, size, resolution and count limits','3','Validation tests against configured limits'],
+ ['FR-UP.4','Batch upload preserving the client’s intended grouping','3, 4','Upload test with grouping hint and manual override'],
+ ['FR-UP.5','Every uploaded file retained in original, unmodified form','1, 3','Retention guard test'],
+ ['FR-AI.1','Detect which files are exposure brackets','3','Detection test across the sample set'],
+ ['FR-AI.2','Group detected brackets by scene','3','Grouping test with confidence scoring'],
+ ['FR-AI.3','Merge each group into one combined image','4, 5','Merge output review against the sample set'],
+ ['FR-AI.4','Render one working image per group','4','Working image record and stored object'],
+ ['FR-AI.5','Working image marked ready for AI or human editing','4','State assertion'],
+ ['FR-AI.6','Originals preserved, separate from the working image, indefinitely','1, 3, 10','Retention guard and lifecycle-policy tests'],
+ ['FR-AI.7','Failure handling with manual bracket confirmation fallback','4, 5','Induced-failure test through to client correction'],
+ ['FR-TIER.1','Client selects one of four tiers per working image','4, 5','Tier API test across all four tiers'],
+ ['FR-TIER.2','Ordering of tier selection resolved','4','Implemented per the decision recorded in the open-issue register'],
+ ['FR-TIER.3','Tier selected per working image after pre-processing','4','Business Rule 1 gating test'],
+ ['FR-BASIC.1','AI Auto Enhance runs automatically on Basic selection','5','Job-trigger test with no client action'],
+ ['FR-BASIC.2','All fourteen manual adjustment controls','6, 7','Visual regression across the reference set'],
+ ['FR-BASIC.3','Three-way view at matched zoom and position','8','Viewer state assertion'],
+ ['FR-BASIC.4','Three client options after the AI preview','9','Decision-outcome assertions'],
+ ['FR-BASIC.5','Credit confirmation before human handoff','9','Confirmation-required test'],
+ ['FR-BASIC.6','Satisfaction yes-or-no gate as the default path','9','Default-path test'],
+ ['FR-BASIC.7','Basic-to-human uses the same pipeline as every other tier','9','Architecture test on the single entry point'],
+ ['FR-HUMAN.1','Common seven-step sequence for every human tier','6, 7, 9','End-to-end test per tier'],
+ ['FR-HUMAN.2','Basic Plus at standard queue priority','8, 9','Tier end-to-end test'],
+ ['FR-HUMAN.3','Standard, including the revision loop','7, 8, 9','Tier end-to-end test with revision'],
+ ['FR-HUMAN.4','Advanced in a high-priority queue with an experienced editor','6, 8','Priority ordering and assignment-refusal tests'],
+ ['FR-HUMAN.5','Revision returns to an editor and passes QA again','7, 9','Revision end-to-end test'],
+ ['FR-ADDON.1','Common six-step add-on flow','5, 6, 7','End-to-end test per add-on'],
+ ['FR-ADDON.2','Lawn Replacement','7, 10','Add-on end-to-end test'],
+ ['FR-ADDON.3','Decluttering','7, 10','Add-on end-to-end test'],
+ ['FR-ADDON.4','Object Removal','6, 10','Add-on end-to-end test'],
+ ['FR-ADDON.5','Object Manipulation with instruction input','8, 10','Add-on end-to-end test with instruction validation'],
+ ['FR-ADDON.6','Virtual Staging with room type and style selection','9, 10','Add-on end-to-end test through the multi-step flow'],
+ ['FR-ADDON.7','Rejected add-on result enters the shared queue','7, 10','Architecture test on the single entry point'],
+ ['FR-TRAFFIC.1','Single entry point, one shared queue, no per-tier or per-add-on queues','4, 8','Architecture test — the build fails on a second creation site'],
+ ['FR-TRAFFIC.2','Priority calculated from five configurable inputs','5, 10','Configuration test and simulation harness'],
+ ['FR-TRAFFIC.3','Editor assignment, restricted by seniority for Advanced','5, 6','Assignment test including refusal and logged override'],
+ ['FR-TRAFFIC.4','QA step with capped reject cycles and escalation','6','QA loop test to cycle cap'],
+ ['FR-TRAFFIC.5','Client review after QA approval','7','State machine test'],
+ ['FR-CREDIT.1','Balance and package status on the dashboard','4, 5','Balance and package integration test'],
+ ['FR-CREDIT.2','Credits reserved before a task enters the queue','4, 6','Transaction test with concurrency'],
+ ['FR-CREDIT.3','Charge, refund and release rules','7, 9','Policy tests across every outcome'],
+ ['FR-CREDIT.4','Basic-to-human requires confirmed additional credit','9','Confirmation test'],
+ ['FR-CREDIT.5','Pricing, packages and credit conversion configured','5, 12','Configuration applied from the client’s pricing document'],
+ ['FR-NOTIF','Notifications to clients, editors and QA reviewers (SRS §3.11)','9, 10','Notification delivery test per event'],
+ ['FR-FILE.1','Original, working image and current delivered version retained','1, 3, 4, 8','Storage assertions per file class'],
+ ['FR-FILE.2','Each revision produces a new version rather than an overwrite','8','Version increment and comparison test'],
+ ['FR-FILE.3','Retention period for originals, working images and superseded revisions','3, 10','Retention policy execution test'],
+ ['NFR-PERF.1','Pre-processing within 60 s for a bracket of up to 7 exposures','6, 11','Timed run across the reference set'],
+ ['NFR-PERF.2','Auto-enhance preview within 15 s','5, 11','Timed run'],
+ ['NFR-PERF.3','Add-on result within 30 s, Virtual Staging to its own confirmed target','10, 11','Timed run per add-on type'],
+ ['NFR-PERF.4','Capacity sized to the confirmed concurrent volume','11','Load test against the figures supplied in the open-issue register'],
+ ['NFR-SCALE.1','Processing engines scale independently of the web tier','6, 10, 11','Separately deployed and independently scaled services'],
+ ['NFR-SCALE.2','Editor pool grows by roster change, not code change','7, 8','Roster-driven assignment test'],
+ ['NFR-AVAIL.1','Availability target met','11','Staging soak and monitoring against the agreed target'],
+ ['NFR-AVAIL.2','Originals stored with redundancy surviving a storage node failure','1, 11','Durability configuration and restore rehearsal'],
+ ['NFR-AVAIL.3','Engine failure degrades to a state visible to the client','5, 6, 8','Induced-failure tests on both AI engines'],
+ ['NFR-SEC.1','Strict role-based separation of client, editor, QA and administrator','1, 2, 11','Full role-permission matrix'],
+ ['NFR-SEC.2','Image access limited to the owning client and assigned staff','8, 11','Authorisation tests across every file class'],
+ ['NFR-SEC.3','Encryption at rest and in transit','1, 11','Configuration audit and transport verification'],
+ ['NFR-SEC.4','Data residency, retention compliance and deletion rights','10, 12','Implemented per the jurisdiction confirmed in the open-issue register'],
+ ['NFR-USE.1','Studio operable without documentation, with visible before-and-after','7, 12','UAT observation'],
+ ['NFR-USE.2','Mask tools give clear visual feedback before submission','6, 12','UAT observation'],
+ ['NFR-MAIN.1','Three-engine separation in code and deployment','4, 5, 10','Service topology and independent deployability'],
+ ['NFR-MAIN.2','Priority logic configurable rather than hardcoded','5, 10','Weight change applied without a release'],
+ ['NFR-PORT.1','Current Chrome, Safari, Edge and Firefox, desktop and mobile web','11','Cross-browser test matrix'],
+ ['BR-1','No tier selection until pre-processing succeeds or a grouping is confirmed','4','Blocked-state test including the failure path'],
+ ['BR-2','A Basic image is not complete until accepted, saved and accepted, or human-approved','9','State machine test across all three outcomes'],
+ ['BR-3','Advanced tasks only to editors flagged experienced, unless explicitly force-overridden with a logged reason','6','Assignment refusal test and override audit assertion'],
+ ['BR-4','Every human-bound path creates exactly one task — never dropped, never duplicated','4, 8, 10','Idempotency test plus the architecture test on the single entry point'],
+ ['BR-5','Credit reserved before task creation, released if cancelled before editing starts','4, 7','Transaction tests across every outcome'],
+ ['BR-6','Originals never deleted as a side effect of any other action','1, 10','Cascade-deletion and retention-policy tests'],
+ ['BR-7','A revision always routes back through QA before reaching the client','4, 7','State machine test asserting the transition cannot be skipped']
+];
+const ISSUES=[
+ ['10.5','Accepted file formats, maximum file size, maximum resolution, images per batch and per project','Fri 9 Oct','W3','JPEG, PNG, TIFF and HEIC; 100 MB per file; 80 megapixels; 200 images per project — all held as configuration, so a change is a value edit and not a code change'],
+ ['10.1','Whether tier selection happens before upload or after pre-processing','Fri 16 Oct','W4','The FR-TIER.3 recommendation: per working image, after pre-processing, since a project routinely contains a mix of tiers and the image count is only known once grouping has run'],
+ ['10.3','Traffic management — integrate with an existing system, or build new','Fri 16 Oct','W4–W8','New build, as scoped here. <b>The most schedule-sensitive item in the register</b>: an instruction to integrate with an existing system invalidates the Week 4 to Week 8 traffic-management work and requires the plan to be re-costed'],
+ ['10.4','When a reserved credit becomes a final charge, and when it is refunded or released','Fri 16 Oct','W4, W7','Reserve on submission, charge on client approval, release if cancelled before an editor begins work; a rejected AI result sent to a human converts the existing reservation rather than consuming a second credit'],
+ ['10.10','The priority calculation formula combining the five named inputs','Fri 23 Oct','W5','Equal weighting across the five inputs with a tier multiplier, delivered as configurable weights so the business rule can be applied later without a release'],
+ ['10.5','Tier pricing, package pricing, add-on pricing, credit-to-currency conversion','Fri 23 Oct','W5','Placeholder values in configuration; the purchase flow is built and tested against them and the real figures are applied in Week 12 configuration'],
+ ['10.2','Editor, QA and administrator screen requirements','Fri 30 Oct','W6–W8','The SRS §4.1 screen inventory interpreted through the Desk_user and QA—Editor_user Figma files'],
+ ['10.7','What qualifies an editor as “experienced” for Advanced work','Fri 30 Oct','W6','A manual administrator-set seniority flag on the editor record, which satisfies Business Rule 3 and can later be driven by tenure, rating or certification without a schema change'],
+ ['10.9','The functional distinction between Decluttering and Object Removal','Fri 6 Nov','W7','The SRS §3.8 interpretation: Decluttering removes multiple small items across a scene in one pass as a general tidy-up; Object Removal targets one specific marked object with background reconstruction'],
+ ['10.8','Whether revision cycles are capped, and whether extra revisions consume credit','Fri 6 Nov','W7','Uncapped, with the cycle number recorded on every revision so a cap can be enforced later by configuration; no additional credit consumed'],
+ ['10.6','Retention period for originals, working images and superseded revisions','Fri 27 Nov','W10','Originals retained indefinitely, as FR-AI.6 requires; working images and superseded revisions retained for 24 months, configurable per class'],
+ ['10.12','Data residency, retention-law compliance and client deletion rights','Fri 27 Nov','W10–W12','Single region, no client-initiated deletion path. Given the property context — uploaded images can reveal an address, a layout and whether a property is occupied — this needs a definite answer rather than a default'],
+ ['10.11','Expected number of clients, projects, images per month and concurrent editors','Fri 4 Dec','W11','Load tested at a nominal profile; production sized against it, with autoscaling headroom rather than a confirmed ceiling']
+];
+const RISKS=[
+ ['R1','Exposure merge quality is unacceptable on real photographs — mixed flash, subject movement, blown windows','High','High','Sample set required by end of Week 2; Week 4 builds the merge with every parameter as configuration; Week 5 is a dedicated tuning week against real images; Week 6 adds a regression suite so a later change cannot silently degrade output. If quality remains unacceptable, the manual grouping and reprocessing paths built in Weeks 4 and 5 let an editor work from the retained originals — precisely why the retention rule exists'],
+ ['R2','No hosted enhancement service meets quality, resolution and cost simultaneously','Medium','High','Week 5 benchmarks two candidates behind one swappable adapter on real images before committing. If none passes, the fallback is statistics-based automatic adjustment, which must be agreed explicitly as a scope decision because the SRS calls for AI enhancement by name'],
+ ['R3','Browser preview and full-resolution export diverge','High','Medium','Preview and export share the same arithmetic rather than two implementations; Week 8 makes parity an explicitly tested deliverable with a numeric tolerance across a fixed reference set, rather than an assumption'],
+ ['R4','The §10.3 answer is “integrate with an existing traffic management system”','Medium','High','Answer required by 16 October, before Week 4 begins. The single most schedule-sensitive open item in the register, raised at every status until answered'],
+ ['R5','Generated add-on results do not preserve the property’s real structure','Medium','High','Week 5 evaluates provider output across all five effects on structural fidelity before committing; Week 9 builds a repeatable evaluation harness; the reject-into-the-human-queue path is built for every add-on regardless, and is the designed safety net'],
+ ['R6','Virtual Staging generates furniture in implausible perspective','Medium','Medium','Assessed in the Week 5 provider evaluation with empty-room samples specifically; Week 9 allows for provider substitution for this effect alone, which the unified adapter makes possible without touching the other four'],
+ ['R7','Open decisions arrive late','High','Medium','Every default is isolated in one configuration file or one policy class, so reversing it is a contained change rather than a refactor. The open-issue register states each default explicitly so nothing is assumed silently'],
+ ['R8','Hosted AI accounts and keys not provisioned before Week 5','Medium','High','Recorded as Assumption A2 with a hard date; the Week 5 provider evaluation is the first task that cannot begin without it, and its absence is escalated immediately'],
+ ['R9','Payment provider approval delayed by jurisdiction or account review','Medium','Medium','Recorded as Assumption A6; the ledger, packages and consumption logic are built independently of the provider and tested against a provider stub, so only the live settlement path is blocked'],
+ ['R10','Feature scope pressure erodes the Weeks 11–12 stabilisation window','Medium','High','The freeze at the end of Week 10 is a stated commitment, not a target. Scope pressure is absorbed by the float items in the critical-path section in the stated order, agreed at a gate. Testing and deployment time is not the contingency'],
+ ['R11','Figma designs change after a screen is built','Medium','Medium','Assumption A5 treats the three files as final for the SRS §4.1 screens. Changes after a screen is built are handled as change requests raised at the next gate with their cost stated'],
+ ['R12','Large multipart uploads fail on poor connections','Medium','Low','Per-part retry with backoff, cross-session resumption and orphan cleanup are built into Weeks 3 and 4 rather than added after a failure is reported'],
+ ['R13','Concurrent credit operations double-spend','Low','High','Serialisable transactions with per-account locking and idempotency keys from Week 4, with a concurrency test suite that actively attempts the double-spend'],
+ ['R14','Week 4 slips','Medium','High','Week 4 carries no exploratory work — every task in it builds on a decision already made in Weeks 1 to 3. The two highest-risk items in it, merge quality and the priority formula, are deliberately scheduled into Week 5 so Week 4 delivers structure rather than tuning']
+];
+</script>
+<script>
+(function(){
+const $=s=>document.querySelector(s), el=(t,c,h)=>{const n=document.createElement(t);if(c)n.className=c;if(h!=null)n.innerHTML=h;return n;};
+const TNAME={}; TRACKS.forEach(t=>TNAME[t.c]=t.n);
+const GLBL={found:'Foundation & data',eng:'Processing & editing',flow:'Workflow & commerce',ship:'Test & deployment'};
+
+/* ---- theme ---- */
+const root=document.documentElement, btn=$('#themeBtn');
+let saved=null; try{saved=localStorage.getItem('pe-theme')}catch(e){}
+if(saved==='dark'||saved==='light') root.setAttribute('data-theme',saved);
+btn.addEventListener('click',()=>{
+  const dark=root.getAttribute('data-theme')==='dark'||(!root.hasAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+  const next=dark?'light':'dark'; root.setAttribute('data-theme',next);
+  try{localStorage.setItem('pe-theme',next)}catch(e){}
+});
+
+/* ---- capabilities ---- */
+$('#capGrid').innerHTML=CAPS.map((c,i)=>
+ `<div class="card"><div class="eyebrow">${String(i+1).padStart(2,'0')} · ${c[2]}</div><h4>${c[0]}</h4><p style="margin:5px 0 0;font-size:13.5px;color:var(--ink-2)">${c[1]}</p></div>`).join('');
+
+/* ---- simple tables ---- */
+const fill=(sel,rows)=>{$(sel+' tbody').innerHTML=rows.join('')};
+fill('#assumeTbl',ASSUME.map(a=>`<tr><td class="mono"><b>${a[0]}</b></td><td>${a[1]}</td><td>${a[2]}</td></tr>`));
+fill('#dodTbl',DOD.map((d,i)=>`<tr><td class="num">${i+1}</td><td>${d}</td></tr>`));
+fill('#stackTbl',STACK.map(s=>`<tr><td><b>${s[0]}</b></td><td>${s[1]}</td></tr>`));
+fill('#keysTbl',KEYS.map(k=>`<tr><td><b>${k[0]}</b></td><td class="mono" style="font-size:11.5px;word-break:break-all">${k[1]}</td><td>${k[2]}</td></tr>`));
+fill('#seqTbl',SEQ.map(s=>`<tr><td class="num">${s[0]}</td><td><b>${s[1]}</b></td><td class="num">${s[2]}</td><td>${s[3]}</td></tr>`));
+fill('#floatTbl',FLOATS.map(f=>`<tr><td><b>${f[0]}</b></td><td class="num">${f[1]}</td><td class="mono">${f[2]}</td><td>${f[3]}</td></tr>`));
+fill('#intTbl',INTG.map(x=>`<tr><td class="num">W${x[0]}</td><td>${x[1]}</td><td class="mono" style="font-size:11.5px">${x[2]}</td></tr>`));
+fill('#exclTbl',EXCL.map(x=>`<tr><td><b>${x[0]}</b></td><td>${x[1]}</td></tr>`));
+fill('#timeTbl',TIMELINE.map(t=>`<tr><td class="num"><b>W${t[0]}</b></td><td class="mono" style="font-size:11.5px">${t[1]}</td><td class="num">${t[2]}</td><td class="mono" style="font-size:11px;color:var(--muted)">${t[3]}</td><td class="num"><b>${t[4]}</b></td><td class="num" style="color:var(--muted)">${t[5]}</td><td>${t[6]}</td></tr>`));
+fill('#issueTbl',ISSUES.map(x=>`<tr><td class="mono"><b>§${x[0]}</b></td><td><b>${x[1]}</b></td><td class="deadline">${x[2]}</td><td class="mono" style="font-size:11.5px">${x[3]}</td><td>${x[4]}</td></tr>`));
+const sev=v=>`<span class="${v==='High'?'sev-h':v==='Medium'?'sev-m':'sev-l'}">${v}</span>`;
+fill('#riskTbl',RISKS.map(r=>`<tr><td class="mono"><b>${r[0]}</b></td><td><b>${r[1]}</b></td><td>${sev(r[2])}</td><td>${sev(r[3])}</td><td>${r[4]}</td></tr>`));
+fill('#phaseTbl',PHASE.map(p=>`<tr><td class="mono"><b>${p[0]}</b></td><td><span class="chip c-${p[2]}">${p[1]}</span></td><td>${p[3]}</td><td>${p[4]}</td><td>${p[5]}</td><td class="num">${p[6]}</td><td class="num"><b>${p[7]}</b></td></tr>`)
+ .concat([`<tr class="total"><td colspan="2">Total</td><td class="num">340 h</td><td class="num">420 h</td><td class="num">400 h</td><td></td><td class="num">1,160</td></tr>`]));
+fill('#layerTbl',LAYER.map(l=>`<tr><td><b>${l[0]}</b><div style="font-size:12px;color:var(--muted);margin-top:2px">${l[1]}</div></td><td class="num">${l[2]}</td><td class="num">${(l[2]/1160*100).toFixed(1)}%</td></tr>`)
+ .concat([`<tr class="total"><td>Total</td><td class="num">1,160</td><td class="num">100%</td></tr>`]));
+fill('#msEffortTbl',MSEFFORT.map((m,i)=>`<tr${i===3?' class="total"':''}><td><b>${m[0]}</b></td><td class="num">${m[1]||'—'}</td><td class="num">${m[2]||'—'}</td><td class="num">${m[3]||'—'}</td><td class="num">${m[4]||'—'}</td><td class="num">${m[5]||'—'}</td><td class="num"><b>${m[6]}</b></td></tr>`));
+const maxE=EFFORT[0][2];
+fill('#effortTbl',EFFORT.map(e=>`<tr><td><b>${e[0]}</b></td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:var(--sunken);border-radius:4px;overflow:hidden"><div style="width:${e[2]/maxE*100}%;height:100%;background:var(--${e[1]==='found'?'steel':e[1]==='eng'?'amber':e[1]==='flow'?'teal':'graphite'})"></div></div><span class="mono" style="font-size:11px;color:var(--muted);width:38px;text-align:right">${(e[2]/1160*100).toFixed(1)}%</span></div></td><td class="num"><b>${e[2]}</b></td><td class="mono" style="font-size:11.5px;color:var(--muted)">${e[3]}</td></tr>`)
+ .concat([`<tr class="total"><td>Total</td><td></td><td class="num">1,160</td><td></td></tr>`]));
+
+/* ---- milestones ---- */
+$('#msCards').innerHTML=MILESTONES.map(m=>`
+ <div style="margin-bottom:22px">
+  <div class="msbar"><span class="lb" style="color:var(--${m.cls==='a'?'steel':m.cls==='b'?'amber':'teal'})">Milestone ${m.n}</span><span class="bar" style="background:var(--${m.cls==='a'?'steel':m.cls==='b'?'amber':'teal'})"></span></div>
+  <div class="card">
+    <div style="display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-bottom:10px">
+      <h4 style="font-size:19px;margin:0">${m.t}</h4>
+      <span class="mono" style="font-size:11.5px;color:var(--muted)">${m.w} · ${m.d}</span>
+      <span class="mono" style="font-size:11.5px;color:var(--ink-2);margin-left:auto"><b>${m.h} h</b> · gate ${m.gate}</span>
+    </div>
+    <p style="font-size:14px;color:var(--ink-2);margin:0 0 12px"><b>Goal.</b> ${m.goal}</p>
+    <div class="eyebrow" style="margin-bottom:6px">Exit criteria</div>
+    <ul class="tight" style="margin:0;font-size:13.5px;color:var(--ink-2);list-style:none;padding-left:0">
+      ${m.ex.map(x=>`<li style="display:flex;gap:9px;margin-bottom:5px"><span style="color:var(--${m.cls==='a'?'steel':m.cls==='b'?'amber':'teal'});flex:0 0 auto">☐</span><span>${x}</span></li>`).join('')}
+    </ul>
+  </div>
+ </div>`).join('');
+
+/* ---- gantt ---- */
+const gi=$('#ganttInner');
+const LBW='218px';
+let selWeek=0;
+function cellCls(w){let c='gcell';if(w>=5&&w<=8)c+=' m2';if(w>=11)c+=' ship';if(w===selWeek)c+=' wsel';return c}
+function renderGantt(){
+  gi.innerHTML='';
+  const mile=el('div','gmile');
+  mile.appendChild(el('div','gm','')).style.borderLeft='0';
+  [['a','Milestone 1',4],['b','Milestone 2',4],['c','Milestone 3',4]].forEach(m=>{
+    const d=el('div','gm '+m[0],m[1]); d.style.gridColumn='span '+m[2]; mile.appendChild(d);
+  });
+  mile.appendChild(el('div','gm',''));
+  gi.appendChild(mile);
+
+  const head=el('div','grow ghead');
+  head.appendChild(el('div','glabel','<span class="code" style="flex:0 0 auto">Track</span>'));
+  for(let w=1;w<=12;w++){
+    const c=el('div','gc');
+    c.innerHTML=`<button type="button" data-w="${w}" aria-pressed="${selWeek===w}">W${w}<small>${WEEKDATES[w-1].split(' – ')[0]}</small></button>`;
+    head.appendChild(c);
+  }
+  head.appendChild(el('div','gtot','Hours'));
+  gi.appendChild(head);
+
+  TRACKS.forEach(t=>{
+    const r=el('div','grow');
+    r.appendChild(el('div','glabel',`<span class="code">${t.c}</span><span class="nm">${t.n}</span>`));
+    const cells=el('div','gcells');
+    for(let w=1;w<=12;w++) cells.appendChild(el('div',cellCls(w)));
+    t.bars.forEach(b=>{
+      const [s,e]=b, span=e-s+1, hrs=span*20;
+      const bar=el('div','gbar b-'+t.g, span>1?hrs+'h':'');
+      bar.style.left=((s-1)/12*100)+'%'; bar.style.width=(span/12*100)+'%';
+      bar.dataset.tip=`<b>${t.c} — ${t.n}</b>Weeks ${s}–${e} · ${span} × 20 h = ${hrs} h<br>${GLBL[t.g]}`;
+      cells.appendChild(bar);
+    });
+    r.appendChild(cells);
+    r.appendChild(el('div','gtot',t.h+''));
+    gi.appendChild(r);
+  });
+
+  const foot=el('div','grow foot');
+  foot.appendChild(el('div','glabel','<span class="code"></span><span class="nm">Hours per week</span>'));
+  const fc=el('div','gcells');
+  for(let w=1;w<=12;w++) fc.appendChild(el('div',cellCls(w),String(WEEKHOURS[w-1])));
+  foot.appendChild(fc); foot.appendChild(el('div','gtot','1,160'));
+  gi.appendChild(foot);
+}
+renderGantt();
+gi.addEventListener('click',e=>{
+  const b=e.target.closest('button[data-w]'); if(!b)return;
+  const w=+b.dataset.w; selWeek=(selWeek===w?0:w); renderGantt();
+  if(selWeek){const d=document.getElementById('wk'+selWeek); if(d){d.open=true;}}
+});
+
+/* ---- tooltip ---- */
+const tip=$('#tip');
+document.addEventListener('mouseover',e=>{
+  const t=e.target.closest('[data-tip]');
+  if(!t){tip.hidden=true;return}
+  tip.innerHTML=t.dataset.tip; tip.hidden=false;
+  const r=t.getBoundingClientRect(), tr=tip.getBoundingClientRect();
+  let x=r.left+r.width/2-tr.width/2, y=r.top-tr.height-9;
+  x=Math.max(10,Math.min(x,innerWidth-tr.width-10)); if(y<10)y=r.bottom+9;
+  tip.style.left=x+'px'; tip.style.top=y+'px';
+});
+document.addEventListener('mouseout',e=>{if(e.target.closest('[data-tip]'))tip.hidden=true});
+addEventListener('scroll',()=>{tip.hidden=true},{passive:true});
+
+/* ---- weeks ---- */
+const MSCOL={1:'steel',2:'amber',3:'teal'};
+$('#weekList').innerHTML=WEEKS.map(w=>{
+  const total=w.tracks.reduce((a,t)=>a+t.tasks.reduce((x,k)=>x+k[3],0),0);
+  return `<details class="wk" id="wk${w.n}">
+   <summary>
+     <div class="wn">${w.n}<small>WEEK</small></div>
+     <div><div class="wt">${w.t}</div><div class="wd">${WEEKDATES[w.n-1]} 2026 · Milestone ${w.ms} · ${w.tracks.length} track${w.tracks.length>1?'s':''}</div></div>
+     <div class="wh">${total} h<small>${w.tracks.map(t=>t.c).join(' · ')}</small></div>
+   </summary>
+   <div class="wkbody">
+     ${w.note?`<div class="note" style="margin-top:12px">${w.note}</div>`:''}
+     ${w.tracks.map(t=>{
+       const th=t.tasks.reduce((a,k)=>a+k[3],0);
+       return `<div class="trk">
+         <div class="trkhd"><span class="chip c-${t.g}">${t.c}</span><span class="tn">${TNAME[t.c]}</span><span class="th">${th} h</span></div>
+         <table class="tasks"><tbody>${t.tasks.map(k=>`<tr><td>${k[0]}</td><td>${k[1]}</td><td>${k[2]}</td><td>${k[3]} h</td></tr>`).join('')}</tbody></table>
+       </div>`;}).join('')}
+     <div class="wkfoot">
+       <div><span class="lb">Deliverable</span>${w.del}</div>
+       <div><span class="lb">Acceptance</span><span class="mono" style="font-size:11.5px">${w.acc}</span></div>
+       <div><span class="lb">Depends on</span>${w.dep}<br><span class="lb" style="margin-top:7px">Blocks</span>${w.blk}</div>
+     </div>
+   </div>
+  </details>`;}).join('');
+$('#weekCount').textContent=WEEKS.reduce((a,w)=>a+w.tracks.reduce((x,t)=>x+t.tasks.length,0),0)+' tasks · 1,160 hours';
+$('#expandAll').onclick=()=>document.querySelectorAll('.wk').forEach(d=>d.open=true);
+$('#collapseAll').onclick=()=>document.querySelectorAll('.wk').forEach(d=>d.open=false);
+document.getElementById('wk1').open=true;
+
+/* ---- traceability filter ---- */
+const tb=$('#traceTbl tbody');
+function drawTrace(){
+  const q=$('#traceSearch').value.trim().toLowerCase();
+  const f=document.querySelector('[data-tf][aria-pressed="true"]').dataset.tf;
+  const rows=TRACE.filter(r=>{
+    if(f!=='all'){
+      if(f==='FR'&&!r[0].startsWith('FR'))return false;
+      if(f==='NFR'&&!r[0].startsWith('NFR'))return false;
+      if(f==='BR'&&!r[0].startsWith('BR'))return false;
+    }
+    return !q||(r[0]+' '+r[1]+' '+r[2]+' '+r[3]).toLowerCase().includes(q);
+  });
+  tb.innerHTML=rows.length?rows.map(r=>`<tr><td class="mono" style="white-space:nowrap"><b>${r[0]}</b></td><td>${r[1]}</td><td class="num">${r[2]}</td><td style="color:var(--muted)">${r[3]}</td></tr>`).join('')
+    :`<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:26px">No requirement matches that search.</td></tr>`;
+  $('#traceCount').textContent=rows.length+' of '+TRACE.length+' requirements';
+}
+$('#traceSearch').addEventListener('input',drawTrace);
+document.querySelectorAll('[data-tf]').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('[data-tf]').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true'); drawTrace();
+}));
+drawTrace();
+
+/* ---- matrix ---- */
+const MXCOLS=TRACKS.map(t=>t.c);
+let mx='<table class="matrix"><thead><tr><th>Week</th>'+TRACKS.map(t=>`<th title="${t.n}">${t.c}</th>`).join('')+'<th>Total</th></tr></thead><tbody>';
+for(let w=1;w<=12;w++){
+  mx+=`<tr><td>W${w}</td>`;
+  TRACKS.forEach(t=>{
+    const on=t.bars.some(b=>w>=b[0]&&w<=b[1]);
+    let h=on?20:0;
+    if(t.c==='TST')h=w===11?60:w===12?40:0;
+    if(t.c==='DEP')h=w===11?40:w===12?60:0;
+    mx+=on?`<td class="h g-${t.g}">${h}</td>`:'<td class="z">·</td>';
+  });
+  mx+=`<td class="h"><b>${WEEKHOURS[w-1]}</b></td></tr>`;
+}
+mx+='<tr class="total"><td>Total</td>'+TRACKS.map(t=>`<td>${t.h}</td>`).join('')+'<td>1,160</td></tr></tbody></table>';
+$('#matrixWrap').innerHTML=mx;
+$('#mxKey').innerHTML=TRACKS.slice(0,13).map(t=>`<span><b class="mono" style="color:var(--ink)">${t.c}</b>&nbsp;${t.n}</span>`).join('');
+
+/* ---- scroll spy ---- */
+const links=[...document.querySelectorAll('#secnav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const spy=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    links.forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id?'true':'false'));
+    const on=links.find(a=>a.getAttribute('aria-current')==='true');
+    if(on&&on.parentElement)on.scrollIntoView({block:'nearest',inline:'nearest'});
+  });
+},{rootMargin:'-60px 0px -72% 0px'});
+secs.forEach(s=>spy.observe(s));
+})();
+</script>
+
+</body>
+</html>
