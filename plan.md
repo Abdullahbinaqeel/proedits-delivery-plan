@@ -9,9 +9,9 @@
 | **Basis** | ProEdits SRS v1.3 (September 2026); "AI = human process work flow" (client source flow document); confirmed technology stack; Figma design files — Client_User, Desk_user, QA—Editor_user |
 | **Duration** | 12 weeks · one calendar quarter |
 | **Modules** | 13 delivery tracks covering all 12 SRS modules plus platform infrastructure |
-| **Total effort** | **1,160 engineering hours** |
-| **Build window** | Weeks 1–10 — feature complete, 960 hours |
-| **Test & deployment window** | Weeks 11–12 — 200 hours |
+| **Total effort** | **240 engineering hours** |
+| **Build window** | Weeks 1–10 — feature complete, 200 hours |
+| **Test & deployment window** | Weeks 11–12 — 40 hours |
 | **Milestones** | 3 |
 | **Start** | Monday 28 September 2026 |
 | **Go-live** | Friday 18 December 2026 |
@@ -102,18 +102,18 @@ Building the shared queue once and correctly, from the start, is the single most
 
 Work is organised into **module tracks**. Each track corresponds to one functional area of the platform and runs across a defined set of weeks.
 
-> **Every module track is resourced at 20 hours of effort in each week it is active.**
+> **The programme runs at 20 hours of effort per week, for 12 weeks — 240 hours in total.**
 
-A week in which five module tracks are active therefore carries 100 hours of effort; a week with six carries 120. Effort ramps up in Week 1 as the foundation is laid, holds at 100–120 hours through the build, and shifts entirely to testing and deployment in Weeks 11–12.
+Those 20 hours are divided each week between the module tracks active in it: a week running four tracks gives each roughly five hours, a week running six divides the same 20 hours more finely. The weekly commitment never varies — what changes is how many fronts it is spread across. From Week 11 the whole 20 hours shifts to testing and deployment.
 
 | Parameter | Value |
 |---|---|
 | Duration | 12 weeks |
 | Module tracks | 13 (M0–M12), plus Test and Deployment tracks in Weeks 11–12 |
-| Effort per active module track per week | 20 hours |
-| Build effort, Weeks 1–10 | 960 hours |
-| Test and deployment effort, Weeks 11–12 | 200 hours |
-| **Total programme effort** | **1,160 hours** |
+| Effort per week | 20 hours, divided across that week's active tracks |
+| Build effort, Weeks 1–10 | 200 hours |
+| Test and deployment effort, Weeks 11–12 | 40 hours |
+| **Total programme effort** | **240 hours** |
 | Milestones | 3, at the end of Weeks 4, 8 and 12 |
 | Feature freeze | End of Week 10 |
 
@@ -132,14 +132,14 @@ A week in which five module tracks are active therefore carries 100 hours of eff
 
 This is a deliberate structure. A platform of this size cannot be tested meaningfully while it is still changing, and a deployment scheduled for the same week as the last feature is a deployment that slips. Reserving one sixth of the programme for stabilisation is what makes the 18 December go-live a date rather than an aspiration.
 
-### 2.3 Weekly working agreement, per active module track
+### 2.3 Weekly working agreement
 
 | Slot | Hours | Content |
 |---|---:|---|
 | Implementation | 16 | Build against that week's task list |
 | Verification | 3 | Unit and integration tests written in the same week as the code they cover, never deferred |
 | Coordination | 1 | Written status, cross-track integration points, open-issue chase |
-| **Per track, per week** | **20** | |
+| **Per week** | **20** | |
 
 ### 2.4 Definition of Done
 
@@ -249,11 +249,11 @@ The bucket is private with no public access. Every read is served through a time
 
 | Milestone | Weeks | Dates | Hours | Theme | Gate |
 |---|---|---|---:|---|---|
-| **Milestone 1 — Foundation and Ingestion** | 1–4 | 28 Sep – 25 Oct 2026 | 340 | Platform, four-role authentication, dashboard, batch upload with permanent original retention, the AI Pre-Processing Engine, four-tier selection, and the shared queue and credit ledger foundations | Fri 23 Oct 2026 |
-| **Milestone 2 — Editing Engines and Human Pipeline** | 5–8 | 26 Oct – 22 Nov 2026 | 420 | The full fourteen-control Basic studio, all human tiers with weighted priority routing, QA and revisions, the add-on engine with the first three add-ons, and packages with payments | Fri 20 Nov 2026 |
-| **Milestone 3 — Completion, Testing and Deployment** | 9–12 | 23 Nov – 20 Dec 2026 | 400 | The remaining add-ons including Virtual Staging, notifications, delivery and version history, **feature freeze at the end of Week 10**, then system testing, UAT, hardening and production go-live | Fri 18 Dec 2026 |
+| **Milestone 1 — Foundation and Ingestion** | 1–4 | 28 Sep – 25 Oct 2026 | 80 | Platform, four-role authentication, dashboard, batch upload with permanent original retention, the AI Pre-Processing Engine, four-tier selection, and the shared queue and credit ledger foundations | Fri 23 Oct 2026 |
+| **Milestone 2 — Editing Engines and Human Pipeline** | 5–8 | 26 Oct – 22 Nov 2026 | 80 | The full fourteen-control Basic studio, all human tiers with weighted priority routing, QA and revisions, the add-on engine with the first three add-ons, and packages with payments | Fri 20 Nov 2026 |
+| **Milestone 3 — Completion, Testing and Deployment** | 9–12 | 23 Nov – 20 Dec 2026 | 80 | The remaining add-ons including Virtual Staging, notifications, delivery and version history, **feature freeze at the end of Week 10**, then system testing, UAT, hardening and production go-live | Fri 18 Dec 2026 |
 
-### 4.1 Milestone 1 — Foundation and Ingestion · Weeks 1–4 · 340 hours
+### 4.1 Milestone 1 — Foundation and Ingestion · Weeks 1–4 · 80 hours
 
 **Goal.** A client creates a project, uploads a bracketed exposure set, receives a rendered working image with every original retained, and selects a service tier from all four — against a live credit balance and a queue that is already built to receive every future task source.
 
@@ -271,7 +271,7 @@ The bucket is private with no public access. Every read is served through a time
 - [ ] Exactly one service method creates an editing task, enforced by an automated architecture test that fails the build on a second creation site (FR-TRAFFIC.1, Business Rule 4).
 - [ ] The full stack starts from a single command locally; migrations apply cleanly from an empty database.
 
-### 4.2 Milestone 2 — Editing Engines and Human Pipeline · Weeks 5–8 · 420 hours
+### 4.2 Milestone 2 — Editing Engines and Human Pipeline · Weeks 5–8 · 80 hours
 
 **Goal.** Both editing engines are operational and the human pipeline carries real work. A Basic image travels the complete Option C flow; a Basic Plus, Standard or Advanced image travels the complete seven-step human flow including a revision; three of the five add-ons produce results and route rejections into the same queue.
 
@@ -289,7 +289,7 @@ The bucket is private with no public access. Every read is served through a time
 - [ ] Object Removal, Decluttering and Lawn Replacement each accept a brush-painted mask exported at the original image's pixel dimensions, return a result, and on rejection enter the same shared queue as every human request (FR-ADDON.1–4, FR-ADDON.7).
 - [ ] Credits reserve on submission, charge on client approval and release on cancellation before editing starts; monthly packages allocate and renew; payment is confirmed only by a verified provider webhook (FR-CREDIT.1–4, Business Rule 5).
 
-### 4.3 Milestone 3 — Completion, Testing and Deployment · Weeks 9–12 · 400 hours
+### 4.3 Milestone 3 — Completion, Testing and Deployment · Weeks 9–12 · 80 hours
 
 **Goal.** The platform is feature complete at the end of Week 10, then tested, hardened, documented, deployed and handed over.
 
@@ -318,22 +318,22 @@ All thirteen delivery tracks, mapped across the three milestones. Every SRS modu
 
 | # | Module | Milestone 1 · Weeks 1–4 | Milestone 2 · Weeks 5–8 | Milestone 3 · Weeks 9–12 | Weeks active | Hours |
 |---|---|---|---|---|---|---:|
-| **M0** | **Platform & Infrastructure** | Monorepo with strict TypeScript, linting and commit conventions; local Docker Compose across database, cache and object storage; NestJS skeleton with validated configuration, global validation, error mapping and health checks; Prisma migration workflow; React application shell with token refresh; design system from Figma; job queue with separate worker processes, retry, backoff and dead-letter handling; continuous integration; structured logging, correlation identifiers and metrics; containerised Python service with internal service authentication | — | Production container images for the web application, API, workers and Python service; continuous deployment to staging with migration on deploy and a documented rollback path; managed PostgreSQL and managed Redis provisioning | 1, 2, 3, 10 | **80** |
-| **M1** | **Accounts & Authentication** | User model with four roles and a seniority flag; register, login, refresh and logout; strong password hashing; short-lived access token with rotating refresh; role guards and an ownership guard; password reset and account recovery with a time-limited token; login, registration and reset screens; role-routed application shells for all four account types; full role-permission matrix tests | — | — | 1, 2 | **40** |
-| **M2** | **Client Dashboard** | Dashboard API returning credit balance, monthly package status, active and completed project lists with counts; dashboard screen with project cards carrying name, date, image count, status and tier; distinction between projects awaiting client action and those awaiting internal action; suppression of editor and QA identity in every client-facing response; project detail screen with image grid, per-image status and group view; per-project activity history; filtering, sorting, pagination and complete empty, loading and error states | — | — | 2, 3 | **40** |
-| **M3** | **Project Creation & Upload** | Project model with create, list and detail endpoints under ownership guards; create-project flow; presigned multipart upload with initiate, part signing, completion and abort, authorised against project access before any temporary permission is issued; drag-and-drop batch uploader with multi-select, per-file and per-part progress, automatic retry with backoff, and cancel; upload verification with capture-metadata extraction; configurable format, size, resolution and count limits validated on both request and completion; client-side manual bracket grouping override; upload resumption across sessions and cleanup of orphaned transfers | — | — | 2, 3, 4 | **60** |
-| **M4** | **AI Pre-Processing Engine** | Python and OpenCV service with a documented internal contract; bracket detection from capture time and exposure-value delta; scene grouping confirmed by feature and histogram similarity with a recorded confidence score; exposure alignment with ghost handling; HDR merge and exposure fusion with tone mapping and configurable parameters; working-image render to storage with a ready state; per-group progress endpoint | Client-facing fallback presenting originals ungrouped for manual bracket confirmation when detection is uncertain or fails; reprocessing a scene from retained originals without re-upload; tuning against the client sample set for mixed flash, subject movement and window detail; performance tuning to the 60-second target; independent scaling of the engine with tuned queue concurrency; graceful degradation to a visible delayed state; a regression suite across the sample set | — | 3, 4, 5, 6 | **80** |
-| **M5** | **Service Tier Selection** | Tier model covering all four tiers; tier options and pricing endpoint per working image; tier picker on the post-processing working-image grid, per image and applied in bulk across a selection; gating that prevents tier selection until pre-processing has succeeded or a grouping has been confirmed | Tier change and re-selection rules before submission; project-level bulk assignment; tier-to-credit cost resolution with an explicit confirmation step; end-to-end coverage across all four tiers | — | 4, 5 | **40** |
-| **M6** | **Basic Tier — AI and Self Editing** | — | Enhancement provider adapter with a two-candidate benchmark against the sample set; auto-triggered AI Auto Enhance writing to its own storage key; edit-session model with a validated adjustment-recipe schema; WebGL preview engine with texture pipeline and recipe binding; tone controls — brightness, exposure, contrast, highlights, shadows, whites, blacks; colour controls — temperature, tint, hue, saturation, vibrance; detail controls — sharpening, clarity; shared zoom and pan viewer; grouped slider panel with per-control reset, numeric readout and an unsaved-changes guard; three-way view toggle at matched position; full-resolution export worker; preview-to-export parity test with a numeric tolerance | Three client options — accept the AI result, save and download a manual edit, or send to a human editor; credit confirmation before handoff with routing through the shared pipeline; satisfaction gate default path; presets and saved edit styles | 5, 6, 7, 8, 9 | **100** |
-| **M7** | **Human Edited Tiers** | — | Tier submission for Basic Plus, Standard and Advanced reserving credit and creating exactly one task through the shared entry point; priority-sorted editor queue; editor task workspace exposing client instructions, the working image and the original exposures through time-limited download links; result upload creating a new delivered version and submission for QA; client review screen with approve or request-revision; revision loop returning through an editor and then QA; Advanced high-priority queue behaviour with delivery deadlines; tier differentiation in interface and pricing; editor performance analytics covering throughput, QA pass rate and cycle time | End-to-end coverage across Basic Plus, Standard and Advanced including revisions; editor workload balancing with deadline surfacing; handling of rejected-AI sources in the workspace, presenting the original, the AI attempt and any mask together | 6, 7, 8, 9 | **80** |
-| **M8** | **AI Add-On Engine** | — | Add-on job model carrying the full five-type enumeration; one unified internal add-on API for creation, status, result and client decision; provider adapter interface with evaluation across all five effects; React Konva canvas with brush, size, hardness, eraser, undo, redo and clear; mask export at the original image's pixel dimensions; Object Removal provider integration with worker and result storage; result preview with accept and reject, rejection entering the shared queue; Decluttering with multi-item marking and scene reconstruction; Lawn Replacement with region marking and appearance selection; Object Manipulation with a marked region plus a short instruction from a constrained action set; instruction validation and per-provider request construction; job status, progress and failure surfacing | Virtual Staging with empty-room selection, room type, style and generation; add-on chaining across one image before delivery; a result-evaluation harness for structural fidelity; engine hardening with retries, provider failover and cost tracking; end-to-end coverage of all five add-ons including reject-to-queue for each; performance tuning to the 30-second target | 5, 6, 7, 8, 9, 10 | **120** |
-| **M9** | **Traffic Management, Assignment & QA** | Task, QA review and revision request models; a guarded state machine with table-driven coverage of every legal and illegal transition; the single entry point for task creation, idempotent per source, enforced by an architecture test | Priority engine with five configurable weighted inputs; editor assignment accounting for availability and seniority; priority rule configuration with an administrator API; QA review screen with synchronised source-and-result comparison; approve and return-with-comments, with a cycle cap and lead escalation; restriction of Advanced work to senior editors with a logged force-override; administrator console for queue monitoring with age and deadline indicators; editor roster, seniority flags and availability management; manual reassignment and priority override with an audit trail; service-level dashboards with per-tier turnaround and breach alerting; load balancing across editor pools; end-to-end queue coverage across all four tiers and both rejected-AI paths | Priority formula calibration against the agreed weights; queue resilience with stuck-task detection, reassignment and dead-letter review; administrator audit log and configuration change history | 4, 5, 6, 7, 8, 10 | **120** |
-| **M10** | **Credits & Package Accounting** | Credit ledger model with a derived balance; reserve, charge and release inside serialisable transactions with idempotency keys; a concurrency suite proving two requests cannot spend the same credit; balance display and insufficient-credit blocking | Package model with allocation, renewal and a defined consumption order against included credits; payment provider integration with verified webhook handling and idempotent settlement; purchase flow for credit bundles and package subscription; refund and release rules as a configurable policy; charge finalisation on approval and release on pre-edit cancellation; invoicing with statements, ledger export and receipts | Package renewal, proration, upgrade and downgrade; credit expiry, low-balance alerts and automatic top-up; financial reconciliation reporting and ledger integrity checks | 4, 5, 7, 9 | **80** |
-| **M11** | **Notifications** | — | — | Notification model with an in-app feed and read state; transactional email service with a template for every event; client progress states surfaced across the dashboard and project detail; server-sent events replacing polling for live status; digest emails and notification preferences; editor and QA assignment notifications and escalation alerts | 9, 10 | **40** |
-| **M12** | **File & Version Management** | Object-storage configuration with a private policy, encryption and cross-origin rules for direct browser upload; storage service implementing the eight-class key convention; file-lineage schema linking originals, working images and delivered versions; retention guard preventing deletion of originals, with lifecycle exclusion and an automated test; thumbnail and preview derivative pipeline; delivered-version model with an incrementing version number and a lineage endpoint; presigned time-limited download service under backend authorisation; configurable retention policy per file class | Full version history across every revision; client-facing version comparison view; version-level access control and audit trail | Per-project ZIP export worker with completion notification; delivery packaging with naming conventions, format options and embedded metadata; retention policy execution with lifecycle rules that exclude the originals prefix | 1, 3, 8, 10 | **80** |
-| — | **System Test & UAT** | — | — | System integration testing across every module; cross-browser verification on desktop and mobile web; performance verification against all three targets; full security pass covering the role matrix, encryption, bucket policy, link expiry, secrets and dependencies; load testing; two rounds of defect remediation; UAT execution with real accounts in every role; post-deployment smoke tests | 11, 12 | **100** |
-| — | **Deployment & Handover** | — | — | Staging environment build and soak; production infrastructure with the web tier scaling independently of the processing engines; backup, restore and disaster-recovery verification; monitoring, alerting and an on-call runbook; production deployment and go-live; data seeding, editor roster onboarding and package configuration; deployment runbook, environment reference and API documentation; operational training materials for administrator, editor and QA roles; gate, handover and closure of the open-issue register | 11, 12 | **100** |
-| | **TOTAL** | **340 h** | **420 h** | **400 h** | | **1,160** |
+| **M0** | **Platform & Infrastructure** | Monorepo with strict TypeScript, linting and commit conventions; local Docker Compose across database, cache and object storage; NestJS skeleton with validated configuration, global validation, error mapping and health checks; Prisma migration workflow; React application shell with token refresh; design system from Figma; job queue with separate worker processes, retry, backoff and dead-letter handling; continuous integration; structured logging, correlation identifiers and metrics; containerised Python service with internal service authentication | — | Production container images for the web application, API, workers and Python service; continuous deployment to staging with migration on deploy and a documented rollback path; managed PostgreSQL and managed Redis provisioning | 1, 2, 3, 10 | **19.75** |
+| **M1** | **Accounts & Authentication** | User model with four roles and a seniority flag; register, login, refresh and logout; strong password hashing; short-lived access token with rotating refresh; role guards and an ownership guard; password reset and account recovery with a time-limited token; login, registration and reset screens; role-routed application shells for all four account types; full role-permission matrix tests | — | — | 1, 2 | **11.75** |
+| **M2** | **Client Dashboard** | Dashboard API returning credit balance, monthly package status, active and completed project lists with counts; dashboard screen with project cards carrying name, date, image count, status and tier; distinction between projects awaiting client action and those awaiting internal action; suppression of editor and QA identity in every client-facing response; project detail screen with image grid, per-image status and group view; per-project activity history; filtering, sorting, pagination and complete empty, loading and error states | — | — | 2, 3 | **9** |
+| **M3** | **Project Creation & Upload** | Project model with create, list and detail endpoints under ownership guards; create-project flow; presigned multipart upload with initiate, part signing, completion and abort, authorised against project access before any temporary permission is issued; drag-and-drop batch uploader with multi-select, per-file and per-part progress, automatic retry with backoff, and cancel; upload verification with capture-metadata extraction; configurable format, size, resolution and count limits validated on both request and completion; client-side manual bracket grouping override; upload resumption across sessions and cleanup of orphaned transfers | — | — | 2, 3, 4 | **13** |
+| **M4** | **AI Pre-Processing Engine** | Python and OpenCV service with a documented internal contract; bracket detection from capture time and exposure-value delta; scene grouping confirmed by feature and histogram similarity with a recorded confidence score; exposure alignment with ghost handling; HDR merge and exposure fusion with tone mapping and configurable parameters; working-image render to storage with a ready state; per-group progress endpoint | Client-facing fallback presenting originals ungrouped for manual bracket confirmation when detection is uncertain or fails; reprocessing a scene from retained originals without re-upload; tuning against the client sample set for mixed flash, subject movement and window detail; performance tuning to the 60-second target; independent scaling of the engine with tuned queue concurrency; graceful degradation to a visible delayed state; a regression suite across the sample set | — | 3, 4, 5, 6 | **15.5** |
+| **M5** | **Service Tier Selection** | Tier model covering all four tiers; tier options and pricing endpoint per working image; tier picker on the post-processing working-image grid, per image and applied in bulk across a selection; gating that prevents tier selection until pre-processing has succeeded or a grouping has been confirmed | Tier change and re-selection rules before submission; project-level bulk assignment; tier-to-credit cost resolution with an explicit confirmation step; end-to-end coverage across all four tiers | — | 4, 5 | **7** |
+| **M6** | **Basic Tier — AI and Self Editing** | — | Enhancement provider adapter with a two-candidate benchmark against the sample set; auto-triggered AI Auto Enhance writing to its own storage key; edit-session model with a validated adjustment-recipe schema; WebGL preview engine with texture pipeline and recipe binding; tone controls — brightness, exposure, contrast, highlights, shadows, whites, blacks; colour controls — temperature, tint, hue, saturation, vibrance; detail controls — sharpening, clarity; shared zoom and pan viewer; grouped slider panel with per-control reset, numeric readout and an unsaved-changes guard; three-way view toggle at matched position; full-resolution export worker; preview-to-export parity test with a numeric tolerance | Three client options — accept the AI result, save and download a manual edit, or send to a human editor; credit confirmation before handoff with routing through the shared pipeline; satisfaction gate default path; presets and saved edit styles | 5, 6, 7, 8, 9 | **19.5** |
+| **M7** | **Human Edited Tiers** | — | Tier submission for Basic Plus, Standard and Advanced reserving credit and creating exactly one task through the shared entry point; priority-sorted editor queue; editor task workspace exposing client instructions, the working image and the original exposures through time-limited download links; result upload creating a new delivered version and submission for QA; client review screen with approve or request-revision; revision loop returning through an editor and then QA; Advanced high-priority queue behaviour with delivery deadlines; tier differentiation in interface and pricing; editor performance analytics covering throughput, QA pass rate and cycle time | End-to-end coverage across Basic Plus, Standard and Advanced including revisions; editor workload balancing with deadline surfacing; handling of rejected-AI sources in the workspace, presenting the original, the AI attempt and any mask together | 6, 7, 8, 9 | **16** |
+| **M8** | **AI Add-On Engine** | — | Add-on job model carrying the full five-type enumeration; one unified internal add-on API for creation, status, result and client decision; provider adapter interface with evaluation across all five effects; React Konva canvas with brush, size, hardness, eraser, undo, redo and clear; mask export at the original image's pixel dimensions; Object Removal provider integration with worker and result storage; result preview with accept and reject, rejection entering the shared queue; Decluttering with multi-item marking and scene reconstruction; Lawn Replacement with region marking and appearance selection; Object Manipulation with a marked region plus a short instruction from a constrained action set; instruction validation and per-provider request construction; job status, progress and failure surfacing | Virtual Staging with empty-room selection, room type, style and generation; add-on chaining across one image before delivery; a result-evaluation harness for structural fidelity; engine hardening with retries, provider failover and cost tracking; end-to-end coverage of all five add-ons including reject-to-queue for each; performance tuning to the 30-second target | 5, 6, 7, 8, 9, 10 | **23.5** |
+| **M9** | **Traffic Management, Assignment & QA** | Task, QA review and revision request models; a guarded state machine with table-driven coverage of every legal and illegal transition; the single entry point for task creation, idempotent per source, enforced by an architecture test | Priority engine with five configurable weighted inputs; editor assignment accounting for availability and seniority; priority rule configuration with an administrator API; QA review screen with synchronised source-and-result comparison; approve and return-with-comments, with a cycle cap and lead escalation; restriction of Advanced work to senior editors with a logged force-override; administrator console for queue monitoring with age and deadline indicators; editor roster, seniority flags and availability management; manual reassignment and priority override with an audit trail; service-level dashboards with per-tier turnaround and breach alerting; load balancing across editor pools; end-to-end queue coverage across all four tiers and both rejected-AI paths | Priority formula calibration against the agreed weights; queue resilience with stuck-task detection, reassignment and dead-letter review; administrator audit log and configuration change history | 4, 5, 6, 7, 8, 10 | **23.5** |
+| **M10** | **Credits & Package Accounting** | Credit ledger model with a derived balance; reserve, charge and release inside serialisable transactions with idempotency keys; a concurrency suite proving two requests cannot spend the same credit; balance display and insufficient-credit blocking | Package model with allocation, renewal and a defined consumption order against included credits; payment provider integration with verified webhook handling and idempotent settlement; purchase flow for credit bundles and package subscription; refund and release rules as a configurable policy; charge finalisation on approval and release on pre-edit cancellation; invoicing with statements, ledger export and receipts | Package renewal, proration, upgrade and downgrade; credit expiry, low-balance alerts and automatic top-up; financial reconciliation reporting and ledger integrity checks | 4, 5, 7, 9 | **15** |
+| **M11** | **Notifications** | — | — | Notification model with an in-app feed and read state; transactional email service with a template for every event; client progress states surfaced across the dashboard and project detail; server-sent events replacing polling for live status; digest emails and notification preferences; editor and QA assignment notifications and escalation alerts | 9, 10 | **8** |
+| **M12** | **File & Version Management** | Object-storage configuration with a private policy, encryption and cross-origin rules for direct browser upload; storage service implementing the eight-class key convention; file-lineage schema linking originals, working images and delivered versions; retention guard preventing deletion of originals, with lifecycle exclusion and an automated test; thumbnail and preview derivative pipeline; delivered-version model with an incrementing version number and a lineage endpoint; presigned time-limited download service under backend authorisation; configurable retention policy per file class | Full version history across every revision; client-facing version comparison view; version-level access control and audit trail | Per-project ZIP export worker with completion notification; delivery packaging with naming conventions, format options and embedded metadata; retention policy execution with lifecycle rules that exclude the originals prefix | 1, 3, 8, 10 | **18.5** |
+| — | **System Test & UAT** | — | — | System integration testing across every module; cross-browser verification on desktop and mobile web; performance verification against all three targets; full security pass covering the role matrix, encryption, bucket policy, link expiry, secrets and dependencies; load testing; two rounds of defect remediation; UAT execution with real accounts in every role; post-deployment smoke tests | 11, 12 | **20** |
+| — | **Deployment & Handover** | — | — | Staging environment build and soak; production infrastructure with the web tier scaling independently of the processing engines; backup, restore and disaster-recovery verification; monitoring, alerting and an on-call runbook; production deployment and go-live; data seeding, editor roster onboarding and package configuration; deployment runbook, environment reference and API documentation; operational training materials for administrator, editor and QA roles; gate, handover and closure of the open-issue register | 11, 12 | **20** |
+| | **TOTAL** | **80 h** | **80 h** | **80 h** | | **240** |
 
 ---
 
@@ -341,40 +341,40 @@ All thirteen delivery tracks, mapped across the three milestones. Every SRS modu
 
 ### 6.1 Week grid
 
-Each `███` is one module track active that week at 20 hours. `◆` marks a milestone gate; `▓▓▓` marks testing and deployment.
+Each `███` is one module track active that week; the 20 hours of that week are shared between the tracks marked in its column. `◆` marks a milestone gate; `▓▓▓` marks testing and deployment.
 
 ```
                                     ┌─── MILESTONE 1 ───┬─── MILESTONE 2 ───┬─── MILESTONE 3 ───┐
 TRACK                                W1  W2  W3  W4 │ W5  W6  W7  W8 │ W9 W10 │W11 W12         h
                                     ─── ─── ─── ───┼─── ─── ─── ───┼─── ───┼─── ───        ───
-M0  Platform & Infrastructure       ███ ███ ███  ·  │ ·   ·   ·   ·  │ ·  ███ │ ·   ·          80
-M1  Accounts & Authentication       ███ ███  ·   ·  │ ·   ·   ·   ·  │ ·   ·  │ ·   ·          40
-M2  Client Dashboard                 ·  ███ ███  ·  │ ·   ·   ·   ·  │ ·   ·  │ ·   ·          40
-M3  Project Creation & Upload        ·  ███ ███ ███ │ ·   ·   ·   ·  │ ·   ·  │ ·   ·          60
-M4  AI Pre-Processing Engine          ·   ·  ███ ███ │███ ███  ·   ·  │ ·   ·  │ ·   ·          80
-M5  Service Tier Selection            ·   ·   ·  ███ │███  ·   ·   ·  │ ·   ·  │ ·   ·          40
-M6  Basic Tier — AI & Self Editing    ·   ·   ·   ·  │███ ███ ███ ███ │███  ·  │ ·   ·         100
-M7  Human Edited Tiers                ·   ·   ·   ·  │ ·  ███ ███ ███ │███  ·  │ ·   ·          80
-M8  AI Add-On Engine                  ·   ·   ·   ·  │███ ███ ███ ███ │███ ███ │ ·   ·         120
-M9  Traffic Mgmt, Assignment & QA     ·   ·   ·  ███ │███ ███ ███ ███ │ ·  ███ │ ·   ·         120
-M10 Credits & Package Accounting      ·   ·   ·  ███ │███  ·  ███  ·  │███  ·  │ ·   ·          80
-M11 Notifications                     ·   ·   ·   ·  │ ·   ·   ·   ·  │███ ███ │ ·   ·          40
-M12 File & Version Management        ███  ·  ███  ·  │ ·   ·   ·  ███ │ ·  ███ │ ·   ·          80
-    System Test & UAT                 ·   ·   ·   ·  │ ·   ·   ·   ·  │ ·   ·  │▓▓▓ ▓▓▓        100
-    Deployment & Handover             ·   ·   ·   ·  │ ·   ·   ·   ·  │ ·   ·  │▓▓▓ ▓▓▓        100
+M0  Platform & Infrastructure       ███ ███ ███  ·  │ ·   ·   ·   ·  │ ·  ███ │ ·   ·       19.75
+M1  Accounts & Authentication       ███ ███  ·   ·  │ ·   ·   ·   ·  │ ·   ·  │ ·   ·       11.75
+M2  Client Dashboard                 ·  ███ ███  ·  │ ·   ·   ·   ·  │ ·   ·  │ ·   ·           9
+M3  Project Creation & Upload        ·  ███ ███ ███ │ ·   ·   ·   ·  │ ·   ·  │ ·   ·          13
+M4  AI Pre-Processing Engine          ·   ·  ███ ███ │███ ███  ·   ·  │ ·   ·  │ ·   ·        15.5
+M5  Service Tier Selection            ·   ·   ·  ███ │███  ·   ·   ·  │ ·   ·  │ ·   ·           7
+M6  Basic Tier — AI & Self Editing    ·   ·   ·   ·  │███ ███ ███ ███ │███  ·  │ ·   ·        19.5
+M7  Human Edited Tiers                ·   ·   ·   ·  │ ·  ███ ███ ███ │███  ·  │ ·   ·          16
+M8  AI Add-On Engine                  ·   ·   ·   ·  │███ ███ ███ ███ │███ ███ │ ·   ·        23.5
+M9  Traffic Mgmt, Assignment & QA     ·   ·   ·  ███ │███ ███ ███ ███ │ ·  ███ │ ·   ·        23.5
+M10 Credits & Package Accounting      ·   ·   ·  ███ │███  ·  ███  ·  │███  ·  │ ·   ·          15
+M11 Notifications                     ·   ·   ·   ·  │ ·   ·   ·   ·  │███ ███ │ ·   ·           8
+M12 File & Version Management        ███  ·  ███  ·  │ ·   ·   ·  ███ │ ·  ███ │ ·   ·        18.5
+    System Test & UAT                 ·   ·   ·   ·  │ ·   ·   ·   ·  │ ·   ·  │▓▓▓ ▓▓▓         20
+    Deployment & Handover             ·   ·   ·   ·  │ ·   ·   ·   ·  │ ·   ·  │▓▓▓ ▓▓▓         20
                                     ─── ─── ─── ───┼─── ─── ─── ───┼─── ───┼─── ───        ───
     MILESTONE GATE                    ·   ·   ·   ◆  │ ·   ·   ·   ◆  │ ·   ·  │ ·   ◆
     FEATURE FREEZE                    ·   ·   ·   ·  │ ·   ·   ·   ·  │ ·  ▲   │ ·   ·
     ACTIVE TRACKS                      3   4   5   5 │  6   5   5   5 │  5   5 │  2   2
-    HOURS THIS WEEK                   60  80 100 100 │120 100 100 100 │100 100 │100 100      1160
-    CUMULATIVE                        60 140 240 340 │460 560 660 760 │860 960 │1060 1160
+    HOURS THIS WEEK                   20  20  20  20 │ 20  20  20  20 │ 20  20 │ 20  20       240
+    CUMULATIVE                        20  40  60  80 │100 120 140 160 │180 200 │220 240
 ```
 
 ### 6.2 Mermaid Gantt
 
 ```mermaid
 gantt
-    title ProEdits — 12-Week Delivery Plan (1,160 hours)
+    title ProEdits — 12-Week Delivery Plan (240 hours)
     dateFormat  YYYY-MM-DD
     axisFormat  %d %b
     excludes    weekends
@@ -502,18 +502,18 @@ Every path that needs a human — the Basic studio's send-to-human, a human-tier
 
 | Week | Dates (Mon–Sun) | Milestone | Active module tracks | Hours | Cumulative | Key output |
 |---|---|---|---|---:|---:|---|
-| **W1** | 28 Sep – 4 Oct 2026 | 1 | M0, M1, M12 | 60 | 60 | Running platform, four-role authentication, storage with original retention enforced |
-| **W2** | 5 – 11 Oct 2026 | 1 | M0, M1, M2, M3 | 80 | 140 | Client application shell, dashboard, project creation, presigned upload API |
-| **W3** | 12 – 18 Oct 2026 | 1 | M0, M2, M3, M4, M12 | 100 | 240 | Batch upload working; bracket detection and grouping operational |
-| **W4** | 19 – 25 Oct 2026 | 1 | M3, M4, M5, M9, M10 | 100 | 340 | **◆ Working image rendered; four-tier selection; shared queue and ledger live — Gate Fri 23 Oct** |
-| **W5** | 26 Oct – 1 Nov 2026 | 2 | M4, M5, M6, M8, M9, M10 | 120 | 460 | AI Auto Enhance, add-on foundation, priority engine, packages and payments |
-| **W6** | 2 – 8 Nov 2026 | 2 | M4, M6, M7, M8, M9 | 100 | 560 | WebGL preview, editor workspace, mask painting, QA review |
-| **W7** | 9 – 15 Nov 2026 | 2 | M6, M7, M8, M9, M10 | 100 | 660 | Full control set, revision loop, three add-ons, administrator console |
-| **W8** | 16 – 22 Nov 2026 | 2 | M6, M7, M8, M9, M12 | 100 | 760 | **◆ Both editing engines and the full human pipeline operational — Gate Fri 20 Nov** |
-| **W9** | 23 – 29 Nov 2026 | 3 | M6, M7, M8, M10, M11 | 100 | 860 | Virtual Staging, add-on chaining, Basic options complete, notifications |
-| **W10** | 30 Nov – 6 Dec 2026 | 3 | M0, M8, M9, M11, M12 | 100 | 960 | **▲ FEATURE FREEZE — production infrastructure, delivery packaging, live status** |
-| **W11** | 7 – 13 Dec 2026 | 3 | System Test, Deployment | 100 | 1,060 | Integration, performance, security, load testing; staging soak; production build |
-| **W12** | 14 – 20 Dec 2026 | 3 | System Test, Deployment | 100 | 1,160 | **◆ UAT signed, production go-live, handover — Gate Fri 18 Dec** |
+| **W1** | 28 Sep – 4 Oct 2026 | 1 | M0, M1, M12 | 20 | 20 | Running platform, four-role authentication, storage with original retention enforced |
+| **W2** | 5 – 11 Oct 2026 | 1 | M0, M1, M2, M3 | 20 | 40 | Client application shell, dashboard, project creation, presigned upload API |
+| **W3** | 12 – 18 Oct 2026 | 1 | M0, M2, M3, M4, M12 | 20 | 60 | Batch upload working; bracket detection and grouping operational |
+| **W4** | 19 – 25 Oct 2026 | 1 | M3, M4, M5, M9, M10 | 20 | 80 | **◆ Working image rendered; four-tier selection; shared queue and ledger live — Gate Fri 23 Oct** |
+| **W5** | 26 Oct – 1 Nov 2026 | 2 | M4, M5, M6, M8, M9, M10 | 20 | 100 | AI Auto Enhance, add-on foundation, priority engine, packages and payments |
+| **W6** | 2 – 8 Nov 2026 | 2 | M4, M6, M7, M8, M9 | 20 | 120 | WebGL preview, editor workspace, mask painting, QA review |
+| **W7** | 9 – 15 Nov 2026 | 2 | M6, M7, M8, M9, M10 | 20 | 140 | Full control set, revision loop, three add-ons, administrator console |
+| **W8** | 16 – 22 Nov 2026 | 2 | M6, M7, M8, M9, M12 | 20 | 160 | **◆ Both editing engines and the full human pipeline operational — Gate Fri 20 Nov** |
+| **W9** | 23 – 29 Nov 2026 | 3 | M6, M7, M8, M10, M11 | 20 | 180 | Virtual Staging, add-on chaining, Basic options complete, notifications |
+| **W10** | 30 Nov – 6 Dec 2026 | 3 | M0, M8, M9, M11, M12 | 20 | 200 | **▲ FEATURE FREEZE — production infrastructure, delivery packaging, live status** |
+| **W11** | 7 – 13 Dec 2026 | 3 | System Test, Deployment | 20 | 220 | Integration, performance, security, load testing; staging soak; production build |
+| **W12** | 14 – 20 Dec 2026 | 3 | System Test, Deployment | 20 | 240 | **◆ UAT signed, production go-live, handover — Gate Fri 18 Dec** |
 
 ### 7.1 Calendar
 
@@ -537,34 +537,34 @@ Every path that needs a human — the Basic studio's send-to-human, a human-tier
 Tasks are grouped by module track. Each track carries 20 hours in each week it appears, and every week's task hours sum to that week's total.
 
 ### Week 1 — Platform, authentication and storage foundation
-**28 Sep – 4 Oct 2026 · 60 hours · Tracks: M0, M1, M12**
+**28 Sep – 4 Oct 2026 · 20 hours · Tracks: M0, M1, M12**
 
-#### M0 — Platform & Infrastructure · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 1.0.1 | Monorepo and tooling | Workspace with four applications: the React client, the NestJS API, the Node worker and the Python processing service. Shared base TypeScript configuration with `strict` and `noUncheckedIndexedAccess`. Linting and formatting enforced on commit; Conventional Commits enforced by a commit-message hook. | 5 |
-| 1.0.2 | Local infrastructure | Docker Compose bringing up PostgreSQL 16, Redis 7 and an S3-compatible object store for local development. A complete environment-variable example file with every key documented; no secret committed to the repository at any point. | 5 |
-| 1.0.3 | NestJS API skeleton | Configuration module with schema-validated environment parsing that refuses to start on a missing or malformed value. Global validation pipe with whitelisting and transformation. Global exception filter mapping every error to one consistent response envelope. Health and readiness endpoints. Request logging with a correlation identifier propagated to workers. | 6 |
-| 1.0.4 | Prisma migration workflow | Prisma initialised against PostgreSQL with the generated client wired into the API. Migration workflow documented and a seed harness created for local and staging data. | 4 |
-
-#### M1 — Accounts & Authentication · 20 h
+#### M0 — Platform & Infrastructure · 6.75 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 1.1.1 | User model | `User` with identifier, role enumeration across client, editor, QA reviewer and administrator, email as a unique login, password hash, nullable seniority level used later for Advanced assignment, creation timestamp and last-login timestamp — per SRS §6.2. First migration applied. | 3 |
-| 1.1.2 | Authentication endpoints | Register, login, refresh and logout. Argon2id password hashing. Short-lived access token paired with a rotating refresh token, with refresh-token reuse detection. Last-login timestamp written on each successful login. Invalid credentials return one uniform refusal that does not disclose whether an account exists. | 7 |
-| 1.1.3 | Role-based access control | Authentication guard, role guard and a role decorator covering all four account types. An ownership-guard primitive for resource-level checks used by every later module. Access control is enforced here, in the backend, on every protected request. | 5 |
-| 1.1.4 | Password reset and recovery | Reset request, time-limited single-use token, and password change, with the token invalidated on use and on password change. Email dispatch behind an interface so the transactional provider is swappable. Rate limiting on the request endpoint. | 5 |
+| 1.0.1 | Monorepo and tooling | Workspace with four applications: the React client, the NestJS API, the Node worker and the Python processing service. Shared base TypeScript configuration with `strict` and `noUncheckedIndexedAccess`. Linting and formatting enforced on commit; Conventional Commits enforced by a commit-message hook. | 1.75 |
+| 1.0.2 | Local infrastructure | Docker Compose bringing up PostgreSQL 16, Redis 7 and an S3-compatible object store for local development. A complete environment-variable example file with every key documented; no secret committed to the repository at any point. | 1.75 |
+| 1.0.3 | NestJS API skeleton | Configuration module with schema-validated environment parsing that refuses to start on a missing or malformed value. Global validation pipe with whitelisting and transformation. Global exception filter mapping every error to one consistent response envelope. Health and readiness endpoints. Request logging with a correlation identifier propagated to workers. | 2 |
+| 1.0.4 | Prisma migration workflow | Prisma initialised against PostgreSQL with the generated client wired into the API. Migration workflow documented and a seed harness created for local and staging data. | 1.25 |
 
-#### M12 — File & Version Management · 20 h
+#### M1 — Accounts & Authentication · 6.75 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 1.12.1 | Object storage configuration | Private bucket with public access blocked entirely, server-side encryption enabled, versioning configured, and cross-origin rules permitting direct browser upload from the application origin only. | 4 |
-| 1.12.2 | Storage service and key convention | A single storage service implementing the eight-class key convention in Section 3.2. All presigning — for upload and for time-limited download — routes through this service, so no other module constructs a key or a URL directly. | 6 |
-| 1.12.3 | File lineage schema | `OriginalFile`, `WorkingImage` and `DeliveredVersion` with the foreign keys that record which original or earlier version each derived file came from, per SRS §6.2. Every saved result receives its own storage key; the relationship between them lives in the database. | 6 |
-| 1.12.4 | Original retention guard | Deletion of an original is blocked at the data-access layer, no delete route exists, and lifecycle rules exclude the originals prefix. An automated test asserts that cascading a project deletion does not remove an original file or object. This is Business Rule 6 and FR-AI.6, implemented in the first week rather than added as a later policy. | 4 |
+| 1.1.1 | User model | `User` with identifier, role enumeration across client, editor, QA reviewer and administrator, email as a unique login, password hash, nullable seniority level used later for Advanced assignment, creation timestamp and last-login timestamp — per SRS §6.2. First migration applied. | 1 |
+| 1.1.2 | Authentication endpoints | Register, login, refresh and logout. Argon2id password hashing. Short-lived access token paired with a rotating refresh token, with refresh-token reuse detection. Last-login timestamp written on each successful login. Invalid credentials return one uniform refusal that does not disclose whether an account exists. | 2.25 |
+| 1.1.3 | Role-based access control | Authentication guard, role guard and a role decorator covering all four account types. An ownership-guard primitive for resource-level checks used by every later module. Access control is enforced here, in the backend, on every protected request. | 1.75 |
+| 1.1.4 | Password reset and recovery | Reset request, time-limited single-use token, and password change, with the token invalidated on use and on password change. Email dispatch behind an interface so the transactional provider is swappable. Rate limiting on the request endpoint. | 1.75 |
+
+#### M12 — File & Version Management · 6.5 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 1.12.1 | Object storage configuration | Private bucket with public access blocked entirely, server-side encryption enabled, versioning configured, and cross-origin rules permitting direct browser upload from the application origin only. | 1.25 |
+| 1.12.2 | Storage service and key convention | A single storage service implementing the eight-class key convention in Section 3.2. All presigning — for upload and for time-limited download — routes through this service, so no other module constructs a key or a URL directly. | 2 |
+| 1.12.3 | File lineage schema | `OriginalFile`, `WorkingImage` and `DeliveredVersion` with the foreign keys that record which original or earlier version each derived file came from, per SRS §6.2. Every saved result receives its own storage key; the relationship between them lives in the database. | 2 |
+| 1.12.4 | Original retention guard | Deletion of an original is blocked at the data-access layer, no delete route exists, and lifecycle rules exclude the originals prefix. An automated test asserts that cascading a project deletion does not remove an original file or object. This is Business Rule 6 and FR-AI.6, implemented in the first week rather than added as a later policy. | 1.25 |
 
 **Deliverable.** The full stack starts from one command. Four account types register, log in, refresh and reset their password. Storage is private, encrypted and structured, and originals cannot be deleted.
 
@@ -575,41 +575,41 @@ Tasks are grouped by module track. Each track carries 20 hours in each week it a
 ---
 
 ### Week 2 — Client application, dashboard and upload API
-**5 – 11 Oct 2026 · 80 hours · Tracks: M0, M1, M2, M3**
+**5 – 11 Oct 2026 · 20 hours · Tracks: M0, M1, M2, M3**
 
-#### M0 — Platform & Infrastructure · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 2.0.1 | React application shell | React with TypeScript in strict mode, routing, server-state management, and an HTTP client that attaches the access token and transparently refreshes and retries once on expiry. Functional components throughout; asynchronous code uses `async`/`await`. | 7 |
-| 2.0.2 | Design system from Figma | Design tokens — colour, typography, spacing, elevation, radius — extracted from the Client_User, Desk_user and QA—Editor_user files, plus the shared component set they have in common: buttons, inputs, cards, status chips, modals, toasts, tables and empty states. Built once here so all four role interfaces stay consistent. | 7 |
-| 2.0.3 | Job queue and worker process | BullMQ on Redis with the worker running as its own process, separate from the API. Queue registry covering pre-processing, enhancement, add-on, export and archive work. Retry with exponential backoff, attempt limits, dead-letter handling and job-level structured logging. | 6 |
-
-#### M1 — Accounts & Authentication · 20 h
+#### M0 — Platform & Infrastructure · 5 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 2.1.1 | Login and registration screens | Client_User authentication screens with field-level validation, inline error surfacing, loading state and a clear failure state. No failure is swallowed. | 5 |
-| 2.1.2 | Password reset screens and emails | Request, confirmation and new-password screens, with the matching transactional email templates and expiry messaging. | 4 |
-| 2.1.3 | Role-routed application shells | Four shells with their own navigation and layout: client (Client_User), editor and administrator (Desk_user), QA reviewer (QA—Editor_user). Route guards read the role claim. This is navigation only; the backend remains the enforcement point. | 6 |
-| 2.1.4 | Role-permission matrix tests | End-to-end tests asserting that each of the four account types is refused every route belonging to the other three, and that an authenticated account cannot reach another account's resources. | 5 |
+| 2.0.1 | React application shell | React with TypeScript in strict mode, routing, server-state management, and an HTTP client that attaches the access token and transparently refreshes and retries once on expiry. Functional components throughout; asynchronous code uses `async`/`await`. | 1.75 |
+| 2.0.2 | Design system from Figma | Design tokens — colour, typography, spacing, elevation, radius — extracted from the Client_User, Desk_user and QA—Editor_user files, plus the shared component set they have in common: buttons, inputs, cards, status chips, modals, toasts, tables and empty states. Built once here so all four role interfaces stay consistent. | 1.75 |
+| 2.0.3 | Job queue and worker process | BullMQ on Redis with the worker running as its own process, separate from the API. Queue registry covering pre-processing, enhancement, add-on, export and archive work. Retry with exponential backoff, attempt limits, dead-letter handling and job-level structured logging. | 1.5 |
 
-#### M2 — Client Dashboard · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 2.2.1 | Dashboard API | One endpoint returning current credit balance, monthly package status, the active project list and the completed project list, each project carrying name, creation date, image count, current status and the tiers associated with its images. | 6 |
-| 2.2.2 | Dashboard screen | Client_User dashboard: project cards with status chips, separated active and completed sections, and the credit balance and package status panels. Balance and package values are wired to the live endpoint from Week 4 onward; until then they read from the same contract against seeded data. | 8 |
-| 2.2.3 | Client-action versus internal-action states | A project awaiting the client — a Basic result ready to accept or send on, or a QA-approved result awaiting review — is presented distinctly from a project awaiting internal work in the editor or QA queue, because the two demand different calls to action (FR-DASH.3). | 4 |
-| 2.2.4 | Identity suppression | A serialisation rule applied to every client-facing response that strips editor identity, QA identity, assignment detail and internal queue position. A test asserts the absence of these fields across every client endpoint (FR-DASH.4). | 2 |
-
-#### M3 — Project Creation & Upload · 20 h
+#### M1 — Accounts & Authentication · 5 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 2.3.1 | Project model and API | `Project` with owner, name, creation date and derived status. Create, list and detail endpoints, each behind an ownership guard. Project creation is an explicit step before any upload, per every version of the source flow (FR-UP.1). | 6 |
-| 2.3.2 | Create-project flow | Client_User creation screen and the transition into the upload step. | 4 |
-| 2.3.3 | Presigned multipart upload API | Initiate, part-signing, completion and abort endpoints. The API verifies project access **before** issuing any temporary upload permission — the browser never receives a credential it has not been authorised for. Part size, part count and expiry are configured; abort cleans up the incomplete transfer. | 10 |
+| 2.1.1 | Login and registration screens | Client_User authentication screens with field-level validation, inline error surfacing, loading state and a clear failure state. No failure is swallowed. | 1.25 |
+| 2.1.2 | Password reset screens and emails | Request, confirmation and new-password screens, with the matching transactional email templates and expiry messaging. | 1 |
+| 2.1.3 | Role-routed application shells | Four shells with their own navigation and layout: client (Client_User), editor and administrator (Desk_user), QA reviewer (QA—Editor_user). Route guards read the role claim. This is navigation only; the backend remains the enforcement point. | 1.5 |
+| 2.1.4 | Role-permission matrix tests | End-to-end tests asserting that each of the four account types is refused every route belonging to the other three, and that an authenticated account cannot reach another account's resources. | 1.25 |
+
+#### M2 — Client Dashboard · 5 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 2.2.1 | Dashboard API | One endpoint returning current credit balance, monthly package status, the active project list and the completed project list, each project carrying name, creation date, image count, current status and the tiers associated with its images. | 1.5 |
+| 2.2.2 | Dashboard screen | Client_User dashboard: project cards with status chips, separated active and completed sections, and the credit balance and package status panels. Balance and package values are wired to the live endpoint from Week 4 onward; until then they read from the same contract against seeded data. | 2 |
+| 2.2.3 | Client-action versus internal-action states | A project awaiting the client — a Basic result ready to accept or send on, or a QA-approved result awaiting review — is presented distinctly from a project awaiting internal work in the editor or QA queue, because the two demand different calls to action (FR-DASH.3). | 1 |
+| 2.2.4 | Identity suppression | A serialisation rule applied to every client-facing response that strips editor identity, QA identity, assignment detail and internal queue position. A test asserts the absence of these fields across every client endpoint (FR-DASH.4). | 0.5 |
+
+#### M3 — Project Creation & Upload · 5 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 2.3.1 | Project model and API | `Project` with owner, name, creation date and derived status. Create, list and detail endpoints, each behind an ownership guard. Project creation is an explicit step before any upload, per every version of the source flow (FR-UP.1). | 1.5 |
+| 2.3.2 | Create-project flow | Client_User creation screen and the transition into the upload step. | 1 |
+| 2.3.3 | Presigned multipart upload API | Initiate, part-signing, completion and abort endpoints. The API verifies project access **before** issuing any temporary upload permission — the browser never receives a credential it has not been authorised for. Part size, part count and expiry are configured; abort cleans up the incomplete transfer. | 2.5 |
 
 **Deliverable.** A client logs in, sees their dashboard, creates a project, and the backend is ready to authorise direct browser uploads into it.
 
@@ -620,48 +620,48 @@ Tasks are grouped by module track. Each track carries 20 hours in each week it a
 ---
 
 ### Week 3 — Batch upload, project detail and bracket detection
-**12 – 18 Oct 2026 · 100 hours · Tracks: M0, M2, M3, M4, M12**
+**12 – 18 Oct 2026 · 20 hours · Tracks: M0, M2, M3, M4, M12**
 
-#### M0 — Platform & Infrastructure · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 3.0.1 | Continuous integration | On every pull request: lint, type check, unit tests and build. Branch protection requires a green pipeline before merge. | 6 |
-| 3.0.2 | Observability | Structured logging with correlation identifiers propagated from the API through the queue into the workers and the Python service, error tracking, and metrics covering queue depth, job duration and failure rate. | 7 |
-| 3.0.3 | Python service container | Container image for the Python and OpenCV service, internal service-to-service authentication so it is not reachable from outside the private network, and contract tests against the documented interface. The Python service holds no account or business logic. | 7 |
-
-#### M2 — Client Dashboard · 20 h
+#### M0 — Platform & Infrastructure · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 3.2.1 | Project detail screen | Image grid with per-image status, exposure groups shown as groups with their member originals, thumbnails, and the per-image tier once selected. | 8 |
-| 3.2.2 | Activity history | A per-project chronological record of what has happened — uploaded, grouped, processed, tier selected, submitted, edited, reviewed, delivered — expressed in client-facing language with no internal identity. | 6 |
-| 3.2.3 | List controls and states | Filtering by status and tier, sorting, pagination, and complete empty, loading, error and partial-failure states across the dashboard and project detail. | 6 |
+| 3.0.1 | Continuous integration | On every pull request: lint, type check, unit tests and build. Branch protection requires a green pipeline before merge. | 1.25 |
+| 3.0.2 | Observability | Structured logging with correlation identifiers propagated from the API through the queue into the workers and the Python service, error tracking, and metrics covering queue depth, job duration and failure rate. | 1.25 |
+| 3.0.3 | Python service container | Container image for the Python and OpenCV service, internal service-to-service authentication so it is not reachable from outside the private network, and contract tests against the documented interface. The Python service holds no account or business logic. | 1.5 |
 
-#### M3 — Project Creation & Upload · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 3.3.1 | Batch uploader | Client_User upload screen: drag-and-drop and file picker, multi-file selection, per-file and per-part progress, automatic retry of failed parts with backoff, individual and bulk cancel, and a clear summary of what succeeded and what did not. Large sets transfer as multipart uploads. | 10 |
-| 3.3.2 | Upload verification and metadata | On completion the backend verifies each object exists with the expected size and checksum, then records the original file with capture time, exposure time, ISO, aperture, exposure bias and dimensions read from the embedded metadata. Processing jobs are scheduled only after verification succeeds. | 6 |
-| 3.3.3 | File limits | Configuration-driven accepted formats, maximum file size, maximum resolution, maximum files per batch and maximum images per project, validated both when a presigned permission is requested and again at completion. Held as configuration rather than constants pending the confirmation in Section 14. | 4 |
-
-#### M4 — AI Pre-Processing Engine · 20 h
+#### M2 — Client Dashboard · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 3.4.1 | Processing service scaffold | The Python and OpenCV service with a documented internal contract: given a set of original files, return group definitions and a rendered working-image key. Invoked by the Node worker, never called directly by the browser. | 5 |
-| 3.4.2 | Bracket detection from metadata | Clustering by capture time within a configurable window, combined with exposure-value delta analysis, to identify candidate bracketed sets — for example five frames of one room taken seconds apart at different exposure levels (FR-AI.1). | 7 |
-| 3.4.3 | Visual similarity confirmation | Feature matching and histogram comparison to confirm that a candidate set really is the same scene, guarding against the two failure modes the source material warns of: similar-looking rooms grouped wrongly, and missing metadata leaving frames ungrouped. A confidence score is recorded per group for later review (FR-AI.2). | 8 |
+| 3.2.1 | Project detail screen | Image grid with per-image status, exposure groups shown as groups with their member originals, thumbnails, and the per-image tier once selected. | 1.5 |
+| 3.2.2 | Activity history | A per-project chronological record of what has happened — uploaded, grouped, processed, tier selected, submitted, edited, reviewed, delivered — expressed in client-facing language with no internal identity. | 1.25 |
+| 3.2.3 | List controls and states | Filtering by status and tier, sorting, pagination, and complete empty, loading, error and partial-failure states across the dashboard and project detail. | 1.25 |
 
-#### M12 — File & Version Management · 20 h
+#### M3 — Project Creation & Upload · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 3.12.1 | Derivative pipeline | Sharp-based generation of thumbnails and web-scale previews for originals, working images and every later result, written to the thumbnails prefix and used by every grid and viewer in the product. | 6 |
-| 3.12.2 | Version model and lineage API | Delivered-version records with an incrementing version number, and an endpoint returning the complete lineage of any image — which original it came from, which working image, which results derive from it. | 6 |
-| 3.12.3 | Download service | Time-limited presigned download URLs issued only after the API authorises the request against the requesting account's role and relationship to the file. No object is ever publicly readable. | 5 |
-| 3.12.4 | Retention policy engine | Configurable retention per file class, with the originals class hard-coded as exempt so no future configuration change can expose them to deletion. | 3 |
+| 3.3.1 | Batch uploader | Client_User upload screen: drag-and-drop and file picker, multi-file selection, per-file and per-part progress, automatic retry of failed parts with backoff, individual and bulk cancel, and a clear summary of what succeeded and what did not. Large sets transfer as multipart uploads. | 2 |
+| 3.3.2 | Upload verification and metadata | On completion the backend verifies each object exists with the expected size and checksum, then records the original file with capture time, exposure time, ISO, aperture, exposure bias and dimensions read from the embedded metadata. Processing jobs are scheduled only after verification succeeds. | 1.25 |
+| 3.3.3 | File limits | Configuration-driven accepted formats, maximum file size, maximum resolution, maximum files per batch and maximum images per project, validated both when a presigned permission is requested and again at completion. Held as configuration rather than constants pending the confirmation in Section 14. | 0.75 |
+
+#### M4 — AI Pre-Processing Engine · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 3.4.1 | Processing service scaffold | The Python and OpenCV service with a documented internal contract: given a set of original files, return group definitions and a rendered working-image key. Invoked by the Node worker, never called directly by the browser. | 1 |
+| 3.4.2 | Bracket detection from metadata | Clustering by capture time within a configurable window, combined with exposure-value delta analysis, to identify candidate bracketed sets — for example five frames of one room taken seconds apart at different exposure levels (FR-AI.1). | 1.5 |
+| 3.4.3 | Visual similarity confirmation | Feature matching and histogram comparison to confirm that a candidate set really is the same scene, guarding against the two failure modes the source material warns of: similar-looking rooms grouped wrongly, and missing metadata leaving frames ungrouped. A confidence score is recorded per group for later review (FR-AI.2). | 1.5 |
+
+#### M12 — File & Version Management · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 3.12.1 | Derivative pipeline | Sharp-based generation of thumbnails and web-scale previews for originals, working images and every later result, written to the thumbnails prefix and used by every grid and viewer in the product. | 1.25 |
+| 3.12.2 | Version model and lineage API | Delivered-version records with an incrementing version number, and an endpoint returning the complete lineage of any image — which original it came from, which working image, which results derive from it. | 1.25 |
+| 3.12.3 | Download service | Time-limited presigned download URLs issued only after the API authorises the request against the requesting account's role and relationship to the file. No object is ever publicly readable. | 1 |
+| 3.12.4 | Retention policy engine | Configurable retention per file class, with the originals class hard-coded as exempt so no future configuration change can expose them to deletion. | 0.5 |
 
 **Deliverable.** A 50-file batch uploads directly to storage, is verified, produces metadata-rich records, and the processing service identifies which frames belong to the same scene.
 
@@ -672,51 +672,51 @@ Tasks are grouped by module track. Each track carries 20 hours in each week it a
 ---
 
 ### Week 4 — Exposure merge, tier selection, queue and ledger ◆ Milestone 1 gate
-**19 – 25 Oct 2026 · 100 hours · Tracks: M3, M4, M5, M9, M10**
+**19 – 25 Oct 2026 · 20 hours · Tracks: M3, M4, M5, M9, M10**
 
-#### M3 — Project Creation & Upload · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 4.3.1 | Manual grouping override | A client-facing view of the detected groups with the ability to split a group, merge two groups, move a frame between groups, or mark a frame as standalone. Groups with a low confidence score are surfaced for confirmation first. This is the correction path the source material asks for, and it is what makes an uncertain automatic grouping recoverable rather than a dead end (FR-UP.4, FR-AI.7). | 8 |
-| 4.3.2 | Grouping override API | Endpoints backing the above, recording whether a group was detected automatically or confirmed by the client, and re-scheduling the merge when a grouping changes. | 5 |
-| 4.3.3 | Upload resumption and cleanup | Resuming an interrupted multipart transfer in a later session, and a scheduled job that aborts and cleans up transfers abandoned beyond a configured age. | 4 |
-| 4.3.4 | Upload end-to-end coverage | Automated coverage of a 50-file batch containing multiple brackets and standalone images, including an induced part failure and its retry. | 3 |
-
-#### M4 — AI Pre-Processing Engine · 20 h
+#### M3 — Project Creation & Upload · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 4.4.1 | Exposure alignment | Alignment across the bracket to correct for camera movement between frames, with handling for moving subjects so a person or a curtain that moved between exposures does not produce a ghost in the merged result. | 6 |
-| 4.4.2 | Merge and tone mapping | HDR merge and exposure-fusion producing the combined image, followed by tone mapping. Every parameter is configuration rather than a constant, because these need testing against real photographs — particularly mixed flash exposures, movement and window detail — and will be tuned in Week 5 (FR-AI.3). | 8 |
-| 4.4.3 | Working image render and ready state | The merged result is rendered and written to the working prefix, a working-image record is created linking it to its exposure group, and it is marked ready for either AI editing or human editing — the state every subsequent step depends on (FR-AI.4, FR-AI.5). | 4 |
-| 4.4.4 | Progress endpoint | Per-group processing status for client polling, so the upload screen can show real progress rather than an unqualified spinner. | 2 |
+| 4.3.1 | Manual grouping override | A client-facing view of the detected groups with the ability to split a group, merge two groups, move a frame between groups, or mark a frame as standalone. Groups with a low confidence score are surfaced for confirmation first. This is the correction path the source material asks for, and it is what makes an uncertain automatic grouping recoverable rather than a dead end (FR-UP.4, FR-AI.7). | 1.75 |
+| 4.3.2 | Grouping override API | Endpoints backing the above, recording whether a group was detected automatically or confirmed by the client, and re-scheduling the merge when a grouping changes. | 1 |
+| 4.3.3 | Upload resumption and cleanup | Resuming an interrupted multipart transfer in a later session, and a scheduled job that aborts and cleans up transfers abandoned beyond a configured age. | 0.75 |
+| 4.3.4 | Upload end-to-end coverage | Automated coverage of a 50-file batch containing multiple brackets and standalone images, including an induced part failure and its retry. | 0.5 |
 
-#### M5 — Service Tier Selection · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 4.5.1 | Tier model | Service selection records tied to a working image, with the tier enumeration covering Basic, Basic Plus, Standard and Advanced, and the selection timestamp. | 3 |
-| 4.5.2 | Tier options and pricing endpoint | Per working image, the available tiers with their credit cost and indicative turnaround, so the client chooses against real information rather than a bare label. | 5 |
-| 4.5.3 | Tier picker | The post-processing working-image grid with thumbnails and scene labels, a per-image tier picker, and bulk application across a multi-selection — since a project routinely contains a mix of tiers and setting them one at a time across fifty images is not workable. | 9 |
-| 4.5.4 | Selection gating | A working image cannot proceed to tier selection until pre-processing has completed successfully or the client has confirmed a manual grouping. Blocked images explain why, and failed groups link straight to the correction path from task 4.3.1 (Business Rule 1). | 3 |
-
-#### M9 — Traffic Management, Assignment & QA · 20 h
+#### M4 — AI Pre-Processing Engine · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 4.9.1 | Workflow models | Editing task, QA review and revision request records per SRS §6.2. The task's source type carries the full enumeration from the outset — Basic Plus, Standard, Advanced, rejected Basic and rejected add-on — so every later consumer plugs in without a schema change. | 4 |
-| 4.9.2 | Task state machine | Guarded transitions through queued, assigned, in editing, in QA, QA rejected, client review, revision requested and complete. All transitions live in one service; an illegal transition throws and is logged. A result can never reach client review without passing QA, and a revision can never bypass it (Business Rule 7). Table-driven tests cover every legal and every illegal edge. | 10 |
-| 4.9.3 | Single entry point | One method creates an editing task, used by every producer without exception, idempotent on the combination of working image, source type and revision cycle so a path can neither duplicate a task nor silently drop one. An architecture test fails the build if a task is created anywhere else in the codebase. This is the SRS's firmest structural requirement and it is built before any of its three consumers exist (FR-TRAFFIC.1, Business Rule 4). | 6 |
+| 4.4.1 | Exposure alignment | Alignment across the bracket to correct for camera movement between frames, with handling for moving subjects so a person or a curtain that moved between exposures does not produce a ghost in the merged result. | 1.25 |
+| 4.4.2 | Merge and tone mapping | HDR merge and exposure-fusion producing the combined image, followed by tone mapping. Every parameter is configuration rather than a constant, because these need testing against real photographs — particularly mixed flash exposures, movement and window detail — and will be tuned in Week 5 (FR-AI.3). | 1.5 |
+| 4.4.3 | Working image render and ready state | The merged result is rendered and written to the working prefix, a working-image record is created linking it to its exposure group, and it is marked ready for either AI editing or human editing — the state every subsequent step depends on (FR-AI.4, FR-AI.5). | 0.75 |
+| 4.4.4 | Progress endpoint | Per-group processing status for client polling, so the upload screen can show real progress rather than an unqualified spinner. | 0.5 |
 
-#### M10 — Credits & Package Accounting · 20 h
+#### M5 — Service Tier Selection · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 4.10.1 | Ledger model | Credit ledger entries recording purchase, package allocation, reservation, charge and refund, each linked to the task, edit session or add-on job that caused it. Balance is always derived from the ledger and never stored as a mutable counter. | 4 |
-| 4.10.2 | Reserve, charge and release | The three operations that move credit, each inside one database transaction at serialisable isolation with a per-account lock and an idempotency key, so a retried request cannot double-spend and two concurrent submissions cannot spend the same credit. | 10 |
-| 4.10.3 | Concurrency coverage | A test suite that fires concurrent reservations against a balance sufficient for only one and asserts exactly one succeeds, plus retry-storm coverage against the idempotency keys. | 3 |
-| 4.10.4 | Balance surfacing and blocking | The live balance replaces the seeded value on the dashboard, and tier selection blocks with a clear explanation when the balance is insufficient, with no partial submission possible. | 3 |
+| 4.5.1 | Tier model | Service selection records tied to a working image, with the tier enumeration covering Basic, Basic Plus, Standard and Advanced, and the selection timestamp. | 0.5 |
+| 4.5.2 | Tier options and pricing endpoint | Per working image, the available tiers with their credit cost and indicative turnaround, so the client chooses against real information rather than a bare label. | 1 |
+| 4.5.3 | Tier picker | The post-processing working-image grid with thumbnails and scene labels, a per-image tier picker, and bulk application across a multi-selection — since a project routinely contains a mix of tiers and setting them one at a time across fifty images is not workable. | 2 |
+| 4.5.4 | Selection gating | A working image cannot proceed to tier selection until pre-processing has completed successfully or the client has confirmed a manual grouping. Blocked images explain why, and failed groups link straight to the correction path from task 4.3.1 (Business Rule 1). | 0.5 |
+
+#### M9 — Traffic Management, Assignment & QA · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 4.9.1 | Workflow models | Editing task, QA review and revision request records per SRS §6.2. The task's source type carries the full enumeration from the outset — Basic Plus, Standard, Advanced, rejected Basic and rejected add-on — so every later consumer plugs in without a schema change. | 0.75 |
+| 4.9.2 | Task state machine | Guarded transitions through queued, assigned, in editing, in QA, QA rejected, client review, revision requested and complete. All transitions live in one service; an illegal transition throws and is logged. A result can never reach client review without passing QA, and a revision can never bypass it (Business Rule 7). Table-driven tests cover every legal and every illegal edge. | 2 |
+| 4.9.3 | Single entry point | One method creates an editing task, used by every producer without exception, idempotent on the combination of working image, source type and revision cycle so a path can neither duplicate a task nor silently drop one. An architecture test fails the build if a task is created anywhere else in the codebase. This is the SRS's firmest structural requirement and it is built before any of its three consumers exist (FR-TRAFFIC.1, Business Rule 4). | 1.25 |
+
+#### M10 — Credits & Package Accounting · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 4.10.1 | Ledger model | Credit ledger entries recording purchase, package allocation, reservation, charge and refund, each linked to the task, edit session or add-on job that caused it. Balance is always derived from the ledger and never stored as a mutable counter. | 0.75 |
+| 4.10.2 | Reserve, charge and release | The three operations that move credit, each inside one database transaction at serialisable isolation with a per-account lock and an idempotency key, so a retried request cannot double-spend and two concurrent submissions cannot spend the same credit. | 2.25 |
+| 4.10.3 | Concurrency coverage | A test suite that fires concurrent reservations against a balance sufficient for only one and asserts exactly one succeeds, plus retry-storm coverage against the idempotency keys. | 0.5 |
+| 4.10.4 | Balance surfacing and blocking | The live balance replaces the seeded value on the dashboard, and tier selection blocks with a clear explanation when the balance is insufficient, with no partial submission possible. | 0.5 |
 
 **Deliverable.** A five-exposure bracket becomes one rendered working image; the client picks a tier from all four against a live balance; the shared queue and the credit ledger are built and proven before anything consumes them.
 
@@ -731,58 +731,58 @@ Tasks are grouped by module track. Each track carries 20 hours in each week it a
 ## 9. Week-by-Week Plan — Milestone 2 (Weeks 5–8)
 
 ### Week 5 — Enhancement, add-on foundation, priority engine and payments
-**26 Oct – 1 Nov 2026 · 120 hours · Tracks: M4, M5, M6, M8, M9, M10**
+**26 Oct – 1 Nov 2026 · 20 hours · Tracks: M4, M5, M6, M8, M9, M10**
 
 This is the widest week of the programme: six tracks run concurrently because Milestone 1 delivered every prerequisite they each depend on, and all six are independent of one another.
 
-#### M4 — AI Pre-Processing Engine · 20 h
+#### M4 — AI Pre-Processing Engine · 3.5 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 5.4.1 | Failure fallback presentation | When detection is uncertain or merging fails, the originals are presented ungrouped with a clear explanation and the manual bracket-confirmation path from Week 4, rather than the image sitting in an indefinite processing state. Failures are logged for monitoring with the reason attached (FR-AI.7, NFR-AVAIL.3). | 9 |
-| 5.4.2 | Reprocessing without re-upload | Re-running detection, grouping and merge from the retained originals after a grouping correction or a parameter change — the direct payoff of the retention rule, and the reason originals are kept rather than discarded once a working image exists. | 6 |
-| 5.4.3 | Tuning against the sample set | Parameter tuning across the supplied photographs, focused on the three conditions the source material flags as hardest: mixed flash exposures, movement between frames, and retaining detail in windows without flattening the interior. | 5 |
+| 5.4.1 | Failure fallback presentation | When detection is uncertain or merging fails, the originals are presented ungrouped with a clear explanation and the manual bracket-confirmation path from Week 4, rather than the image sitting in an indefinite processing state. Failures are logged for monitoring with the reason attached (FR-AI.7, NFR-AVAIL.3). | 1.5 |
+| 5.4.2 | Reprocessing without re-upload | Re-running detection, grouping and merge from the retained originals after a grouping correction or a parameter change — the direct payoff of the retention rule, and the reason originals are kept rather than discarded once a working image exists. | 1 |
+| 5.4.3 | Tuning against the sample set | Parameter tuning across the supplied photographs, focused on the three conditions the source material flags as hardest: mixed flash exposures, movement between frames, and retaining detail in windows without flattening the interior. | 1 |
 
-#### M5 — Service Tier Selection · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 5.5.1 | Change and re-selection rules | Which tier changes are permitted before submission, what happens to a reserved credit when a tier changes, and the point after which the selection is locked. | 5 |
-| 5.5.2 | Project-level bulk assignment | Applying one tier across every image in a project or across a filtered subset, with a preview of the total credit cost before confirmation. | 6 |
-| 5.5.3 | Cost resolution and confirmation | Resolving the credit cost for the chosen tier against the account's package entitlement and pay-as-you-go balance, and presenting a confirmation showing what will be consumed from each. | 6 |
-| 5.5.4 | Four-tier coverage | End-to-end coverage of selection, change and submission across Basic, Basic Plus, Standard and Advanced. | 3 |
-
-#### M6 — Basic Tier · 20 h
+#### M5 — Service Tier Selection · 3 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 5.6.1 | Enhancement provider adapter and benchmark | One internal interface taking a working image and returning an enhanced result, so the vendor behind it is swappable without touching anything else (NFR-MAIN.1). Two candidate hosted services benchmarked against the sample set on output quality, resolution ceiling, latency against the 15-second target and cost per image, with a written recommendation and a recorded selection. The source material is explicit that this provider stays undecided until real images establish acceptable quality — this task is where that decision gets made on evidence. | 8 |
-| 5.6.2 | Auto-enhance job | Selecting Basic enqueues the enhancement job automatically, with no button press: the client sees the enhanced result as a preview when they arrive at the studio (FR-BASIC.1). The result is written to its own storage key, leaving the working image untouched. A provider failure surfaces a visible delayed state, never an indefinite spinner. | 7 |
-| 5.6.3 | Edit session and adjustment recipe | The Basic edit session record holding the enhancement result path, the manual adjustment values and the client's eventual decision. Adjustments are stored as a validated, versioned recipe keyed by control name — for example an exposure of 0.4, a contrast of 10 and a saturation of 5 — so the same recipe replays identically in the browser preview and in the full-resolution export. | 5 |
+| 5.5.1 | Change and re-selection rules | Which tier changes are permitted before submission, what happens to a reserved credit when a tier changes, and the point after which the selection is locked. | 0.75 |
+| 5.5.2 | Project-level bulk assignment | Applying one tier across every image in a project or across a filtered subset, with a preview of the total credit cost before confirmation. | 0.75 |
+| 5.5.3 | Cost resolution and confirmation | Resolving the credit cost for the chosen tier against the account's package entitlement and pay-as-you-go balance, and presenting a confirmation showing what will be consumed from each. | 1 |
+| 5.5.4 | Four-tier coverage | End-to-end coverage of selection, change and submission across Basic, Basic Plus, Standard and Advanced. | 0.5 |
 
-#### M8 — AI Add-On Engine · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 5.8.1 | Add-on job model | Add-on job records carrying the full five-type enumeration from the start, plus mask data, instruction text, room type and style — the union of what all five add-ons need, so adding the fourth and fifth requires no schema change (SRS §6.2). | 4 |
-| 5.8.2 | Unified add-on API | One API surface for every add-on: create a job with its mask or instruction, poll status, fetch the result, and record the client's accept or reject decision. The source material is explicit that one common architecture should serve all five; this is that architecture. | 7 |
-| 5.8.3 | Provider adapter and evaluation | A provider interface behind which different hosted services can sit for different effects, plus an evaluation across all five effects on output quality and — critically for property photography — whether the generated result preserves the structure of the room or the building rather than inventing geometry. | 9 |
-
-#### M9 — Traffic Management, Assignment & QA · 20 h
+#### M6 — Basic Tier · 3.5 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 5.9.1 | Priority engine | Priority calculated from the five named inputs — monthly package status, service quality tier, delivery time or deadline, queue position, and editor availability — combined through weights held in configuration rather than in code, so the balance between them can be adjusted once real queue behaviour is observed without a release (FR-TRAFFIC.2, NFR-MAIN.2). | 10 |
-| 5.9.2 | Editor assignment | Assignment of the highest-priority task to an available editor, accounting for current workload and, for Advanced work, the seniority flag. | 7 |
-| 5.9.3 | Priority configuration API | Storage of the weight set with an administrator endpoint to read and update it, and a change history so a shift in queue behaviour can be traced to the configuration change that caused it. | 3 |
+| 5.6.1 | Enhancement provider adapter and benchmark | One internal interface taking a working image and returning an enhanced result, so the vendor behind it is swappable without touching anything else (NFR-MAIN.1). Two candidate hosted services benchmarked against the sample set on output quality, resolution ceiling, latency against the 15-second target and cost per image, with a written recommendation and a recorded selection. The source material is explicit that this provider stays undecided until real images establish acceptable quality — this task is where that decision gets made on evidence. | 1.25 |
+| 5.6.2 | Auto-enhance job | Selecting Basic enqueues the enhancement job automatically, with no button press: the client sees the enhanced result as a preview when they arrive at the studio (FR-BASIC.1). The result is written to its own storage key, leaving the working image untouched. A provider failure surfaces a visible delayed state, never an indefinite spinner. | 1.25 |
+| 5.6.3 | Edit session and adjustment recipe | The Basic edit session record holding the enhancement result path, the manual adjustment values and the client's eventual decision. Adjustments are stored as a validated, versioned recipe keyed by control name — for example an exposure of 0.4, a contrast of 10 and a saturation of 5 — so the same recipe replays identically in the browser preview and in the full-resolution export. | 1 |
 
-#### M10 — Credits & Package Accounting · 20 h
+#### M8 — AI Add-On Engine · 3.5 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 5.10.1 | Monthly packages | Package definitions with included credits and a renewal date, client enrolment, allocation on renewal, and a defined consumption order so included credits are drawn down before pay-as-you-go balance. | 8 |
-| 5.10.2 | Payment provider integration | Credit purchase and package subscription through a provider supported in the operating jurisdiction. Payment is confirmed **only** by a verified provider webhook, never by a browser redirect, and settlement is idempotent so a repeated webhook cannot credit an account twice. | 9 |
-| 5.10.3 | Purchase flow | Client-facing purchase of a credit bundle and subscription to a package, with confirmation and receipt. | 3 |
+| 5.8.1 | Add-on job model | Add-on job records carrying the full five-type enumeration from the start, plus mask data, instruction text, room type and style — the union of what all five add-ons need, so adding the fourth and fifth requires no schema change (SRS §6.2). | 0.75 |
+| 5.8.2 | Unified add-on API | One API surface for every add-on: create a job with its mask or instruction, poll status, fetch the result, and record the client's accept or reject decision. The source material is explicit that one common architecture should serve all five; this is that architecture. | 1.25 |
+| 5.8.3 | Provider adapter and evaluation | A provider interface behind which different hosted services can sit for different effects, plus an evaluation across all five effects on output quality and — critically for property photography — whether the generated result preserves the structure of the room or the building rather than inventing geometry. | 1.5 |
+
+#### M9 — Traffic Management, Assignment & QA · 3.5 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 5.9.1 | Priority engine | Priority calculated from the five named inputs — monthly package status, service quality tier, delivery time or deadline, queue position, and editor availability — combined through weights held in configuration rather than in code, so the balance between them can be adjusted once real queue behaviour is observed without a release (FR-TRAFFIC.2, NFR-MAIN.2). | 1.75 |
+| 5.9.2 | Editor assignment | Assignment of the highest-priority task to an available editor, accounting for current workload and, for Advanced work, the seniority flag. | 1.25 |
+| 5.9.3 | Priority configuration API | Storage of the weight set with an administrator endpoint to read and update it, and a change history so a shift in queue behaviour can be traced to the configuration change that caused it. | 0.5 |
+
+#### M10 — Credits & Package Accounting · 3 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 5.10.1 | Monthly packages | Package definitions with included credits and a renewal date, client enrolment, allocation on renewal, and a defined consumption order so included credits are drawn down before pay-as-you-go balance. | 1.25 |
+| 5.10.2 | Payment provider integration | Credit purchase and package subscription through a provider supported in the operating jurisdiction. Payment is confirmed **only** by a verified provider webhook, never by a browser redirect, and settlement is idempotent so a repeated webhook cannot credit an account twice. | 1.25 |
+| 5.10.3 | Purchase flow | Client-facing purchase of a credit bundle and subscription to a package, with confirmation and receipt. | 0.5 |
 
 **Deliverable.** AI Auto Enhance produces previews; the add-on architecture and provider selection are settled; the queue prioritises and assigns; clients can buy credits and subscribe to a package.
 
@@ -793,48 +793,48 @@ This is the widest week of the programme: six tracks run concurrently because Mi
 ---
 
 ### Week 6 — WebGL preview, editor workspace, mask painting and QA review
-**2 – 8 Nov 2026 · 100 hours · Tracks: M4, M6, M7, M8, M9**
+**2 – 8 Nov 2026 · 20 hours · Tracks: M4, M6, M7, M8, M9**
 
-#### M4 — AI Pre-Processing Engine · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 6.4.1 | Performance tuning | Bringing detection, grouping, stacking and rendering for a bracket set of up to seven exposures within the 60-second target, with client-visible progress if a set runs longer (NFR-PERF.1). | 7 |
-| 6.4.2 | Independent scaling | Queue concurrency and worker sizing tuned so processing capacity grows independently of the web tier, as the architecture requires (NFR-SCALE.1). | 5 |
-| 6.4.3 | Graceful degradation | If the engine is unavailable or errors, the affected task moves to a state the client can see and understand rather than leaving the interface in an indefinite loading state (NFR-AVAIL.3). | 4 |
-| 6.4.4 | Regression suite | An automated suite running the full sample set through detection, grouping and merge, comparing against recorded baselines so a later parameter change cannot silently degrade output quality. | 4 |
-
-#### M6 — Basic Tier · 20 h
+#### M4 — AI Pre-Processing Engine · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 6.6.1 | WebGL preview core | The rendering pipeline: texture upload of a downscaled preview, the render loop, and binding of the adjustment recipe to shader uniforms so a slider change repaints immediately rather than round-tripping to the server. | 8 |
-| 6.6.2 | Tone controls | Brightness, exposure, contrast, highlights, shadows, whites and blacks implemented in the shader. Highlights and shadows operate on luminance ranges rather than as a global curve, which is what makes them useful on interior photography with bright windows. | 8 |
-| 6.6.3 | Shared viewer | A reusable viewer holding one zoom level and one pan offset, so any two images shown through it are compared at the identical position. Built once here and reused by the three-way view in Week 8, the QA comparison in this same week, and the add-on preview in Week 7. | 4 |
+| 6.4.1 | Performance tuning | Bringing detection, grouping, stacking and rendering for a bracket set of up to seven exposures within the 60-second target, with client-visible progress if a set runs longer (NFR-PERF.1). | 1.5 |
+| 6.4.2 | Independent scaling | Queue concurrency and worker sizing tuned so processing capacity grows independently of the web tier, as the architecture requires (NFR-SCALE.1). | 1 |
+| 6.4.3 | Graceful degradation | If the engine is unavailable or errors, the affected task moves to a state the client can see and understand rather than leaving the interface in an indefinite loading state (NFR-AVAIL.3). | 0.75 |
+| 6.4.4 | Regression suite | An automated suite running the full sample set through detection, grouping and merge, comparing against recorded baselines so a later parameter change cannot silently degrade output quality. | 0.75 |
 
-#### M7 — Human Edited Tiers · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 6.7.1 | Tier submission | Submitting a Basic Plus, Standard or Advanced image reserves the credit and creates exactly one task through the single entry point, both inside one transaction so a failed queue insert releases the reservation rather than stranding it (FR-HUMAN.1 steps 1 and 2). | 6 |
-| 6.7.2 | Editor queue screen | The Desk_user queue: the editor's assigned work sorted by priority, showing tier, age, deadline and thumbnail, with claim and open actions and complete empty and loading states. | 6 |
-| 6.7.3 | Editor task workspace | Task detail carrying the client's instructions, the working image, **and** the original exposures — the explicit reason the retention rule exists, since an editor fixing windows, lighting or other HDR problems may need the source frames. Every file is offered through a time-limited download link, with a download-all action. Editors work in their own desktop tools; the workspace provides the material and takes back the result. | 8 |
-
-#### M8 — AI Add-On Engine · 20 h
+#### M6 — Basic Tier · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 6.8.1 | Mask painting canvas | React Konva canvas with a brush of adjustable size and hardness, an eraser, undo and redo, clear, and a visible overlay of the painted region so the client can see exactly what is marked before submitting — a poorly marked region reliably produces a poor result and an avoidable rejection into the human queue (NFR-USE.2). | 10 |
-| 6.8.2 | Mask export | The painted region is exported as a mask at the **original image's pixel dimensions**, not the dimensions it was displayed at, and written to the masks prefix. Getting this wrong misaligns every generated result, so it carries its own coverage across zoom levels and viewport sizes. | 5 |
-| 6.8.3 | Object Removal | The first add-on: the working image and the mask are sent to the provider, the result is written to its own key with its lineage recorded, and the job's progress and failure states are surfaced (FR-ADDON.4). | 5 |
+| 6.6.1 | WebGL preview core | The rendering pipeline: texture upload of a downscaled preview, the render loop, and binding of the adjustment recipe to shader uniforms so a slider change repaints immediately rather than round-tripping to the server. | 1.75 |
+| 6.6.2 | Tone controls | Brightness, exposure, contrast, highlights, shadows, whites and blacks implemented in the shader. Highlights and shadows operate on luminance ranges rather than as a global curve, which is what makes them useful on interior photography with bright windows. | 1.5 |
+| 6.6.3 | Shared viewer | A reusable viewer holding one zoom level and one pan offset, so any two images shown through it are compared at the identical position. Built once here and reused by the three-way view in Week 8, the QA comparison in this same week, and the add-on preview in Week 7. | 0.75 |
 
-#### M9 — Traffic Management, Assignment & QA · 20 h
+#### M7 — Human Edited Tiers · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 6.9.1 | QA review screen | The QA—Editor_user review screen: the editor's result against the source material — originals and working image — through the Week 6 shared viewer with synchronised zoom and pan, so a reviewer compares the same region of both rather than eyeballing two independently positioned images. | 9 |
-| 6.9.2 | Approve and return | Approve advances the task to client review. Return requires comments, routes back to the same editor, and is capped at a configurable number of QA cycles before escalating to a lead editor. Every pass is recorded as its own review record (FR-TRAFFIC.4). | 6 |
-| 6.9.3 | Advanced seniority restriction | An Advanced task can only be assigned to an editor flagged as experienced. Assignment to a non-senior editor is refused — including through a manual administrator action — unless the administrator explicitly force-overrides, in which case the override and its reason are logged (FR-HUMAN.4, Business Rule 3). | 5 |
+| 6.7.1 | Tier submission | Submitting a Basic Plus, Standard or Advanced image reserves the credit and creates exactly one task through the single entry point, both inside one transaction so a failed queue insert releases the reservation rather than stranding it (FR-HUMAN.1 steps 1 and 2). | 1.25 |
+| 6.7.2 | Editor queue screen | The Desk_user queue: the editor's assigned work sorted by priority, showing tier, age, deadline and thumbnail, with claim and open actions and complete empty and loading states. | 1.25 |
+| 6.7.3 | Editor task workspace | Task detail carrying the client's instructions, the working image, **and** the original exposures — the explicit reason the retention rule exists, since an editor fixing windows, lighting or other HDR problems may need the source frames. Every file is offered through a time-limited download link, with a download-all action. Editors work in their own desktop tools; the workspace provides the material and takes back the result. | 1.5 |
+
+#### M8 — AI Add-On Engine · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 6.8.1 | Mask painting canvas | React Konva canvas with a brush of adjustable size and hardness, an eraser, undo and redo, clear, and a visible overlay of the painted region so the client can see exactly what is marked before submitting — a poorly marked region reliably produces a poor result and an avoidable rejection into the human queue (NFR-USE.2). | 2 |
+| 6.8.2 | Mask export | The painted region is exported as a mask at the **original image's pixel dimensions**, not the dimensions it was displayed at, and written to the masks prefix. Getting this wrong misaligns every generated result, so it carries its own coverage across zoom levels and viewport sizes. | 1 |
+| 6.8.3 | Object Removal | The first add-on: the working image and the mask are sent to the provider, the result is written to its own key with its lineage recorded, and the job's progress and failure states are surfaced (FR-ADDON.4). | 1 |
+
+#### M9 — Traffic Management, Assignment & QA · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 6.9.1 | QA review screen | The QA—Editor_user review screen: the editor's result against the source material — originals and working image — through the Week 6 shared viewer with synchronised zoom and pan, so a reviewer compares the same region of both rather than eyeballing two independently positioned images. | 1.75 |
+| 6.9.2 | Approve and return | Approve advances the task to client review. Return requires comments, routes back to the same editor, and is capped at a configurable number of QA cycles before escalating to a lead editor. Every pass is recorded as its own review record (FR-TRAFFIC.4). | 1.25 |
+| 6.9.3 | Advanced seniority restriction | An Advanced task can only be assigned to an editor flagged as experienced. Assignment to a non-senior editor is refused — including through a manual administrator action — unless the administrator explicitly force-overrides, in which case the override and its reason are logged (FR-HUMAN.4, Business Rule 3). | 1 |
 
 **Deliverable.** Sliders move an image live in the browser; an editor can take a task and see everything needed to work on it; a client can paint a mask and remove an object; a reviewer can compare and approve or return.
 
@@ -845,47 +845,47 @@ This is the widest week of the programme: six tracks run concurrently because Mi
 ---
 
 ### Week 7 — Full control set, revision loop, two more add-ons and the admin console
-**9 – 15 Nov 2026 · 100 hours · Tracks: M6, M7, M8, M9, M10**
+**9 – 15 Nov 2026 · 20 hours · Tracks: M6, M7, M8, M9, M10**
 
-#### M6 — Basic Tier · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 7.6.1 | Colour controls | Temperature, tint, hue, saturation and vibrance in the shader. Temperature and tint operate in a colour space that keeps neutral surfaces neutral, which matters on interiors where mixed daylight and tungsten are routine. Vibrance is weighted away from already-saturated pixels so it does not wreck skin tones or oversaturate a lawn. | 8 |
-| 7.6.2 | Detail controls | Sharpening and clarity, the latter as a local-contrast pass rather than a global contrast change. These two, with highlights and shadows, are the controls the stack note flags as beyond routine image operations, and they are implemented deliberately rather than approximated. | 6 |
-| 7.6.3 | Studio panel | The Client_User studio: grouped and collapsible slider sections, per-control and global reset, live numeric readout, keyboard adjustment, and an unsaved-changes guard on navigation. All fourteen controls are operable without documentation (NFR-USE.1). | 6 |
-
-#### M7 — Human Edited Tiers · 20 h
+#### M6 — Basic Tier · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 7.7.1 | Result upload and QA submission | The editor uploads the finished file through a presigned upload, which creates a new delivered version, and submits it for QA through the guarded state machine (FR-HUMAN.1 step 5). | 7 |
-| 7.7.2 | Client review screen | The Client_User review screen showing the QA-approved result against the working image through the shared viewer, with approve or request-revision, the latter requiring comments. No editor or QA identity appears anywhere on it (FR-TRAFFIC.5, FR-HUMAN.1 step 6, FR-DASH.4). | 7 |
-| 7.7.3 | Revision loop | A revision request records its cycle number, then creates a new task through the single entry point, routed back to an editor and **always** back through QA before reaching the client a second time. QA cannot be skipped on a revision cycle under any path (FR-HUMAN.5, Business Rule 7). | 6 |
+| 7.6.1 | Colour controls | Temperature, tint, hue, saturation and vibrance in the shader. Temperature and tint operate in a colour space that keeps neutral surfaces neutral, which matters on interiors where mixed daylight and tungsten are routine. Vibrance is weighted away from already-saturated pixels so it does not wreck skin tones or oversaturate a lawn. | 1.5 |
+| 7.6.2 | Detail controls | Sharpening and clarity, the latter as a local-contrast pass rather than a global contrast change. These two, with highlights and shadows, are the controls the stack note flags as beyond routine image operations, and they are implemented deliberately rather than approximated. | 1.25 |
+| 7.6.3 | Studio panel | The Client_User studio: grouped and collapsible slider sections, per-control and global reset, live numeric readout, keyboard adjustment, and an unsaved-changes guard on navigation. All fourteen controls are operable without documentation (NFR-USE.1). | 1.25 |
 
-#### M8 — AI Add-On Engine · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 7.8.1 | Result preview and decision | The generated result shown against the source through the shared viewer, with accept — which delivers and downloads — or reject, which creates a task through the same entry point every other human request uses. There is no add-on-specific queue anywhere in the system (FR-ADDON.7, Business Rule 4). | 5 |
-| 7.8.2 | Decluttering | Marking multiple unwanted items across a scene in one pass, with the provider removing them and reconstructing the background behind them — a general tidy-up across several small objects, as distinct from Object Removal's single marked target (FR-ADDON.3). | 7 |
-| 7.8.3 | Lawn Replacement | Marking the dry or undesired grass area and selecting the desired appearance, with the provider regenerating that masked region as healthy grass while leaving the rest of the photograph unchanged — the boundary between the masked and unmasked region being the quality-critical part (FR-ADDON.2). | 8 |
-
-#### M9 — Traffic Management, Assignment & QA · 20 h
+#### M7 — Human Edited Tiers · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 7.9.1 | Administrator console | The Desk_user administrator view: live queue monitoring with status, age, tier and deadline indicators, filtering across every dimension, and queue-health signals such as depth by tier and oldest unassigned task. | 8 |
-| 7.9.2 | Editor roster | Editor records with seniority flags, availability and current workload, maintained by an administrator. Growing the editor pool is a roster change, not a code change (NFR-SCALE.2). | 6 |
-| 7.9.3 | Reassignment and override | Manual reassignment of a task to a different editor and manual priority override, both recorded in an audit trail with the acting administrator and the reason. | 6 |
+| 7.7.1 | Result upload and QA submission | The editor uploads the finished file through a presigned upload, which creates a new delivered version, and submits it for QA through the guarded state machine (FR-HUMAN.1 step 5). | 1.25 |
+| 7.7.2 | Client review screen | The Client_User review screen showing the QA-approved result against the working image through the shared viewer, with approve or request-revision, the latter requiring comments. No editor or QA identity appears anywhere on it (FR-TRAFFIC.5, FR-HUMAN.1 step 6, FR-DASH.4). | 1.5 |
+| 7.7.3 | Revision loop | A revision request records its cycle number, then creates a new task through the single entry point, routed back to an editor and **always** back through QA before reaching the client a second time. QA cannot be skipped on a revision cycle under any path (FR-HUMAN.5, Business Rule 7). | 1.25 |
 
-#### M10 — Credits & Package Accounting · 20 h
+#### M8 — AI Add-On Engine · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 7.10.1 | Refund and release policy | The rules governing what happens to a reserved credit in every outcome — rejected AI result sent to a human, cancelled project, revision request, task abandoned — implemented as one configurable policy class rather than scattered through the workflow, so the business rule can change without touching the workflow code. | 7 |
-| 7.10.2 | Charge finalisation | A reservation converts to a charge on client approval and is released back to the balance if the task is cancelled before an editor begins work. Both paths are transactional and idempotent (Business Rule 5). | 6 |
-| 7.10.3 | Invoicing | Account statements, ledger export, and receipts for purchases and package renewals. | 7 |
+| 7.8.1 | Result preview and decision | The generated result shown against the source through the shared viewer, with accept — which delivers and downloads — or reject, which creates a task through the same entry point every other human request uses. There is no add-on-specific queue anywhere in the system (FR-ADDON.7, Business Rule 4). | 1 |
+| 7.8.2 | Decluttering | Marking multiple unwanted items across a scene in one pass, with the provider removing them and reconstructing the background behind them — a general tidy-up across several small objects, as distinct from Object Removal's single marked target (FR-ADDON.3). | 1.5 |
+| 7.8.3 | Lawn Replacement | Marking the dry or undesired grass area and selecting the desired appearance, with the provider regenerating that masked region as healthy grass while leaving the rest of the photograph unchanged — the boundary between the masked and unmasked region being the quality-critical part (FR-ADDON.2). | 1.5 |
+
+#### M9 — Traffic Management, Assignment & QA · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 7.9.1 | Administrator console | The Desk_user administrator view: live queue monitoring with status, age, tier and deadline indicators, filtering across every dimension, and queue-health signals such as depth by tier and oldest unassigned task. | 1.5 |
+| 7.9.2 | Editor roster | Editor records with seniority flags, availability and current workload, maintained by an administrator. Growing the editor pool is a roster change, not a code change (NFR-SCALE.2). | 1.25 |
+| 7.9.3 | Reassignment and override | Manual reassignment of a task to a different editor and manual priority override, both recorded in an audit trail with the acting administrator and the reason. | 1.25 |
+
+#### M10 — Credits & Package Accounting · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 7.10.1 | Refund and release policy | The rules governing what happens to a reserved credit in every outcome — rejected AI result sent to a human, cancelled project, revision request, task abandoned — implemented as one configurable policy class rather than scattered through the workflow, so the business rule can change without touching the workflow code. | 1.25 |
+| 7.10.2 | Charge finalisation | A reservation converts to a charge on client approval and is released back to the balance if the task is cancelled before an editor begins work. Both paths are transactional and idempotent (Business Rule 5). | 1.25 |
+| 7.10.3 | Invoicing | Account statements, ledger export, and receipts for purchases and package renewals. | 1.5 |
 
 **Deliverable.** All fourteen controls work; the revision loop closes; three of the five add-ons produce results; administrators can see and steer the queue.
 
@@ -896,47 +896,47 @@ This is the widest week of the programme: six tracks run concurrently because Mi
 ---
 
 ### Week 8 — Export parity, Advanced behaviour, Object Manipulation, version history ◆ Milestone 2 gate
-**16 – 22 Nov 2026 · 100 hours · Tracks: M6, M7, M8, M9, M12**
+**16 – 22 Nov 2026 · 20 hours · Tracks: M6, M7, M8, M9, M12**
 
-#### M6 — Basic Tier · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 8.6.1 | Three-way view | Toggling between the original working image, the AI-enhanced result and the client's manual edit, all through the shared viewer so all three are seen at an identical zoom level and pan position. Keyboard shortcut and a hold-to-compare gesture (FR-BASIC.3). | 6 |
-| 8.6.2 | Full-resolution export | On save or export, a worker applies the stored recipe to the full-resolution image. Routine operations run through Sharp; the remaining photographic operations reuse the same arithmetic as the shader so the two agree rather than approximate each other. | 9 |
-| 8.6.3 | Preview-to-export parity | An automated test comparing the browser preview against the exported full-resolution result across the reference image set at a set of representative recipes, asserting a per-channel difference within an agreed numeric tolerance. The gap between a browser preview and a server-side export is a known risk in this stack; this test is how it is closed rather than assumed away. | 5 |
-
-#### M7 — Human Edited Tiers · 20 h
+#### M6 — Basic Tier · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 8.7.1 | Advanced queue behaviour | Advanced tasks placed ahead of Basic Plus and Standard tasks of equal age, with delivery deadlines attached and surfaced to both editor and administrator (FR-HUMAN.4). | 6 |
-| 8.7.2 | Tier differentiation | The interface and pricing differences between Basic Plus, Standard and Advanced expressed consistently across selection, submission, the editor workspace and client-facing status. | 5 |
-| 8.7.3 | Editor performance analytics | Throughput per editor, QA pass rate on first submission, average cycle time and revision rate, presented to administrators — the data that later informs how the priority weights and the editor pool are tuned. | 9 |
+| 8.6.1 | Three-way view | Toggling between the original working image, the AI-enhanced result and the client's manual edit, all through the shared viewer so all three are seen at an identical zoom level and pan position. Keyboard shortcut and a hold-to-compare gesture (FR-BASIC.3). | 1.25 |
+| 8.6.2 | Full-resolution export | On save or export, a worker applies the stored recipe to the full-resolution image. Routine operations run through Sharp; the remaining photographic operations reuse the same arithmetic as the shader so the two agree rather than approximate each other. | 1.75 |
+| 8.6.3 | Preview-to-export parity | An automated test comparing the browser preview against the exported full-resolution result across the reference image set at a set of representative recipes, asserting a per-channel difference within an agreed numeric tolerance. The gap between a browser preview and a server-side export is a known risk in this stack; this test is how it is closed rather than assumed away. | 1 |
 
-#### M8 — AI Add-On Engine · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 8.8.1 | Object Manipulation | The one add-on requiring instruction beyond a marked region: a marked object plus a short instruction — move, replace, add, reposition — drawn from a constrained action set with an optional free-text qualifier, since the model needs to know what change to make, not only where (FR-ADDON.5). | 9 |
-| 8.8.2 | Instruction handling | Validation of the instruction against the permitted action set, and per-provider request construction translating the internal instruction format into whatever each provider expects — keeping one consistent internal API while the providers behind it differ. | 5 |
-| 8.8.3 | Job status and failure surfacing | Progress, queue position and failure reasons surfaced to the client for every add-on type, with a clear recovery action on failure rather than a dead end. | 6 |
-
-#### M9 — Traffic Management, Assignment & QA · 20 h
+#### M7 — Human Edited Tiers · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 8.9.1 | Service-level dashboards | Per-tier turnaround measured against the promised delivery time, breach and near-breach alerting, and trend reporting for administrators. | 8 |
-| 8.9.2 | Load balancing across editor pools | Distributing assignment across the available editor pool by workload and seniority rather than round-robin, so a single editor does not accumulate the queue while others idle. | 6 |
-| 8.9.3 | Queue end-to-end coverage | Automated coverage proving all four tiers, a rejected Basic AI result and a rejected add-on result all enter the same queue, are prioritised together, and are assigned, reviewed and delivered through one pipeline. | 6 |
+| 8.7.1 | Advanced queue behaviour | Advanced tasks placed ahead of Basic Plus and Standard tasks of equal age, with delivery deadlines attached and surfaced to both editor and administrator (FR-HUMAN.4). | 1.25 |
+| 8.7.2 | Tier differentiation | The interface and pricing differences between Basic Plus, Standard and Advanced expressed consistently across selection, submission, the editor workspace and client-facing status. | 1 |
+| 8.7.3 | Editor performance analytics | Throughput per editor, QA pass rate on first submission, average cycle time and revision rate, presented to administrators — the data that later informs how the priority weights and the editor pool are tuned. | 1.75 |
 
-#### M12 — File & Version Management · 20 h
+#### M8 — AI Add-On Engine · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 8.12.1 | Full version history | Every revision cycle produces a new delivered version rather than overwriting the previous one, so both the client and internal staff can compare versions if a delivery is disputed (FR-FILE.2). | 7 |
-| 8.12.2 | Version comparison view | A client-facing comparison between any two versions of a delivered image through the shared viewer at matched zoom and position, with the revision comments that produced each. | 8 |
-| 8.12.3 | Version access control and audit | Version-level access restricted to the owning client and to staff actively assigned to a related task, with an audit trail recording every access to a delivered file (NFR-SEC.2). | 5 |
+| 8.8.1 | Object Manipulation | The one add-on requiring instruction beyond a marked region: a marked object plus a short instruction — move, replace, add, reposition — drawn from a constrained action set with an optional free-text qualifier, since the model needs to know what change to make, not only where (FR-ADDON.5). | 1.75 |
+| 8.8.2 | Instruction handling | Validation of the instruction against the permitted action set, and per-provider request construction translating the internal instruction format into whatever each provider expects — keeping one consistent internal API while the providers behind it differ. | 1 |
+| 8.8.3 | Job status and failure surfacing | Progress, queue position and failure reasons surfaced to the client for every add-on type, with a clear recovery action on failure rather than a dead end. | 1.25 |
+
+#### M9 — Traffic Management, Assignment & QA · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 8.9.1 | Service-level dashboards | Per-tier turnaround measured against the promised delivery time, breach and near-breach alerting, and trend reporting for administrators. | 1.5 |
+| 8.9.2 | Load balancing across editor pools | Distributing assignment across the available editor pool by workload and seniority rather than round-robin, so a single editor does not accumulate the queue while others idle. | 1.25 |
+| 8.9.3 | Queue end-to-end coverage | Automated coverage proving all four tiers, a rejected Basic AI result and a rejected add-on result all enter the same queue, are prioritised together, and are assigned, reviewed and delivered through one pipeline. | 1.25 |
+
+#### M12 — File & Version Management · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 8.12.1 | Full version history | Every revision cycle produces a new delivered version rather than overwriting the previous one, so both the client and internal staff can compare versions if a delivery is disputed (FR-FILE.2). | 1.5 |
+| 8.12.2 | Version comparison view | A client-facing comparison between any two versions of a delivered image through the shared viewer at matched zoom and position, with the revision comments that produced each. | 1.5 |
+| 8.12.3 | Version access control and audit | Version-level access restricted to the owning client and to staff actively assigned to a related task, with an audit trail recording every access to a delivered file (NFR-SEC.2). | 1 |
 
 **Deliverable.** What the client previews is what the client downloads; Advanced behaves as a priority tier with senior routing; four of five add-ons work; every revision is retained and comparable.
 
@@ -951,48 +951,48 @@ This is the widest week of the programme: six tracks run concurrently because Mi
 ## 10. Week-by-Week Plan — Milestone 3 (Weeks 9–12)
 
 ### Week 9 — Virtual Staging, Basic completion, notifications
-**23 – 29 Nov 2026 · 100 hours · Tracks: M6, M7, M8, M10, M11**
+**23 – 29 Nov 2026 · 20 hours · Tracks: M6, M7, M8, M10, M11**
 
-#### M6 — Basic Tier · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 9.6.1 | Three client options | The three outcomes the source flow settles on as Option C, presented at any point after the AI Auto Enhance preview: accept the AI result as it is and download; adjust with the studio controls, save and download; or hand the image to a human editor. Each outcome is recorded on the edit session (FR-BASIC.4). | 7 |
-| 9.6.2 | Send to human editor | An explicit confirmation of the additional credit or price **before** the task is created, then the image — in whatever state the client left it, AI-enhanced or manually adjusted — handed to the same entry point Standard and Advanced use. No separate Basic pipeline exists anywhere in the system (FR-BASIC.5, FR-BASIC.7, FR-CREDIT.4). | 5 |
-| 9.6.3 | Satisfaction gate | Where the client does not explicitly choose one of the three options, the default decision point is a simple satisfied yes-or-no: yes completes and downloads, no routes into the human editing queue (FR-BASIC.6). | 3 |
-| 9.6.4 | Presets and saved edit styles | Saving a recipe as a named preset and applying it across other images in the project, so a client editing thirty photographs of one property does not rebuild the same adjustment thirty times. | 5 |
-
-#### M7 — Human Edited Tiers · 20 h
+#### M6 — Basic Tier · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 9.7.1 | Human-tier end-to-end coverage | Automated coverage of Basic Plus, Standard and Advanced from submission through assignment, editing, QA, client review, one full revision cycle and final delivery, asserting that originals remain intact at every step and that QA is never bypassed. | 8 |
-| 9.7.2 | Workload balancing and deadlines | Editor workload visibility with deadline surfacing across the queue and the workspace, and warnings as a promised turnaround approaches. | 6 |
-| 9.7.3 | Rejected-AI sources in the workspace | When a task originates from a rejected AI result — either a Basic enhancement the client declined or a rejected add-on — the editor workspace presents the original exposures, the working image, the AI attempt and any mask the client painted, together with the client's reason. The editor starts from the full context rather than from the failed output alone. | 6 |
+| 9.6.1 | Three client options | The three outcomes the source flow settles on as Option C, presented at any point after the AI Auto Enhance preview: accept the AI result as it is and download; adjust with the studio controls, save and download; or hand the image to a human editor. Each outcome is recorded on the edit session (FR-BASIC.4). | 1.5 |
+| 9.6.2 | Send to human editor | An explicit confirmation of the additional credit or price **before** the task is created, then the image — in whatever state the client left it, AI-enhanced or manually adjusted — handed to the same entry point Standard and Advanced use. No separate Basic pipeline exists anywhere in the system (FR-BASIC.5, FR-BASIC.7, FR-CREDIT.4). | 1 |
+| 9.6.3 | Satisfaction gate | Where the client does not explicitly choose one of the three options, the default decision point is a simple satisfied yes-or-no: yes completes and downloads, no routes into the human editing queue (FR-BASIC.6). | 0.5 |
+| 9.6.4 | Presets and saved edit styles | Saving a recipe as a named preset and applying it across other images in the project, so a client editing thirty photographs of one property does not rebuild the same adjustment thirty times. | 1 |
 
-#### M8 — AI Add-On Engine · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 9.8.1 | Virtual Staging | The multi-step add-on: select an empty-room image, select a room type — living room, bedroom, office — select a style — modern, luxury, minimal — then generate, with the standard accept-or-reject outcome. It differs from the other four in requiring a sequence of selections rather than a single mark-and-generate, and in being judged on whether the generated furniture sits in plausible perspective within the real room (FR-ADDON.6). | 10 |
-| 9.8.2 | Add-on chaining | Applying more than one add-on to the same image before delivery — for example decluttering a room and then staging it — with each step's lineage recorded so the chain can be traced and any step rejected into the human queue with its full history. | 6 |
-| 9.8.3 | Structural-fidelity evaluation harness | A repeatable evaluation across the sample set checking that generated results preserve the property's actual structure — walls, windows, floor lines, exterior geometry — rather than inventing it, since a structurally wrong result is worse than no result in property marketing. | 4 |
-
-#### M10 — Credits & Package Accounting · 20 h
+#### M7 — Human Edited Tiers · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 9.10.1 | Package lifecycle | Renewal, proration, upgrade and downgrade between packages, with correct handling of unused included credits across the boundary. | 7 |
-| 9.10.2 | Balance management | Credit expiry rules, low-balance alerts, and optional automatic top-up, so a client does not discover an empty balance mid-project. | 6 |
-| 9.10.3 | Reconciliation and integrity | Financial reconciliation reports against provider settlement records, and a scheduled ledger integrity check asserting that every derived balance still reconciles to the sum of its entries. | 7 |
+| 9.7.1 | Human-tier end-to-end coverage | Automated coverage of Basic Plus, Standard and Advanced from submission through assignment, editing, QA, client review, one full revision cycle and final delivery, asserting that originals remain intact at every step and that QA is never bypassed. | 1.5 |
+| 9.7.2 | Workload balancing and deadlines | Editor workload visibility with deadline surfacing across the queue and the workspace, and warnings as a promised turnaround approaches. | 1.25 |
+| 9.7.3 | Rejected-AI sources in the workspace | When a task originates from a rejected AI result — either a Basic enhancement the client declined or a rejected add-on — the editor workspace presents the original exposures, the working image, the AI attempt and any mask the client painted, together with the client's reason. The editor starts from the full context rather than from the failed output alone. | 1.25 |
 
-#### M11 — Notifications · 20 h
+#### M8 — AI Add-On Engine · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 9.11.1 | Notification model and feed | Notification records with a read state, an in-app feed for every role, and endpoints to list and mark read. | 6 |
-| 9.11.2 | Transactional email | Email dispatch with a template for each event: an AI result ready for review, a human-edited result ready for review, a revision completed, a task assigned to an editor or QA reviewer, and a delivery ready to download. Delivery failures are logged and retried rather than swallowed. | 8 |
-| 9.11.3 | Client progress states | The client-facing states — processing, with editor, in review, ready for review, complete — surfaced consistently across the dashboard, project detail and image detail, so the client always knows where a photograph is without asking. | 6 |
+| 9.8.1 | Virtual Staging | The multi-step add-on: select an empty-room image, select a room type — living room, bedroom, office — select a style — modern, luxury, minimal — then generate, with the standard accept-or-reject outcome. It differs from the other four in requiring a sequence of selections rather than a single mark-and-generate, and in being judged on whether the generated furniture sits in plausible perspective within the real room (FR-ADDON.6). | 2 |
+| 9.8.2 | Add-on chaining | Applying more than one add-on to the same image before delivery — for example decluttering a room and then staging it — with each step's lineage recorded so the chain can be traced and any step rejected into the human queue with its full history. | 1.25 |
+| 9.8.3 | Structural-fidelity evaluation harness | A repeatable evaluation across the sample set checking that generated results preserve the property's actual structure — walls, windows, floor lines, exterior geometry — rather than inventing it, since a structurally wrong result is worse than no result in property marketing. | 0.75 |
+
+#### M10 — Credits & Package Accounting · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 9.10.1 | Package lifecycle | Renewal, proration, upgrade and downgrade between packages, with correct handling of unused included credits across the boundary. | 1.25 |
+| 9.10.2 | Balance management | Credit expiry rules, low-balance alerts, and optional automatic top-up, so a client does not discover an empty balance mid-project. | 1.25 |
+| 9.10.3 | Reconciliation and integrity | Financial reconciliation reports against provider settlement records, and a scheduled ledger integrity check asserting that every derived balance still reconciles to the sum of its entries. | 1.5 |
+
+#### M11 — Notifications · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 9.11.1 | Notification model and feed | Notification records with a read state, an in-app feed for every role, and endpoints to list and mark read. | 1.25 |
+| 9.11.2 | Transactional email | Email dispatch with a template for each event: an AI result ready for review, a human-edited result ready for review, a revision completed, a task assigned to an editor or QA reviewer, and a delivery ready to download. Delivery failures are logged and retried rather than swallowed. | 1.5 |
+| 9.11.3 | Client progress states | The client-facing states — processing, with editor, in review, ready for review, complete — surfaced consistently across the dashboard, project detail and image detail, so the client always knows where a photograph is without asking. | 1.25 |
 
 **Deliverable.** All five add-ons produce results; the Basic Option C flow is complete end to end; billing handles the full package lifecycle; everyone is told when something needs them.
 
@@ -1003,49 +1003,49 @@ This is the widest week of the programme: six tracks run concurrently because Mi
 ---
 
 ### Week 10 — Production infrastructure, hardening, live status, delivery ▲ Feature freeze
-**30 Nov – 6 Dec 2026 · 100 hours · Tracks: M0, M8, M9, M11, M12**
+**30 Nov – 6 Dec 2026 · 20 hours · Tracks: M0, M8, M9, M11, M12**
 
 This is the last week of feature development. At its close the product is functionally complete and the codebase enters freeze.
 
-#### M0 — Platform & Infrastructure · 20 h
+#### M0 — Platform & Infrastructure · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 10.0.1 | Production container images | Multi-stage images for the React application, the NestJS API, the Node worker and the Python processing service, each deployed as its own service so the processing engines scale independently of the web tier (NFR-SCALE.1). | 6 |
-| 10.0.2 | Continuous deployment | On merge: build and publish images, apply database migrations, deploy to staging. A documented and rehearsed rollback path for both the application and the migration. | 7 |
-| 10.0.3 | Managed services | Managed PostgreSQL and managed Redis provisioned and configured — sizing, connection pooling, backup schedule, retention window, network isolation and credential rotation. | 7 |
+| 10.0.1 | Production container images | Multi-stage images for the React application, the NestJS API, the Node worker and the Python processing service, each deployed as its own service so the processing engines scale independently of the web tier (NFR-SCALE.1). | 1.25 |
+| 10.0.2 | Continuous deployment | On merge: build and publish images, apply database migrations, deploy to staging. A documented and rehearsed rollback path for both the application and the migration. | 1.25 |
+| 10.0.3 | Managed services | Managed PostgreSQL and managed Redis provisioned and configured — sizing, connection pooling, backup schedule, retention window, network isolation and credential rotation. | 1.5 |
 
-#### M8 — AI Add-On Engine · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 10.8.1 | Engine hardening | Retry policy per provider, failover to an alternate provider where one is configured, per-job cost tracking, and rate-limit handling that queues rather than fails. | 7 |
-| 10.8.2 | All-add-on coverage | End-to-end coverage of all five add-ons, each exercising both outcomes — accepted and downloaded, and rejected into the shared queue, assigned, edited, QA-reviewed and delivered. | 7 |
-| 10.8.3 | Add-on performance tuning | Bringing generation within the 30-second target for the mark-and-generate add-ons, with Virtual Staging held to its own confirmed target given the heavier generation it performs (NFR-PERF.3). | 6 |
-
-#### M9 — Traffic Management, Assignment & QA · 20 h
+#### M8 — AI Add-On Engine · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 10.9.1 | Priority calibration | Calibrating the five configured weights against the agreed business rule, with a simulation harness that replays a synthetic queue under a candidate weight set so the effect of a change is visible before it is applied. | 6 |
-| 10.9.2 | Queue resilience | Stuck-task detection with automatic reassignment, dead-letter review with an administrator action to requeue, and reconciliation so no task can be lost between the queue and the database. | 7 |
-| 10.9.3 | Audit log | A complete administrator audit log — assignments, reassignments, priority overrides, seniority changes, configuration changes and force-overrides — each with actor, timestamp and reason. | 7 |
+| 10.8.1 | Engine hardening | Retry policy per provider, failover to an alternate provider where one is configured, per-job cost tracking, and rate-limit handling that queues rather than fails. | 1.25 |
+| 10.8.2 | All-add-on coverage | End-to-end coverage of all five add-ons, each exercising both outcomes — accepted and downloaded, and rejected into the shared queue, assigned, edited, QA-reviewed and delivered. | 1.5 |
+| 10.8.3 | Add-on performance tuning | Bringing generation within the 30-second target for the mark-and-generate add-ons, with Virtual Staging held to its own confirmed target given the heavier generation it performs (NFR-PERF.3). | 1.25 |
 
-#### M11 — Notifications · 20 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 10.11.1 | Live status | Server-sent events replacing polling for queue status, processing progress and result-ready events, with automatic reconnection and a polling fallback where the connection cannot be held. Polling was sufficient to build against; live updates are what the multi-actor workflow actually needs, since several people wait on the same state change. | 8 |
-| 10.11.2 | Digests and preferences | Daily digest emails and per-account notification preferences by channel and event type. | 6 |
-| 10.11.3 | Staff notifications and escalation | Assignment notifications to editors and QA reviewers, QA-rejection notifications back to the editor, and escalation alerts to a lead on cycle-cap breach or an approaching deadline. | 6 |
-
-#### M12 — File & Version Management · 20 h
+#### M9 — Traffic Management, Assignment & QA · 4 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 10.12.1 | Project archive export | A worker building a ZIP of a project's delivered files, with the client notified when it is ready and the archive served through a time-limited private link. Large projects are built asynchronously rather than held open on a request. | 7 |
-| 10.12.2 | Delivery packaging | File naming conventions, output format and quality options, and embedded metadata on delivered files. | 6 |
-| 10.12.3 | Retention execution | The retention policy running as a scheduled job across working images, superseded revisions and derivatives, with the originals prefix excluded from every rule — verified by a test that runs the policy against a seeded project and asserts every original survives. | 7 |
+| 10.9.1 | Priority calibration | Calibrating the five configured weights against the agreed business rule, with a simulation harness that replays a synthetic queue under a candidate weight set so the effect of a change is visible before it is applied. | 1.25 |
+| 10.9.2 | Queue resilience | Stuck-task detection with automatic reassignment, dead-letter review with an administrator action to requeue, and reconciliation so no task can be lost between the queue and the database. | 1.25 |
+| 10.9.3 | Audit log | A complete administrator audit log — assignments, reassignments, priority overrides, seniority changes, configuration changes and force-overrides — each with actor, timestamp and reason. | 1.5 |
+
+#### M11 — Notifications · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 10.11.1 | Live status | Server-sent events replacing polling for queue status, processing progress and result-ready events, with automatic reconnection and a polling fallback where the connection cannot be held. Polling was sufficient to build against; live updates are what the multi-actor workflow actually needs, since several people wait on the same state change. | 1.5 |
+| 10.11.2 | Digests and preferences | Daily digest emails and per-account notification preferences by channel and event type. | 1.25 |
+| 10.11.3 | Staff notifications and escalation | Assignment notifications to editors and QA reviewers, QA-rejection notifications back to the editor, and escalation alerts to a lead on cycle-cap breach or an approaching deadline. | 1.25 |
+
+#### M12 — File & Version Management · 4 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 10.12.1 | Project archive export | A worker building a ZIP of a project's delivered files, with the client notified when it is ready and the archive served through a time-limited private link. Large projects are built asynchronously rather than held open on a request. | 1.25 |
+| 10.12.2 | Delivery packaging | File naming conventions, output format and quality options, and embedded metadata on delivered files. | 1.25 |
+| 10.12.3 | Retention execution | The retention policy running as a scheduled job across working images, superseded revisions and derivatives, with the originals prefix excluded from every rule — verified by a test that runs the policy against a seeded project and asserts every original survives. | 1.5 |
 
 **Deliverable.** The platform is feature complete, deployable as four independently scalable services, resilient in its queue, live in its status updates, and complete in its delivery path.
 
@@ -1056,27 +1056,27 @@ This is the last week of feature development. At its close the product is functi
 ---
 
 ### Week 11 — System testing, security, load and production build
-**7 – 13 Dec 2026 · 100 hours · Tracks: System Test (60 h), Deployment (40 h)**
+**7 – 13 Dec 2026 · 20 hours · Tracks: System Test (12 h), Deployment (8 h)**
 
-#### System Test & UAT · 60 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 11.T.1 | System integration testing | Full regression across all thirteen tracks and every cross-module boundary: upload into pre-processing, pre-processing into tier selection, tier selection into the queue, the queue into editing and QA, both AI engines into the shared queue, credits across every path that consumes them, and versions across every path that produces one. Includes the paths that only appear in combination — a rejected add-on on an image that already carries a manual edit, a revision on a chained add-on result, a package boundary crossed mid-project. | 14 |
-| 11.T.2 | Cross-browser verification | Current Chrome, Safari, Edge and Firefox on desktop, and mobile web for the client-facing application. Particular attention to the WebGL studio and the Konva mask canvas, which are the two most rendering-sensitive surfaces in the product (NFR-PORT.1). | 8 |
-| 11.T.3 | Performance verification | Measurement against all three targets on the reference set: pre-processing within 60 seconds for a bracket of up to seven exposures, an auto-enhance preview within 15 seconds, and an add-on result within 30 seconds. Actual figures recorded; any miss logged with its identified cause and a remediation item (NFR-PERF.1–3). | 10 |
-| 11.T.4 | Security pass | The complete role-permission matrix across all four account types and every endpoint; verification that storage is encrypted at rest and enforced in transit; the bucket confirmed private with no public access path; presigned link expiry verified including replay after expiry; confirmation that image access is limited to the owning client and to staff actively assigned to a related task; a secrets audit confirming every credential is supplied by environment and none is committed; and a dependency vulnerability scan (NFR-SEC.1–3). | 12 |
-| 11.T.5 | Load testing | Concurrent upload, concurrent pre-processing, concurrent studio sessions and sustained queue throughput, run against the confirmed volume assumptions, with the web tier and the processing engines measured separately so a bottleneck is attributed to the right service. | 8 |
-| 11.T.6 | Defect remediation, round one | Triage and fix of everything found above, prioritised by severity, with a regression test added for each defect fixed. | 8 |
-
-#### Deployment & Handover · 40 h
+#### System Test & UAT · 12 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 11.D.1 | Staging build and soak | The complete stack deployed to staging and run continuously under synthetic load for the remainder of the week, surfacing the class of problem — connection exhaustion, memory growth, queue drift, token expiry — that only appears over time. | 10 |
-| 11.D.2 | Production infrastructure | Production environment built with the web tier, API, Node workers and Python processing service as separately scalable units, autoscaling policies set per service, and object storage configured with the durability the retention rule requires (NFR-SCALE.1, NFR-AVAIL.2). | 10 |
-| 11.D.3 | Backup and disaster recovery | Database backup schedule and retention configured, a restore rehearsed and timed against a real snapshot, object-storage durability and versioning confirmed, and recovery objectives documented (NFR-AVAIL.2). | 8 |
-| 11.D.4 | Monitoring, alerting and runbook | Dashboards for the application, the queue and the processing engines; alerts on error rate, queue depth, job failure rate, provider failure and deadline breach; and an on-call runbook covering the top failure modes with their diagnosis and remedy. | 12 |
+| 11.T.1 | System integration testing | Full regression across all thirteen tracks and every cross-module boundary: upload into pre-processing, pre-processing into tier selection, tier selection into the queue, the queue into editing and QA, both AI engines into the shared queue, credits across every path that consumes them, and versions across every path that produces one. Includes the paths that only appear in combination — a rejected add-on on an image that already carries a manual edit, a revision on a chained add-on result, a package boundary crossed mid-project. | 3 |
+| 11.T.2 | Cross-browser verification | Current Chrome, Safari, Edge and Firefox on desktop, and mobile web for the client-facing application. Particular attention to the WebGL studio and the Konva mask canvas, which are the two most rendering-sensitive surfaces in the product (NFR-PORT.1). | 1.5 |
+| 11.T.3 | Performance verification | Measurement against all three targets on the reference set: pre-processing within 60 seconds for a bracket of up to seven exposures, an auto-enhance preview within 15 seconds, and an add-on result within 30 seconds. Actual figures recorded; any miss logged with its identified cause and a remediation item (NFR-PERF.1–3). | 2 |
+| 11.T.4 | Security pass | The complete role-permission matrix across all four account types and every endpoint; verification that storage is encrypted at rest and enforced in transit; the bucket confirmed private with no public access path; presigned link expiry verified including replay after expiry; confirmation that image access is limited to the owning client and to staff actively assigned to a related task; a secrets audit confirming every credential is supplied by environment and none is committed; and a dependency vulnerability scan (NFR-SEC.1–3). | 2.5 |
+| 11.T.5 | Load testing | Concurrent upload, concurrent pre-processing, concurrent studio sessions and sustained queue throughput, run against the confirmed volume assumptions, with the web tier and the processing engines measured separately so a bottleneck is attributed to the right service. | 1.5 |
+| 11.T.6 | Defect remediation, round one | Triage and fix of everything found above, prioritised by severity, with a regression test added for each defect fixed. | 1.5 |
+
+#### Deployment & Handover · 8 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 11.D.1 | Staging build and soak | The complete stack deployed to staging and run continuously under synthetic load for the remainder of the week, surfacing the class of problem — connection exhaustion, memory growth, queue drift, token expiry — that only appears over time. | 2 |
+| 11.D.2 | Production infrastructure | Production environment built with the web tier, API, Node workers and Python processing service as separately scalable units, autoscaling policies set per service, and object storage configured with the durability the retention rule requires (NFR-SCALE.1, NFR-AVAIL.2). | 2 |
+| 11.D.3 | Backup and disaster recovery | Database backup schedule and retention configured, a restore rehearsed and timed against a real snapshot, object-storage durability and versioning confirmed, and recovery objectives documented (NFR-AVAIL.2). | 1.5 |
+| 11.D.4 | Monitoring, alerting and runbook | Dashboards for the application, the queue and the processing engines; alerts on error rate, queue depth, job failure rate, provider failure and deadline breach; and an on-call runbook covering the top failure modes with their diagnosis and remedy. | 2.5 |
 
 **Deliverable.** Every module tested together, measured, hardened and load-proven; production infrastructure standing and monitored; staging soaking.
 
@@ -1087,25 +1087,25 @@ This is the last week of feature development. At its close the product is functi
 ---
 
 ### Week 12 — UAT, go-live and handover ◆ Milestone 3 gate
-**14 – 20 Dec 2026 · 100 hours · Tracks: System Test (40 h), Deployment (60 h)**
+**14 – 20 Dec 2026 · 20 hours · Tracks: System Test (8 h), Deployment (12 h)**
 
-#### System Test & UAT · 40 h
-
-| ID | Task | Detail | h |
-|---|---|---|---:|
-| 12.T.1 | User acceptance testing | Scripted UAT executed on staging with real accounts in all four roles, covering every exit criterion from all three milestones: registration through to download on Basic; the full human flow on each of Basic Plus, Standard and Advanced including a revision; each of the five add-ons through both accept and reject; credit purchase, package subscription and consumption; and the notification and delivery paths. Observations recorded against each criterion. | 16 |
-| 12.T.2 | Defect remediation, round two | Triage and fix of UAT findings, prioritised by whether they block go-live, each with a regression test. Anything not blocking is logged with an owner rather than absorbed silently. | 14 |
-| 12.T.3 | Production smoke and verification | Post-deployment verification in production: authentication across all four roles, an upload through to a rendered working image, a tier selection with credit movement, a queue submission through to QA, one add-on generation, a delivery download, and confirmation that notifications and monitoring are firing. | 10 |
-
-#### Deployment & Handover · 60 h
+#### System Test & UAT · 8 h
 
 | ID | Task | Detail | h |
 |---|---|---|---:|
-| 12.D.1 | Production deployment and go-live | The release executed against the rehearsed plan: migrations applied, services deployed in dependency order, health verified at each step, with the rollback path standing by throughout. | 14 |
-| 12.D.2 | Configuration and onboarding | Production configuration seeded — tier definitions and pricing, package definitions, priority weights, file limits, retention rules, QA cycle caps — and the editor and QA roster created with seniority flags set. | 10 |
-| 12.D.3 | Documentation | Deployment runbook, environment variable reference, API documentation, the data model, the task state machine as a reference diagram, and the operational procedures for the recurring administrative actions. | 12 |
-| 12.D.4 | Operational training material | Role-based guides for administrators, editors and QA reviewers covering the queue, the workspace, the review flow, the escalation path and the priority configuration. | 10 |
-| 12.D.5 | Gate, handover and closure | Final demonstration against the Section 4.3 exit criteria; handover of the documentation set, credentials and monitoring access; closure of the open-issue register with every Section 14 item marked resolved or carried with a named owner; written sign-off. | 14 |
+| 12.T.1 | User acceptance testing | Scripted UAT executed on staging with real accounts in all four roles, covering every exit criterion from all three milestones: registration through to download on Basic; the full human flow on each of Basic Plus, Standard and Advanced including a revision; each of the five add-ons through both accept and reject; credit purchase, package subscription and consumption; and the notification and delivery paths. Observations recorded against each criterion. | 3.25 |
+| 12.T.2 | Defect remediation, round two | Triage and fix of UAT findings, prioritised by whether they block go-live, each with a regression test. Anything not blocking is logged with an owner rather than absorbed silently. | 2.75 |
+| 12.T.3 | Production smoke and verification | Post-deployment verification in production: authentication across all four roles, an upload through to a rendered working image, a tier selection with credit movement, a queue submission through to QA, one add-on generation, a delivery download, and confirmation that notifications and monitoring are firing. | 2 |
+
+#### Deployment & Handover · 12 h
+
+| ID | Task | Detail | h |
+|---|---|---|---:|
+| 12.D.1 | Production deployment and go-live | The release executed against the rehearsed plan: migrations applied, services deployed in dependency order, health verified at each step, with the rollback path standing by throughout. | 2.75 |
+| 12.D.2 | Configuration and onboarding | Production configuration seeded — tier definitions and pricing, package definitions, priority weights, file limits, retention rules, QA cycle caps — and the editor and QA roster created with seniority flags set. | 2 |
+| 12.D.3 | Documentation | Deployment runbook, environment variable reference, API documentation, the data model, the task state machine as a reference diagram, and the operational procedures for the recurring administrative actions. | 2.5 |
+| 12.D.4 | Operational training material | Role-based guides for administrators, editors and QA reviewers covering the queue, the workspace, the review flow, the escalation path and the priority configuration. | 2 |
+| 12.D.5 | Gate, handover and closure | Final demonstration against the Section 4.3 exit criteria; handover of the documentation set, credentials and monitoring access; closure of the open-issue register with every Section 14 item marked resolved or carried with a named owner; written sign-off. | 2.75 |
 
 **Deliverable.** ProEdits live in production, verified, documented, staffed and handed over.
 
@@ -1121,24 +1121,24 @@ This is the last week of feature development. At its close the product is functi
 
 ### 11.1 By module track
 
-| Rank | Module track | Hours | % of 1,160 | Weeks active |
+| Rank | Module track | Hours | % of 240 | Weeks active |
 |---:|---|---:|---:|---|
-| 1 | M8 — AI Add-On Engine | 120 | 10.3 % | 5, 6, 7, 8, 9, 10 |
-| 1 | M9 — Traffic Management, Assignment & QA | 120 | 10.3 % | 4, 5, 6, 7, 8, 10 |
-| 3 | M6 — Basic Tier (AI + Self Editing) | 100 | 8.6 % | 5, 6, 7, 8, 9 |
-| 3 | System Test & UAT | 100 | 8.6 % | 11, 12 |
-| 3 | Deployment & Handover | 100 | 8.6 % | 11, 12 |
-| 6 | M0 — Platform & Infrastructure | 80 | 6.9 % | 1, 2, 3, 10 |
-| 6 | M4 — AI Pre-Processing Engine | 80 | 6.9 % | 3, 4, 5, 6 |
-| 6 | M7 — Human Edited Tiers | 80 | 6.9 % | 6, 7, 8, 9 |
-| 6 | M10 — Credits & Package Accounting | 80 | 6.9 % | 4, 5, 7, 9 |
-| 6 | M12 — File & Version Management | 80 | 6.9 % | 1, 3, 8, 10 |
-| 11 | M3 — Project Creation & Upload | 60 | 5.2 % | 2, 3, 4 |
-| 12 | M1 — Accounts & Authentication | 40 | 3.4 % | 1, 2 |
-| 12 | M2 — Client Dashboard | 40 | 3.4 % | 2, 3 |
-| 12 | M5 — Service Tier Selection | 40 | 3.4 % | 4, 5 |
-| 12 | M11 — Notifications | 40 | 3.4 % | 9, 10 |
-| | **Total** | **1,160** | **100 %** | |
+| 1 | M8 — AI Add-On Engine | 23.5 | 9.8 % | 5, 6, 7, 8, 9, 10 |
+| 1 | M9 — Traffic Management, Assignment & QA | 23.5 | 9.8 % | 4, 5, 6, 7, 8, 10 |
+| 3 | System Test & UAT | 20 | 8.3 % | 11, 12 |
+| 3 | Deployment & Handover | 20 | 8.3 % | 11, 12 |
+| 5 | M0 — Platform & Infrastructure | 19.75 | 8.2 % | 1, 2, 3, 10 |
+| 6 | M6 — Basic Tier (AI + Self Editing) | 19.5 | 8.1 % | 5, 6, 7, 8, 9 |
+| 7 | M12 — File & Version Management | 18.5 | 7.7 % | 1, 3, 8, 10 |
+| 8 | M7 — Human Edited Tiers | 16 | 6.7 % | 6, 7, 8, 9 |
+| 9 | M4 — AI Pre-Processing Engine | 15.5 | 6.5 % | 3, 4, 5, 6 |
+| 10 | M10 — Credits & Package Accounting | 15 | 6.2 % | 4, 5, 7, 9 |
+| 11 | M3 — Project Creation & Upload | 13 | 5.4 % | 2, 3, 4 |
+| 12 | M1 — Accounts & Authentication | 11.75 | 4.9 % | 1, 2 |
+| 13 | M2 — Client Dashboard | 9 | 3.8 % | 2, 3 |
+| 14 | M11 — Notifications | 8 | 3.3 % | 9, 10 |
+| 15 | M5 — Service Tier Selection | 7 | 2.9 % | 4, 5 |
+| | **Total** | **240** | **100 %** | |
 
 The two largest tracks are the add-on engine and the traffic-management layer. That weighting is deliberate and follows the source material: five independent generative effects each need their own input handling and quality validation, and the shared queue is the component every other module depends on and the one the SRS singles out as the most important part of the whole design.
 
@@ -1146,20 +1146,20 @@ The two largest tracks are the add-on engine and the traffic-management layer. T
 
 | Layer | Hours | Share | What it covers |
 |---|---:|---:|---|
-| Backend | 398 | 34.3 % | NestJS API, Prisma and PostgreSQL, the workflow state machine, credits and the ledger, queue orchestration, versioning, notifications, storage and authorisation |
-| Frontend | 342 | 29.5 % | React client application, the four role interfaces, the WebGL editing studio, the Konva mask canvas, the shared viewer, staff dashboards and consoles |
-| Test & deployment | 200 | 17.2 % | Weeks 11–12 in full |
-| Image processing | 140 | 12.1 % | Python and OpenCV pre-processing, Sharp derivatives and full-resolution export, hosted AI provider adapters and evaluation |
-| Infrastructure | 80 | 6.9 % | Containerisation, local and production environments, continuous integration and deployment, observability, managed services |
+| Backend | 83 | 34.6 % | NestJS API, Prisma and PostgreSQL, the workflow state machine, credits and the ledger, queue orchestration, versioning, notifications, storage and authorisation |
+| Frontend | 71.25 | 29.7 % | React client application, the four role interfaces, the WebGL editing studio, the Konva mask canvas, the shared viewer, staff dashboards and consoles |
+| Test & deployment | 40 | 16.7 % | Weeks 11–12 in full |
+| Image processing | 29.25 | 12.2 % | Python and OpenCV pre-processing, Sharp derivatives and full-resolution export, hosted AI provider adapters and evaluation |
+| Infrastructure | 16.5 | 6.9 % | Containerisation, local and production environments, continuous integration and deployment, observability, managed services |
 
 ### 11.3 By milestone
 
 | Milestone | Backend | Frontend | Image processing | Infrastructure | Test & deployment | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| Milestone 1 — Weeks 1–4 | 121 | 114 | 45 | 60 | — | 340 |
-| Milestone 2 — Weeks 5–8 | 199 | 146 | 75 | — | — | 420 |
-| Milestone 3 — Weeks 9–12 | 78 | 82 | 20 | 20 | 200 | 400 |
-| **Total** | **398** | **342** | **140** | **80** | **200** | **1,160** |
+| Milestone 1 — Weeks 1–4 | 28.5 | 26.75 | 10.5 | 14.25 | — | 80 |
+| Milestone 2 — Weeks 5–8 | 38 | 27.75 | 14.25 | — | — | 80 |
+| Milestone 3 — Weeks 9–12 | 16.5 | 16.75 | 4.5 | 2.25 | 40 | 80 |
+| **Total** | **83** | **71.25** | **29.25** | **16.5** | **40** | **240** |
 
 Effort shifts decisively from infrastructure and backend in Milestone 1, to the two editing engines and the workflow in Milestone 2, to completion and stabilisation in Milestone 3. No week carries new feature work after Week 10.
 
@@ -1215,7 +1215,7 @@ Most tracks run on the critical path. The following carry float and are the rese
 | Server-sent events (10.11.1) | W10 | Post go-live | Status refreshes by polling, which is functionally sufficient but less immediate |
 | Financial reconciliation reporting (9.10.3) | W9 | Post go-live | Reconciliation against provider settlement is performed manually at launch |
 
-Together these represent roughly 40 hours. They are the only items that can be deferred without reducing the functional scope agreed for go-live, and any use of them is agreed at a milestone gate and recorded, never taken silently.
+Together these represent roughly 8 hours. They are the only items that can be deferred without reducing the functional scope agreed for go-live, and any use of them is agreed at a milestone gate and recorded, never taken silently.
 
 ### 12.4 Cross-track integration points
 
@@ -1407,19 +1407,19 @@ Everything else specified in SRS v1.3 is delivered inside these 12 weeks.
 
 | Week | M0 | M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 | M9 | M10 | M11 | M12 | Test | Deploy | **Total** |
 |---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
-| W1 | 20 | 20 | | | | | | | | | | | 20 | | | **60** |
-| W2 | 20 | 20 | 20 | 20 | | | | | | | | | | | | **80** |
-| W3 | 20 | | 20 | 20 | 20 | | | | | | | | 20 | | | **100** |
-| W4 | | | | 20 | 20 | 20 | | | | 20 | 20 | | | | | **100** |
-| W5 | | | | | 20 | 20 | 20 | | 20 | 20 | 20 | | | | | **120** |
-| W6 | | | | | 20 | | 20 | 20 | 20 | 20 | | | | | | **100** |
-| W7 | | | | | | | 20 | 20 | 20 | 20 | 20 | | | | | **100** |
-| W8 | | | | | | | 20 | 20 | 20 | 20 | | | 20 | | | **100** |
-| W9 | | | | | | | 20 | 20 | 20 | | 20 | 20 | | | | **100** |
-| W10 | 20 | | | | | | | | 20 | 20 | | 20 | 20 | | | **100** |
-| W11 | | | | | | | | | | | | | | 60 | 40 | **100** |
-| W12 | | | | | | | | | | | | | | 40 | 60 | **100** |
-| **Total** | **80** | **40** | **40** | **60** | **80** | **40** | **100** | **80** | **120** | **120** | **80** | **40** | **80** | **100** | **100** | **1,160** |
+| W1 | 6.75 | 6.75 |  |  |  |  |  |  |  |  |  |  | 6.5 |  |  | **20** |
+| W2 | 5 | 5 | 5 | 5 |  |  |  |  |  |  |  |  |  |  |  | **20** |
+| W3 | 4 |  | 4 | 4 | 4 |  |  |  |  |  |  |  | 4 |  |  | **20** |
+| W4 |  |  |  | 4 | 4 | 4 |  |  |  | 4 | 4 |  |  |  |  | **20** |
+| W5 |  |  |  |  | 3.5 | 3 | 3.5 |  | 3.5 | 3.5 | 3 |  |  |  |  | **20** |
+| W6 |  |  |  |  | 4 |  | 4 | 4 | 4 | 4 |  |  |  |  |  | **20** |
+| W7 |  |  |  |  |  |  | 4 | 4 | 4 | 4 | 4 |  |  |  |  | **20** |
+| W8 |  |  |  |  |  |  | 4 | 4 | 4 | 4 |  |  | 4 |  |  | **20** |
+| W9 |  |  |  |  |  |  | 4 | 4 | 4 |  | 4 | 4 |  |  |  | **20** |
+| W10 | 4 |  |  |  |  |  |  |  | 4 | 4 |  | 4 | 4 |  |  | **20** |
+| W11 |  |  |  |  |  |  |  |  |  |  |  |  |  | 12 | 8 | **20** |
+| W12 |  |  |  |  |  |  |  |  |  |  |  |  |  | 8 | 12 | **20** |
+| **Total** | **19.75** | **11.75** | **9** | **13** | **15.5** | **7** | **19.5** | **16** | **23.5** | **23.5** | **15** | **8** | **18.5** | **20** | **20** | **240** |
 
 **M0** Platform & Infrastructure · **M1** Accounts & Authentication · **M2** Client Dashboard · **M3** Project Creation & Upload · **M4** AI Pre-Processing Engine · **M5** Service Tier Selection · **M6** Basic Tier · **M7** Human Edited Tiers · **M8** AI Add-On Engine · **M9** Traffic Management, Assignment & QA · **M10** Credits & Package Accounting · **M11** Notifications · **M12** File & Version Management
 
