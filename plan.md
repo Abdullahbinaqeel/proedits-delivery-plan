@@ -13,7 +13,6 @@
 | **Build window** | Weeks 1–10 — feature complete, 200 hours |
 | **Test & deployment window** | Weeks 11–12 — 40 hours |
 | **Milestones** | 4, one every 3 weeks |
-| **Project value** | **$1,500**, in 4 equal payments of **$375** |
 | **Start** | Monday 28 September 2026 |
 | **Go-live** | Friday 18 December 2026 |
 
@@ -24,7 +23,7 @@
 1. [Scope Basis and Assumptions](#1-scope-basis-and-assumptions)
 2. [Delivery Model](#2-delivery-model)
 3. [Technology Stack](#3-technology-stack)
-4. [Milestones and Payment Schedule](#4-milestones-and-payment-schedule)
+4. [Milestone Summary](#4-milestone-summary)
 5. [Phase Breakdown by Module](#5-phase-breakdown-by-module)
 6. [Gantt Chart](#6-gantt-chart)
 7. [Timeline and Calendar](#7-timeline-and-calendar)
@@ -164,7 +163,6 @@ At the end of Weeks 3, 6, 9 and 12:
 2. Defect triage — blocking defects are fixed inside the gate; non-blocking defects are logged against a named week.
 3. The open-issue register in Section 14 is updated, and any decision still outstanding is recorded as a schedule risk against the week it affects.
 4. Written sign-off before the following milestone begins.
-5. The milestone payment of **$375** falls due on sign-off (Section 4.5).
 
 ---
 
@@ -249,17 +247,17 @@ The bucket is private with no public access. Every read is served through a time
 
 ---
 
-## 4. Milestones and Payment Schedule
+## 4. Milestone Summary
 
-| Milestone | Weeks | Dates | Hours | Payment | Theme | Gate |
-|---|---|---|---:|---:|---|---|
-| **M1 — Foundation and Ingestion** | 1–3 | 28 Sep – 18 Oct 2026 | 60 | **$375** | Platform, four-role authentication, dashboard, batch upload with permanent original retention, and bracket detection and grouping | Fri 16 Oct 2026 |
-| **M2 — Processing, Tiering and Queue** | 4–6 | 19 Oct – 8 Nov 2026 | 60 | **$375** | Exposure merge to a working image, four-tier selection, the credit ledger, the single shared queue, and both AI engines opened up | Fri 6 Nov 2026 |
-| **M3 — Editing Engines and Human Pipeline** | 7–9 | 9 – 29 Nov 2026 | 60 | **$375** | The complete fourteen-control Basic studio, all four human tiers with QA and revisions, all five add-ons, and notifications | Fri 27 Nov 2026 |
-| **M4 — Hardening, Testing and Go-Live** | 10–12 | 30 Nov – 20 Dec 2026 | 60 | **$375** | Production infrastructure and **feature freeze at the end of Week 10**, then system testing, security, UAT, deployment and handover | Fri 18 Dec 2026 |
-| | | | **240** | **$1,500** | | |
+| Milestone | Weeks | Dates | Hours | Theme | Gate |
+|---|---|---|---:|---|---|
+| **M1 — Foundation and Ingestion** | 1–3 | 28 Sep – 18 Oct 2026 | 60 | Platform, four-role authentication, dashboard, batch upload with permanent original retention, and bracket detection and grouping | Fri 16 Oct 2026 |
+| **M2 — Processing, Tiering and Queue** | 4–6 | 19 Oct – 8 Nov 2026 | 60 | Exposure merge to a working image, four-tier selection, the credit ledger, the single shared queue, and both AI engines opened up | Fri 6 Nov 2026 |
+| **M3 — Editing Engines and Human Pipeline** | 7–9 | 9 – 29 Nov 2026 | 60 | The complete fourteen-control Basic studio, all four human tiers with QA and revisions, all five add-ons, and notifications | Fri 27 Nov 2026 |
+| **M4 — Hardening, Testing and Go-Live** | 10–12 | 30 Nov – 20 Dec 2026 | 60 | Production infrastructure and **feature freeze at the end of Week 10**, then system testing, security, UAT, deployment and handover | Fri 18 Dec 2026 |
+| | | | **240** | | |
 
-### 4.1 M1 — Foundation and Ingestion · Weeks 1–3 · 60 hours · $375
+### 4.1 M1 — Foundation and Ingestion · Weeks 1–3 · 60 hours
 
 **Goal.** A client registers, logs in, creates a project and batch-uploads a bracketed exposure set. Every original is permanently retained, and the system identifies which frames belong to the same scene.
 
@@ -275,7 +273,7 @@ The bucket is private with no public access. Every read is served through a time
 
 **Deliverables.** Monorepo and local environment; authentication and RBAC across four roles; storage service with the eight-class key convention and the original-retention guard; React application shell and design system; client dashboard and project detail; presigned multipart upload and batch uploader; bracket detection and grouping.
 
-### 4.2 M2 — Processing, Tiering and Queue · Weeks 4–6 · 60 hours · $375
+### 4.2 M2 — Processing, Tiering and Queue · Weeks 4–6 · 60 hours
 
 **Goal.** A bracketed set becomes one rendered working image, the client selects from all four tiers against a live credit balance, and the single shared queue carries its first tasks through an editor and QA.
 
@@ -295,7 +293,7 @@ The bucket is private with no public access. Every read is served through a time
 
 **Deliverables.** Exposure alignment, HDR merge and working-image render; four-tier selection with bulk assignment; credit ledger and packages with payment integration; task state machine and the single queue entry point; priority engine; editor queue and workspace; QA review screen; WebGL preview core; Konva mask editor and the first add-on.
 
-### 4.3 M3 — Editing Engines and Human Pipeline · Weeks 7–9 · 60 hours · $375
+### 4.3 M3 — Editing Engines and Human Pipeline · Weeks 7–9 · 60 hours
 
 **Goal.** Both editing engines are complete. All fourteen studio controls work, all five add-ons produce results, and every human tier completes the full seven-step sequence including a revision.
 
@@ -314,7 +312,7 @@ The bucket is private with no public access. Every read is served through a time
 
 **Deliverables.** Complete colour and detail control set with the studio panel; three-way view and the full-resolution export worker with its parity test; client review and the QA-gated revision loop; Decluttering, Lawn Replacement, Object Manipulation and Virtual Staging; administrator console, editor roster and SLA dashboards; full version history and comparison view; notification service.
 
-### 4.4 M4 — Hardening, Testing and Go-Live · Weeks 10–12 · 60 hours · $375
+### 4.4 M4 — Hardening, Testing and Go-Live · Weeks 10–12 · 60 hours
 
 **Goal.** Feature development closes at the end of Week 10. The platform is then tested, secured, measured, deployed and handed over.
 
@@ -333,21 +331,6 @@ The bucket is private with no public access. Every read is served through a time
 - [ ] Production deployment completes; smoke tests pass; runbook, environment reference, API documentation and operational training materials are handed over.
 
 **Deliverables.** Production container images and continuous deployment; managed PostgreSQL and Redis; queue resilience and the administrator audit log; archive export and delivery packaging; the full test pass — integration, cross-browser, performance, security and load; two defect-remediation rounds; staging soak and production build; go-live, documentation, training and handover.
-
-### 4.5 Payment schedule
-
-The project is **$1,500**, paid in **four equal instalments of $375**, one per milestone. Each instalment falls due on written sign-off of that milestone's exit criteria at its gate.
-
-| Payment | Milestone | Gate date | Amount | Cumulative |
-|---:|---|---|---:|---:|
-| 1 | M1 — Foundation and Ingestion | Fri 16 Oct 2026 | **$375** | $375 |
-| 2 | M2 — Processing, Tiering and Queue | Fri 6 Nov 2026 | **$375** | $750 |
-| 3 | M3 — Editing Engines and Human Pipeline | Fri 27 Nov 2026 | **$375** | $1,125 |
-| 4 | M4 — Hardening, Testing and Go-Live | Fri 18 Dec 2026 | **$375** | **$1,500** |
-
-Each milestone is three weeks and 60 hours, so the four payments are equal in both scope and effort. A milestone that does not pass its gate is remediated inside the following week before the instalment is invoiced; the schedule absorbs this without moving the go-live date, because the float in Section 13.3 sits in M3 and M4.
-
----
 
 ## 5. Phase Breakdown by Module
 
@@ -371,7 +354,6 @@ All thirteen delivery tracks, mapped across the four milestones. Every SRS modul
 | — | **System Test & UAT** | — | — | — | System integration testing across every module; cross-browser verification on desktop and mobile web; performance verification against all three targets; full security pass covering the role matrix, encryption, bucket policy, link expiry, secrets and dependencies; load testing; two rounds of defect remediation; UAT execution with real accounts in every role; post-deployment smoke tests | 11, 12 | **20** |
 | — | **Deployment & Handover** | — | — | — | Staging environment build and soak; production infrastructure with the web tier scaling independently of the processing engines; backup, restore and disaster-recovery verification; monitoring, alerting and an on-call runbook; production deployment and go-live; data seeding, editor roster onboarding and package configuration; deployment runbook, environment reference and API documentation; operational training materials; gate, handover and closure of the open-issue register | 11, 12 | **20** |
 | | **TOTAL** | **60 h** | **60 h** | **60 h** | **60 h** | | **240** |
-| | **PAYMENT** | **$375** | **$375** | **$375** | **$375** | | **$1,500** |
 
 ---
 
@@ -379,10 +361,10 @@ All thirteen delivery tracks, mapped across the four milestones. Every SRS modul
 
 ### 6.1 Week grid
 
-Each `███` is one module track active that week; the 20 hours of that week are shared between the tracks marked in its column. `◆` marks a milestone gate and `$` the $375 instalment that falls due on sign-off; `▓▓▓` marks testing and deployment.
+Each `███` is one module track active that week; the 20 hours of that week are shared between the tracks marked in its column. `◆` marks a milestone gate; `▓▓▓` marks testing and deployment.
 
 ```
-                                    ┌M1 · $375─┬─M2 · $375─┬─M3 · $375─┬─M4 · $375─┐
+                                    ┌──── M1 ──┬──── M2 ───┬──── M3 ───┬──── M4 ───┐
 TRACK                                W1  W2  W3│ W4  W5  W6│ W7  W8  W9│W10 W11 W12       h
                                     ─── ─── ───┼─── ─── ───┼─── ─── ───┼─── ─── ───      ───
 M0  Platform & Infrastructure       ███ ███ ███│ ·   ·   · │ ·   ·   · │███  ·   ·    19.75
@@ -402,7 +384,6 @@ M12 File & Version Management       ███  ·  ███│ ·   ·   · │
     Deployment & Handover            ·   ·   · │ ·   ·   · │ ·   ·   · │ ·  ▓▓▓ ▓▓▓      20
                                     ─── ─── ───┼─── ─── ───┼─── ─── ───┼─── ─── ───      ───
     MILESTONE GATE                   ·   ·   ◆ │ ·   ·   ◆ │ ·   ·   ◆ │ ·   ·   ◆  
-    PAYMENT  $375 each               ·   ·   $ │ ·   ·   $ │ ·   ·   $ │ ·   ·   $  
     FEATURE FREEZE                   ·   ·   · │ ·   ·   · │ ·   ·   · │ ▲   ·   ·  
     ACTIVE TRACKS                    3   4   5 │ 5   6   5 │ 5   5   5 │ 5   2   2  
     HOURS THIS WEEK                  20  20  20│ 20  20  20│ 20  20  20│ 20  20  20     240
@@ -493,11 +474,11 @@ gantt
     ZIP export, packaging, retention run     :v4, 2026-11-30, 5d
 
     section Milestones
-    M1 gate - payment 1                      :milestone, m1, 2026-10-16, 0d
-    M2 gate - payment 2                      :milestone, m2, 2026-11-06, 0d
-    M3 gate - payment 3                      :milestone, m3, 2026-11-27, 0d
+    M1 gate                                 :milestone, m1, 2026-10-16, 0d
+    M2 gate                                 :milestone, m2, 2026-11-06, 0d
+    M3 gate                                 :milestone, m3, 2026-11-27, 0d
     FEATURE FREEZE                           :milestone, ff, 2026-12-04, 0d
-    M4 gate - payment 4 - GO-LIVE            :milestone, m4, 2026-12-18, 0d
+    M4 gate - GO-LIVE                        :milestone, m4, 2026-12-18, 0d
 
     section Test and Deployment
     Integration, cross-browser, performance  :s1, 2026-12-07, 5d
@@ -544,16 +525,16 @@ Every path that needs a human — the Basic studio's send-to-human, a human-tier
 |---|---|---|---|---:|---:|---|
 | **W1** | 28 Sep – 4 Oct 2026 | 1 | M0, M1, M12 | 20 | 20 | Running platform, four-role authentication, storage with original retention enforced |
 | **W2** | 5 – 11 Oct 2026 | 1 | M0, M1, M2, M3 | 20 | 40 | Client application shell, dashboard, project creation, presigned upload API |
-| **W3** | 12 – 18 Oct 2026 | 1 | M0, M2, M3, M4, M12 | 20 | 60 | **◆ Batch upload and bracket detection working — M1 gate Fri 16 Oct · $375** |
+| **W3** | 12 – 18 Oct 2026 | 1 | M0, M2, M3, M4, M12 | 20 | 60 | **◆ Batch upload and bracket detection working — M1 gate Fri 16 Oct** |
 | **W4** | 19 – 25 Oct 2026 | 2 | M3, M4, M5, M9, M10 | 20 | 80 | Exposure merge, four-tier selection, shared queue and credit ledger live |
 | **W5** | 26 Oct – 1 Nov 2026 | 2 | M4, M5, M6, M8, M9, M10 | 20 | 100 | AI Auto Enhance, add-on foundation, priority engine, packages and payments |
-| **W6** | 2 – 8 Nov 2026 | 2 | M4, M6, M7, M8, M9 | 20 | 120 | **◆ WebGL preview, editor workspace, masks, QA review — M2 gate Fri 6 Nov · $375** |
+| **W6** | 2 – 8 Nov 2026 | 2 | M4, M6, M7, M8, M9 | 20 | 120 | **◆ WebGL preview, editor workspace, masks, QA review — M2 gate Fri 6 Nov** |
 | **W7** | 9 – 15 Nov 2026 | 3 | M6, M7, M8, M9, M10 | 20 | 140 | Full control set, revision loop, three add-ons, administrator console |
 | **W8** | 16 – 22 Nov 2026 | 3 | M6, M7, M8, M9, M12 | 20 | 160 | Export parity, Advanced tier, Object Manipulation, full version history |
-| **W9** | 23 – 29 Nov 2026 | 3 | M6, M7, M8, M10, M11 | 20 | 180 | **◆ All five add-ons, Basic options, notifications — M3 gate Fri 27 Nov · $375** |
+| **W9** | 23 – 29 Nov 2026 | 3 | M6, M7, M8, M10, M11 | 20 | 180 | **◆ All five add-ons, Basic options, notifications — M3 gate Fri 27 Nov** |
 | **W10** | 30 Nov – 6 Dec 2026 | 4 | M0, M8, M9, M11, M12 | 20 | 200 | **▲ FEATURE FREEZE — production infrastructure, delivery packaging, live status** |
 | **W11** | 7 – 13 Dec 2026 | 4 | System Test, Deployment | 20 | 220 | Integration, performance, security, load testing; staging soak; production build |
-| **W12** | 14 – 20 Dec 2026 | 4 | System Test, Deployment | 20 | 240 | **◆ UAT signed, production go-live, handover — M4 gate Fri 18 Dec · $375** |
+| **W12** | 14 – 20 Dec 2026 | 4 | System Test, Deployment | 20 | 240 | **◆ UAT signed, production go-live, handover — M4 gate Fri 18 Dec** |
 
 ### 7.1 Calendar
 
@@ -709,7 +690,7 @@ Tasks are grouped by module track. Each track carries 20 hours in each week it a
 
 **Depends on.** Week 2. **Blocks.** Week 4 — nothing can be merged before the groups exist.
 
-**◆ M1 gate — Friday 16 October 2026.** Demonstration against the Section 4.1 exit criteria, defect triage, open-issue register update, written sign-off — **payment 1 of 4, $375**.
+**◆ M1 gate — Friday 16 October 2026.** Demonstration against the Section 4.1 exit criteria, defect triage, open-issue register update, written sign-off.
 
 ---
 
@@ -884,7 +865,7 @@ This is the widest week of the programme: six tracks run concurrently because Mi
 
 **Depends on.** Week 5. **Blocks.** Week 7.
 
-**◆ M2 gate — Friday 6 November 2026.** Demonstration against the Section 4.2 exit criteria, defect triage, open-issue register update, written sign-off — **payment 2 of 4, $375**.
+**◆ M2 gate — Friday 6 November 2026.** Demonstration against the Section 4.2 exit criteria, defect triage, open-issue register update, written sign-off.
 
 ---
 
@@ -1044,7 +1025,7 @@ This is the widest week of the programme: six tracks run concurrently because Mi
 
 **Depends on.** Week 8. **Blocks.** Week 10.
 
-**◆ M3 gate — Friday 27 November 2026.** Demonstration against the Section 4.3 exit criteria, defect triage, open-issue register update, written sign-off — **payment 3 of 4, $375**.
+**◆ M3 gate — Friday 27 November 2026.** Demonstration against the Section 4.3 exit criteria, defect triage, open-issue register update, written sign-off.
 
 ---
 
@@ -1161,7 +1142,7 @@ This is the last week of feature development. At its close the product is functi
 
 **Depends on.** Week 11.
 
-**◆ M4 gate and go-live — Friday 18 December 2026.** Demonstration against the Section 4.4 exit criteria, handover, written sign-off — **payment 4 of 4, $375**.
+**◆ M4 gate and go-live — Friday 18 December 2026.** Demonstration against the Section 4.4 exit criteria, handover, written sign-off.
 
 ---
 
@@ -1210,7 +1191,7 @@ The two largest tracks are the add-on engine and the traffic-management layer. T
 | M4 — Weeks 10–12 | 9 | 5.5 | 1.5 | 4 | 40 | 60 |
 | **Total** | **83** | **71.25** | **29.25** | **16.5** | **40** | **240** |
 
-Effort shifts from infrastructure and backend in M1, through image processing and the workflow spine in M2, to the two editing engines in M3, and finally to stabilisation in M4. Each milestone is 60 hours, so the four $375 payments are equal in effort as well as in money. No week carries new feature work after Week 10.
+Effort shifts from infrastructure and backend in M1, through image processing and the workflow spine in M2, to the two editing engines in M3, and finally to stabilisation in M4. Each milestone is 60 hours, so the four are equal in effort. No week carries new feature work after Week 10.
 
 ---
 
@@ -1476,7 +1457,7 @@ Everything else specified in SRS v1.3 is delivered inside these 12 weeks.
 
 ## Appendix B — Deliverables Checklist
 
-### M1 · Weeks 1–3 · payment 1 · $375
+### M1 · Weeks 1–3
 
 | # | Deliverable | Week |
 |---:|---|---|
@@ -1501,9 +1482,9 @@ Everything else specified in SRS v1.3 is delivered inside these 12 weeks.
 | 19 | Configurable file format, size, resolution and count limits | 3 |
 | 20 | Bracket detection from capture metadata with visual similarity confirmation | 3 |
 | 21 | Derivative pipeline, version model, download service and retention policy engine | 3 |
-| 22 | **◆ M1 gate sign-off — payment 1 of 4, $375** | 3 |
+| 22 | **◆ M1 gate sign-off** | 3 |
 
-### M2 · Weeks 4–6 · payment 2 · $375
+### M2 · Weeks 4–6
 
 | # | Deliverable | Week |
 |---:|---|---|
@@ -1524,9 +1505,9 @@ Everything else specified in SRS v1.3 is delivered inside these 12 weeks.
 | 37 | Human-tier submission, editor queue and the editor task workspace | 6 |
 | 38 | React Konva mask canvas with export at original dimensions, and Object Removal | 6 |
 | 39 | QA review screen, approve-and-return loop, and the Advanced seniority restriction | 6 |
-| 40 | **◆ M2 gate sign-off — payment 2 of 4, $375** | 6 |
+| 40 | **◆ M2 gate sign-off** | 6 |
 
-### M3 · Weeks 7–9 · payment 3 · $375
+### M3 · Weeks 7–9
 
 | # | Deliverable | Week |
 |---:|---|---|
@@ -1547,9 +1528,9 @@ Everything else specified in SRS v1.3 is delivered inside these 12 weeks.
 | 55 | Virtual Staging, add-on chaining and the structural-fidelity evaluation harness | 9 |
 | 56 | Package lifecycle, balance management and financial reconciliation | 9 |
 | 57 | Notification model, in-app feed, transactional email and client progress states | 9 |
-| 58 | **◆ M3 gate sign-off — payment 3 of 4, $375** | 9 |
+| 58 | **◆ M3 gate sign-off** | 9 |
 
-### M4 · Weeks 10–12 · payment 4 · $375
+### M4 · Weeks 10–12
 
 | # | Deliverable | Week |
 |---:|---|---|
@@ -1576,7 +1557,7 @@ Everything else specified in SRS v1.3 is delivered inside these 12 weeks.
 | 79 | Post-deployment smoke tests and production verification | 12 |
 | 80 | Deployment runbook, environment reference, API documentation and data model | 12 |
 | 81 | Operational training material for administrator, editor and QA roles | 12 |
-| 82 | **◆ M4 gate, handover and open-issue register closure — payment 4 of 4, $375** | 12 |
+| 82 | **◆ M4 gate, handover and open-issue register closure** | 12 |
 
 ---
 
