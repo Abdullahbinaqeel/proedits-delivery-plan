@@ -5,12 +5,12 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="ProEdits 12-Week Delivery Plan — the complete build of the AI and human assisted photo editing platform. 240 hours across 13 module tracks and three milestones, with an interactive Gantt chart, every weekly task and full SRS traceability.">
+<meta name="description" content="ProEdits 12-Week Delivery Plan — the complete build of the AI and human assisted photo editing platform. 240 hours across 13 module tracks and four milestones, $1,500 in four equal payments of $375, with an interactive Gantt chart, every weekly task and full SRS traceability.">
 <meta name="theme-color" content="#F6F7F8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#11161A" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ProEdits — 12-Week Delivery Plan">
-<meta property="og:description" content="240 hours across 13 module tracks and three milestones. Interactive Gantt, every weekly task, full requirement traceability.">
+<meta property="og:description" content="240 hours across 13 module tracks and four milestones. $1,500 in four equal payments of $375. Interactive Gantt, every weekly task, full requirement traceability.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B3A5C'/%3E%3Crect x='7' y='9' width='18' height='15' rx='2' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M7 14h18M12 6v5M20 6v5' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3Crect x='11' y='17' width='7' height='3' rx='1' fill='%23DE9540'/%3E%3C/svg%3E">
 <style>
@@ -203,6 +203,9 @@ tr.total td{background:var(--sunken);font-weight:600;color:var(--ink)}
 .gmile .gm.a{background:var(--steel-soft);color:var(--steel)}
 .gmile .gm.b{background:var(--amber-soft);color:var(--amber)}
 .gmile .gm.c{background:var(--teal-soft);color:var(--teal)}
+.gmile .gm.d{background:var(--graphite-soft);color:var(--graphite)}
+.gcell.gatecol{box-shadow:inset 2px 0 0 var(--amber)}
+.gatepay{display:block;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;color:var(--amber);line-height:34px}
 .legend{display:flex;flex-wrap:wrap;gap:6px 18px;padding:11px 14px;border-top:1px solid var(--line);background:var(--surface-2);font-size:11.5px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;font-size:10.5px}
 .sw{width:11px;height:11px;border-radius:2px;display:inline-block}
@@ -298,7 +301,7 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding-block:26px 10px;
       <a href="#scope">Scope</a>
       <a href="#model">Model</a>
       <a href="#stack">Stack</a>
-      <a href="#milestones">Milestones</a>
+      <a href="#milestones">Milestones &amp; Payment</a>
       <a href="#modules">Phase Breakdown</a>
       <a href="#gantt">Gantt</a>
       <a href="#timeline">Timeline</a>
@@ -325,7 +328,8 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding-block:26px 10px;
       <div class="fig acc"><b>240</b><i>Hours</i></div>
       <div class="fig"><b>13</b><i>Module tracks</i></div>
       <div class="fig"><b>20</b><i>Hours / week</i></div>
-      <div class="fig"><b>3</b><i>Milestones</i></div>
+      <div class="fig acc"><b>$1,500</b><i>4 \u00d7 $375</i></div>
+      <div class="fig"><b>4</b><i>Milestones</i></div>
       <div class="fig"><b>10</b><i>Build weeks</i></div>
       <div class="fig"><b>2</b><i>Test &amp; deploy weeks</i></div>
     </div>
@@ -405,13 +409,13 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding-block:26px 10px;
 </section>
 
 <section id="milestones">
-  <div class="shead"><span class="n">04</span><h2>Milestone Summary</h2></div>
+  <div class="shead"><span class="n">04</span><h2>Milestones and Payment Schedule</h2></div>
   <div id="msCards"></div>
 </section>
 
 <section id="modules">
   <div class="shead"><span class="n">05</span><h2>Phase Breakdown by Module</h2></div>
-  <p class="prose">All thirteen delivery tracks, mapped across the three milestones. Every SRS module appears; nothing is deferred beyond the programme.</p>
+  <p class="prose">All thirteen delivery tracks, mapped across the four milestones. Each milestone is three weeks, 60 hours and one $375 payment. Every SRS module appears; nothing is deferred beyond the programme.</p>
   <div class="tw" style="max-height:none"><table id="phaseTbl"><thead><tr><th style="width:1%">#</th><th style="width:13%">Module</th><th>Milestone 1 · W1–4</th><th>Milestone 2 · W5–8</th><th>Milestone 3 · W9–12</th><th style="width:1%" class="num">Weeks</th><th style="width:1%" class="num">Hours</th></tr></thead><tbody></tbody></table></div>
 </section>
 
@@ -548,6 +552,8 @@ const ALLOC={1:{M0:6.75,M1:6.75,M12:6.5},2:{M0:5,M1:5,M2:5,M3:5},
  9:{M6:4,M7:4,M8:4,M10:4,M11:4},10:{M0:4,M8:4,M9:4,M11:4,M12:4},
  11:{TST:12,DEP:8},12:{TST:8,DEP:12}};
 const hw=(t,w)=>(ALLOC[w]||{})[t]||0;
+const MSOF=w=>w<=3?1:w<=6?2:w<=9?3:4;
+const GATEW=[3,6,9,12];
 const fmtH=x=>(Math.round(x*100)/100).toString();
 const WEEKHOURS=[20,20,20,20,20,20,20,20,20,20,20,20];
 const WEEKDATES=['28 Sep – 4 Oct','5 – 11 Oct','12 – 18 Oct','19 – 25 Oct','26 Oct – 1 Nov','2 – 8 Nov','9 – 15 Nov','16 – 22 Nov','23 – 29 Nov','30 Nov – 6 Dec','7 – 13 Dec','14 – 20 Dec'];
@@ -619,48 +625,53 @@ const KEYS=[
  ['Thumbnails &amp; previews','projects/{projectId}/thumbs/{entityId}.webp','Node worker (Sharp)']
 ];
 const MILESTONES=[
- {n:1,t:'Foundation and Ingestion',w:'Weeks 1–4',d:'28 Sep – 25 Oct 2026',h:80,gate:'Fri 23 Oct 2026',cls:'a',
-  goal:'A client creates a project, uploads a bracketed exposure set, receives a rendered working image with every original retained, and selects a service tier from all four — against a live credit balance and a queue already built to receive every future task source.',
-  ex:['Four account types register, log in, refresh and log out; password reset works end to end; a request for another account’s resource returns a refusal from the backend guard, not from a hidden control.',
-      'The dashboard shows credit balance, package status, active and completed projects, and distinguishes projects awaiting client action from those awaiting internal action.',
-      'No client-facing response anywhere exposes an editor identity, a QA identity or an internal queue position.',
-      'A 50-file batch containing multiple brackets uploads directly to storage with per-part retry and resumption after interruption.',
-      'Brackets are detected and grouped from capture metadata and visual similarity, with a confidence score recorded per group.',
-      'Exposures are aligned, merged and tone-mapped into one working image per scene, written to storage and marked ready, within 60 seconds per group.',
-      'Deleting a project, running a revision or processing an add-on leaves every original file intact.',
-      'A tier can be selected per working image across all four tiers, individually or in bulk, and cannot be selected until pre-processing has succeeded or the client has confirmed a grouping.',
-      'The credit ledger reserves, charges and releases inside serialisable transactions; two concurrent submissions cannot spend the same credit.',
-      'Exactly one service method creates an editing task, enforced by an architecture test that fails the build on a second creation site.',
+ {n:1,t:'Foundation and Ingestion',w:'Weeks 1\u20133',d:'28 Sep \u2013 18 Oct 2026',h:60,pay:'$375',gate:'Fri 16 Oct 2026',cls:'a',
+  goal:'A client registers, logs in, creates a project and batch-uploads a bracketed exposure set. Every original is permanently retained, and the system identifies which frames belong to the same scene.',
+  ex:['Four account types register, log in, refresh and log out; password reset works end to end; a request for another account\u2019s resource is refused by the backend guard.',
+      'The dashboard shows credit balance, package status, active and completed projects, and distinguishes client-action from internal-action.',
+      'No client-facing response exposes an editor identity, a QA identity or an internal queue position.',
+      'A 50-file batch containing multiple brackets uploads directly to storage with per-part retry and resumption.',
+      'Brackets are detected and grouped from capture metadata and visual similarity, with a confidence score per group.',
+      'Deleting a project leaves every original file intact.',
       'The full stack starts from a single command locally; migrations apply cleanly from an empty database.']},
- {n:2,t:'Editing Engines and Human Pipeline',w:'Weeks 5–8',d:'26 Oct – 22 Nov 2026',h:80,gate:'Fri 20 Nov 2026',cls:'b',
-  goal:'Both editing engines are operational and the human pipeline carries real work. A Basic image travels the complete Option C flow; a Basic Plus, Standard or Advanced image travels the complete seven-step human flow including a revision; three of the five add-ons produce results and route rejections into the same queue.',
-  ex:['Selecting Basic automatically runs AI Auto Enhance and presents the result as a preview with no button press required.',
-      'All fourteen adjustment controls operate live in the browser with visible before-and-after feedback and require no documentation to use.',
-      'The three-way toggle switches between the original working image, the AI result and the client’s manual edit at an identical zoom level and pan position.',
-      'Full-resolution export reproduces the browser preview within the agreed numeric tolerance across the reference image set.',
-      'Basic Plus, Standard and Advanced each complete the seven-step sequence; Advanced is placed in a high-priority queue and cannot be assigned to a non-senior editor unless the override is explicit and logged.',
-      'Priority is calculated from all five named inputs as configurable weights, adjustable without a code change.',
-      'QA approves or returns with comments; a return routes back to the same editor and escalates to a lead after a configurable number of cycles.',
-      'A client revision request creates a new version and always passes through QA again before reaching the client.',
+ {n:2,t:'Processing, Tiering and Queue',w:'Weeks 4\u20136',d:'19 Oct \u2013 8 Nov 2026',h:60,pay:'$375',gate:'Fri 6 Nov 2026',cls:'b',
+  goal:'A bracketed set becomes one rendered working image, the client selects from all four tiers against a live credit balance, and the single shared queue carries its first tasks through an editor and QA.',
+  ex:['Exposures are aligned, merged and tone-mapped into one working image per scene, marked ready, within 60 seconds per group.',
+      'A failed grouping presents the originals ungrouped for manual confirmation; a scene can be reprocessed without re-upload.',
+      'A tier can be selected per working image across all four tiers, individually or in bulk, and only after pre-processing succeeds.',
+      'The credit ledger reserves, charges and releases in serialisable transactions; two concurrent submissions cannot spend the same credit.',
+      'Exactly one service method creates an editing task, enforced by an architecture test.',
+      'Priority is calculated from all five named inputs as configurable weights.',
+      'Selecting Basic automatically runs AI Auto Enhance with no button press.',
+      'A brush-painted mask exports at the original pixel dimensions and Object Removal returns a result.',
+      'An editor downloads originals and the working image, uploads a result and submits for QA; QA approves or returns with comments.',
+      'An Advanced task cannot reach a non-senior editor unless the override is explicit and logged.',
+      'Monthly packages allocate and renew; payment is confirmed only by a verified provider webhook.']},
+ {n:3,t:'Editing Engines and Human Pipeline',w:'Weeks 7\u20139',d:'9 \u2013 29 Nov 2026',h:60,pay:'$375',gate:'Fri 27 Nov 2026',cls:'c',
+  goal:'Both editing engines are complete. All fourteen studio controls work, all five add-ons produce results, and every human tier completes the full seven-step sequence including a revision.',
+  ex:['All fourteen adjustment controls operate live in the browser with visible before-and-after feedback.',
+      'The three-way toggle switches between working image, AI result and manual edit at identical zoom and pan.',
+      'Full-resolution export reproduces the browser preview within the agreed numeric tolerance.',
+      'All three Basic client options and the satisfaction gate resolve; send-to-human enters the same pipeline.',
+      'Basic Plus, Standard and Advanced each complete the seven-step sequence, Advanced in a high-priority queue.',
+      'A revision creates a new version and always passes through QA again before reaching the client.',
       'Every delivered revision is retained as its own version and is comparable against earlier versions.',
-      'Object Removal, Decluttering and Lawn Replacement each accept a brush-painted mask exported at original pixel dimensions, return a result, and on rejection enter the same shared queue.',
-      'Credits reserve on submission, charge on client approval and release on cancellation before editing starts; monthly packages allocate and renew; payment is confirmed only by a verified provider webhook.']},
- {n:3,t:'Completion, Testing and Deployment',w:'Weeks 9–12',d:'23 Nov – 20 Dec 2026',h:80,gate:'Fri 18 Dec 2026',cls:'c',
-  goal:'The platform is feature complete at the end of Week 10, then tested, hardened, documented, deployed and handed over.',
-  ex:['Object Manipulation accepts a marked region plus a short instruction; Virtual Staging accepts an empty-room image, a room type and a style, and generates furnished output.',
-      'Multiple add-ons can be applied to one image before delivery.',
-      'The three Basic client options and the satisfaction gate all resolve correctly, and a Basic image sent to a human enters the same pipeline as every other human request.',
-      'Clients and staff receive in-app notification and transactional email on result-ready, task-assigned and revision-completed events, with live status delivered by server-sent events.',
-      'Final files and per-project ZIP archives download through time-limited private links after backend authorisation.',
-      'The retention policy is implemented and executes, with the originals prefix excluded from every lifecycle rule.',
-      'Feature freeze holds from the end of Week 10. No functional change enters Weeks 11 or 12 outside defect remediation.',
+      'All five add-ons accept their input, return a result, and on rejection enter the same shared queue.',
+      'Credits reserve, charge and release correctly; statements and reconciliation reporting work.',
+      'Clients and staff receive in-app and email notification on result-ready and task-assigned.']},
+ {n:4,t:'Hardening, Testing and Go-Live',w:'Weeks 10\u201312',d:'30 Nov \u2013 20 Dec 2026',h:60,pay:'$375',gate:'Fri 18 Dec 2026',cls:'d',
+  goal:'Feature development closes at the end of Week 10. The platform is then tested, secured, measured, deployed and handed over.',
+  ex:['Feature freeze holds from the end of Week 10; no functional change enters Weeks 11 or 12 outside defect remediation.',
+      'The web application, API, workers and Python service build as separate images and deploy independently.',
+      'Live status is delivered by server-sent events, with digest emails and staff escalation alerts.',
+      'Final files and per-project ZIP archives download through time-limited private links; the retention policy executes.',
       'Performance meets all three targets on the reference set, measured and recorded.',
-      'The full role-permission matrix passes; storage is encrypted at rest and in transit; the bucket is private; presigned links expire; no secret is committed.',
+      'The full role-permission matrix passes; storage is encrypted; the bucket is private; no secret is committed.',
       'Load testing passes against the confirmed volume assumptions.',
-      'The application renders and functions on current Chrome, Safari, Edge and Firefox, desktop and mobile web.',
+      'The application works on current Chrome, Safari, Edge and Firefox, desktop and mobile web.',
       'Backup and restore are verified; monitoring and alerting are live.',
-      'UAT is executed with real client, editor, QA and administrator accounts and signed off.',
-      'Production deployment completes; smoke tests pass; runbook, environment reference, API documentation and operational training materials are handed over.']}
+      'UAT is executed with real accounts in all four roles and signed off.',
+      'Production deployment completes; smoke tests pass; runbook, API documentation and training are handed over.']}
 ];
 </script>
 <script>
@@ -943,7 +954,7 @@ WEEKS.push(
 
 {n:12,ms:3,t:'UAT, go-live and handover — Milestone 3 gate',tracks:[
  {c:'TST',g:'ship',h:8,tasks:[
-  ['12.T.1','User acceptance testing','Scripted UAT executed on staging with real accounts in all four roles, covering every exit criterion from all three milestones: registration through to download on Basic; the full human flow on each of Basic Plus, Standard and Advanced including a revision; each of the five add-ons through both accept and reject; credit purchase, package subscription and consumption; and the notification and delivery paths. Observations recorded against each criterion.',3.25],
+  ['12.T.1','User acceptance testing','Scripted UAT executed on staging with real accounts in all four roles, covering every exit criterion from all four milestones: registration through to download on Basic; the full human flow on each of Basic Plus, Standard and Advanced including a revision; each of the five add-ons through both accept and reject; credit purchase, package subscription and consumption; and the notification and delivery paths. Observations recorded against each criterion.',3.25],
   ['12.T.2','Defect remediation, round two','Triage and fix of UAT findings, prioritised by whether they block go-live, each with a regression test. Anything not blocking is logged with an owner rather than absorbed silently.',2.75],
   ['12.T.3','Production smoke and verification','Post-deployment verification in production: authentication across all four roles, an upload through to a rendered working image, a tier selection with credit movement, a queue submission through to QA, one add-on generation, a delivery download, and confirmation that notifications and monitoring are firing.',2]]},
  {c:'DEP',g:'ship',h:12,tasks:[
@@ -975,19 +986,20 @@ const PHASE=[
  ['—','System Test &amp; UAT','ship','—','—','System integration testing across every module; cross-browser verification on desktop and mobile web; performance verification against all three targets; full security pass covering the role matrix, encryption, bucket policy, link expiry, secrets and dependencies; load testing; two rounds of defect remediation; UAT execution with real accounts in every role; post-deployment smoke tests','11, 12',100],
  ['—','Deployment &amp; Handover','ship','—','—','Staging environment build and soak; production infrastructure with the web tier scaling independently of the processing engines; backup, restore and disaster-recovery verification; monitoring, alerting and an on-call runbook; production deployment and go-live; data seeding, editor roster onboarding and package configuration; deployment runbook, environment reference and API documentation; operational training materials for administrator, editor and QA roles; gate, handover and closure of the open-issue register','11, 12',100]
 ];
+const MSFOR=w=>w<=3?1:w<=6?2:w<=9?3:4;
 const TIMELINE=[
  [1,'28 Sep – 4 Oct 2026',1,'M0, M1, M12',20,20,'Running platform, four-role authentication, storage with original retention enforced'],
  [2,'5 – 11 Oct 2026',1,'M0, M1, M2, M3',20,40,'Client application shell, dashboard, project creation, presigned upload API'],
  [3,'12 – 18 Oct 2026',1,'M0, M2, M3, M4, M12',20,60,'Batch upload working; bracket detection and grouping operational'],
- [4,'19 – 25 Oct 2026',1,'M3, M4, M5, M9, M10',20,80,'<b>Working image rendered; four-tier selection; shared queue and ledger live — Gate Fri 23 Oct</b>'],
+ [4,'19 – 25 Oct 2026',2,'M3, M4, M5, M9, M10',20,80,'<b>Working image rendered; four-tier selection; shared queue and ledger live — Gate Fri 23 Oct</b>'],
  [5,'26 Oct – 1 Nov 2026',2,'M4, M5, M6, M8, M9, M10',20,100,'AI Auto Enhance, add-on foundation, priority engine, packages and payments'],
  [6,'2 – 8 Nov 2026',2,'M4, M6, M7, M8, M9',20,120,'WebGL preview, editor workspace, mask painting, QA review'],
- [7,'9 – 15 Nov 2026',2,'M6, M7, M8, M9, M10',20,140,'Full control set, revision loop, three add-ons, administrator console'],
- [8,'16 – 22 Nov 2026',2,'M6, M7, M8, M9, M12',20,160,'<b>Both editing engines and the full human pipeline operational — Gate Fri 20 Nov</b>'],
+ [7,'9 – 15 Nov 2026',3,'M6, M7, M8, M9, M10',20,140,'Full control set, revision loop, three add-ons, administrator console'],
+ [8,'16 – 22 Nov 2026',3,'M6, M7, M8, M9, M12',20,160,'<b>Both editing engines and the full human pipeline operational — Gate Fri 20 Nov</b>'],
  [9,'23 – 29 Nov 2026',3,'M6, M7, M8, M10, M11',20,180,'Virtual Staging, add-on chaining, Basic options complete, notifications'],
- [10,'30 Nov – 6 Dec 2026',3,'M0, M8, M9, M11, M12',20,200,'<b>▲ Feature freeze — production infrastructure, delivery packaging, live status</b>'],
- [11,'7 – 13 Dec 2026',3,'System Test, Deployment',20,220,'Integration, performance, security, load testing; staging soak; production build'],
- [12,'14 – 20 Dec 2026',3,'System Test, Deployment',20,240,'<b>UAT signed, production go-live, handover — Gate Fri 18 Dec</b>']
+ [10,'30 Nov – 6 Dec 2026',4,'M0, M8, M9, M11, M12',20,200,'<b>▲ Feature freeze — production infrastructure, delivery packaging, live status</b>'],
+ [11,'7 – 13 Dec 2026',4,'System Test, Deployment',20,220,'Integration, performance, security, load testing; staging soak; production build'],
+ [12,'14 – 20 Dec 2026',4,'System Test, Deployment',20,240,'<b>UAT signed, production go-live, handover — Gate Fri 18 Dec</b>']
 ];
 const EFFORT=[
  ['M8 — AI Add-On Engine','eng',23.5,'5, 6, 7, 8, 9, 10'],
@@ -1013,7 +1025,8 @@ const LAYER=[
  ['Image processing','Python and OpenCV pre-processing, Sharp derivatives and full-resolution export, hosted AI provider adapters and evaluation',29.25],
  ['Infrastructure','Containerisation, local and production environments, continuous integration and deployment, observability, managed services',16.5]
 ];
-const MSEFFORT=[['Milestone 1 — Weeks 1–4',28.5,26.75,10.5,14.25,0,80],['Milestone 2 — Weeks 5–8',38,27.75,14.25,0,0,80],['Milestone 3 — Weeks 9–12',16.5,16.75,4.5,2.25,40,80],['Total',83,71.25,29.25,16.5,40,240]];
+const MSEFFORT=[['M1 — Weeks 1–3',22.5,19.5,5.5,12.5,0,60],['M2 — Weeks 4–6',23.5,21.5,15,0,0,60],['M3 — Weeks 7–9',28,24.75,7.25,0,0,60],['M4 — Weeks 10–12',9,5.5,1.5,4,40,60],
+['Total',83,71.25,29.25,16.5,40,240]];
 const SEQ=[
  [1,'Accounts and roles','1–2','Everything else requires authenticated actors and enforced permissions'],
  [2,'Upload and storage, including original file retention','1–4','Nothing exists to process without files, and the retention rule must be structural rather than retrofitted'],
@@ -1209,26 +1222,27 @@ fill('#phaseTbl',PHASE.map(p=>`<tr><td class="mono"><b>${p[0]}</b></td><td><span
  .concat([`<tr class="total"><td colspan="2">Total</td><td class="num">340 h</td><td class="num">420 h</td><td class="num">400 h</td><td></td><td class="num">240</td></tr>`]));
 fill('#layerTbl',LAYER.map(l=>`<tr><td><b>${l[0]}</b><div style="font-size:12px;color:var(--muted);margin-top:2px">${l[1]}</div></td><td class="num">${l[2]}</td><td class="num">${(l[2]/240*100).toFixed(1)}%</td></tr>`)
  .concat([`<tr class="total"><td>Total</td><td class="num">240</td><td class="num">100%</td></tr>`]));
-fill('#msEffortTbl',MSEFFORT.map((m,i)=>`<tr${i===3?' class="total"':''}><td><b>${m[0]}</b></td><td class="num">${m[1]||'—'}</td><td class="num">${m[2]||'—'}</td><td class="num">${m[3]||'—'}</td><td class="num">${m[4]||'—'}</td><td class="num">${m[5]||'—'}</td><td class="num"><b>${m[6]}</b></td></tr>`));
+fill('#msEffortTbl',MSEFFORT.map((m,i)=>`<tr${i===MSEFFORT.length-1?' class="total"':''}><td><b>${m[0]}</b></td><td class="num">${m[1]||'—'}</td><td class="num">${m[2]||'—'}</td><td class="num">${m[3]||'—'}</td><td class="num">${m[4]||'—'}</td><td class="num">${m[5]||'—'}</td><td class="num"><b>${m[6]}</b></td></tr>`));
 EFFORT.sort((a,b)=>b[2]-a[2]);
 const maxE=EFFORT[0][2];
 fill('#effortTbl',EFFORT.map(e=>`<tr><td><b>${e[0]}</b></td><td><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:8px;background:var(--sunken);border-radius:4px;overflow:hidden"><div style="width:${e[2]/maxE*100}%;height:100%;background:var(--${e[1]==='found'?'steel':e[1]==='eng'?'amber':e[1]==='flow'?'teal':'graphite'})"></div></div><span class="mono" style="font-size:11px;color:var(--muted);width:38px;text-align:right">${(e[2]/240*100).toFixed(1)}%</span></div></td><td class="num"><b>${e[2]}</b></td><td class="mono" style="font-size:11.5px;color:var(--muted)">${e[3]}</td></tr>`)
  .concat([`<tr class="total"><td>Total</td><td></td><td class="num">240</td><td></td></tr>`]));
 
 /* ---- milestones ---- */
+const MSC={a:'steel',b:'amber',c:'teal',d:'graphite'};
 $('#msCards').innerHTML=MILESTONES.map(m=>`
  <div style="margin-bottom:22px">
-  <div class="msbar"><span class="lb" style="color:var(--${m.cls==='a'?'steel':m.cls==='b'?'amber':'teal'})">Milestone ${m.n}</span><span class="bar" style="background:var(--${m.cls==='a'?'steel':m.cls==='b'?'amber':'teal'})"></span></div>
+  <div class="msbar"><span class="lb" style="color:var(--${MSC[m.cls]})">Milestone ${m.n} · ${m.pay}</span><span class="bar" style="background:var(--${MSC[m.cls]})"></span></div>
   <div class="card">
     <div style="display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;margin-bottom:10px">
       <h4 style="font-size:19px;margin:0">${m.t}</h4>
       <span class="mono" style="font-size:11.5px;color:var(--muted)">${m.w} · ${m.d}</span>
-      <span class="mono" style="font-size:11.5px;color:var(--ink-2);margin-left:auto"><b>${m.h} h</b> · gate ${m.gate}</span>
+      <span class="mono" style="font-size:11.5px;color:var(--ink-2);margin-left:auto"><b>${m.h} h</b> · <b>${m.pay}</b> · gate ${m.gate}</span>
     </div>
     <p style="font-size:14px;color:var(--ink-2);margin:0 0 12px"><b>Goal.</b> ${m.goal}</p>
     <div class="eyebrow" style="margin-bottom:6px">Exit criteria</div>
     <ul class="tight" style="margin:0;font-size:13.5px;color:var(--ink-2);list-style:none;padding-left:0">
-      ${m.ex.map(x=>`<li style="display:flex;gap:9px;margin-bottom:5px"><span style="color:var(--${m.cls==='a'?'steel':m.cls==='b'?'amber':'teal'});flex:0 0 auto">☐</span><span>${x}</span></li>`).join('')}
+      ${m.ex.map(x=>`<li style="display:flex;gap:9px;margin-bottom:5px"><span style="color:var(--${MSC[m.cls]});flex:0 0 auto">☐</span><span>${x}</span></li>`).join('')}
     </ul>
   </div>
  </div>`).join('');
@@ -1237,12 +1251,12 @@ $('#msCards').innerHTML=MILESTONES.map(m=>`
 const gi=$('#ganttInner');
 const LBW='218px';
 let selWeek=0;
-function cellCls(w){let c='gcell';if(w>=5&&w<=8)c+=' m2';if(w>=11)c+=' ship';if(w===selWeek)c+=' wsel';return c}
+function cellCls(w){let c='gcell';if(MSOF(w)%2===0)c+=' m2';if(w>=11)c+=' ship';if(GATEW.includes(w))c+=' gatecol';if(w===selWeek)c+=' wsel';return c}
 function renderGantt(){
   gi.innerHTML='';
   const mile=el('div','gmile');
   mile.appendChild(el('div','gm','')).style.borderLeft='0';
-  [['a','Milestone 1',4],['b','Milestone 2',4],['c','Milestone 3',4]].forEach(m=>{
+  [['a','M1 · $375',3],['b','M2 · $375',3],['c','M3 · $375',3],['d','M4 · $375',3]].forEach(m=>{
     const d=el('div','gm '+m[0],m[1]); d.style.gridColumn='span '+m[2]; mile.appendChild(d);
   });
   mile.appendChild(el('div','gm',''));
@@ -1274,6 +1288,13 @@ function renderGantt(){
     r.appendChild(el('div','gtot',fmtH(t.h)));
     gi.appendChild(r);
   });
+
+  const gates=el('div','grow'); gates.style.background='var(--surface-2)';
+  gates.appendChild(el('div','glabel','<span class="code">◆</span><span class="nm">Gate · payment</span>'));
+  const gc=el('div','gcells');
+  for(let w=1;w<=12;w++) gc.appendChild(el('div',cellCls(w), GATEW.includes(w)?'<span class="gatepay">$375</span>':''));
+  gates.appendChild(gc); gates.appendChild(el('div','gtot','$1,500'));
+  gi.appendChild(gates);
 
   const foot=el('div','grow foot');
   foot.appendChild(el('div','glabel','<span class="code"></span><span class="nm">Hours per week</span>'));
@@ -1310,7 +1331,7 @@ $('#weekList').innerHTML=WEEKS.map(w=>{
   return `<details class="wk" id="wk${w.n}">
    <summary>
      <div class="wn">${w.n}<small>WEEK</small></div>
-     <div><div class="wt">${w.t}</div><div class="wd">${WEEKDATES[w.n-1]} 2026 · Milestone ${w.ms} · ${w.tracks.length} track${w.tracks.length>1?'s':''}</div></div>
+     <div><div class="wt">${w.t}</div><div class="wd">${WEEKDATES[w.n-1]} 2026 · Milestone ${MSOF(w.n)} · ${w.tracks.length} track${w.tracks.length>1?'s':''}</div></div>
      <div class="wh">${total} h<small>${w.tracks.map(t=>t.c).join(' · ')}</small></div>
    </summary>
    <div class="wkbody">
